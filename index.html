@@ -1,178 +1,120 @@
-!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Swadesh Link | Digital & Professional Solutions</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,Arial}
-html{scroll-behavior:smooth}
-
-/* LOADER */
-#loader{
-position:fixed;
-width:100%;
-height:100%;
-background:#020617;
-z-index:9999;
-display:flex;
-align-items:center;
-justify-content:center;
-color:#fff;
-font-size:22px;
-}
-
-/* NAVBAR */
-.navbar{
-position:fixed;
-top:0;
-width:100%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 50px;
-background:rgba(2,6,23,.85);
-backdrop-filter:blur(10px);
-z-index:1000;
-}
-.navbar img{height:42px}
-.navbar a{
-color:#fff;
-margin-left:25px;
-text-decoration:none;
-font-weight:500;
-}
-.navbar a:hover{color:#38bdf8}
-
-/* SECTIONS */
-.section{
-min-height:100vh;
-background-size:cover;
-background-position:center;
-display:flex;
-align-items:center;
-justify-content:center;
-color:#fff;
-text-align:center;
-position:relative;
-}
-.overlay{
-background:rgba(0,0,0,.65);
-padding:70px 40px;
-max-width:900px;
-border-radius:20px;
-}
-
-/* HEADINGS */
-h1{font-size:48px;margin-bottom:15px}
-h2{font-size:38px;margin-bottom:15px}
-p{font-size:18px;opacity:.95}
-
-/* BUTTON */
-.btn{
-display:inline-block;
-margin-top:25px;
-padding:14px 28px;
-background:#2563eb;
-color:#fff;
-border-radius:30px;
-text-decoration:none;
-font-weight:600;
-}
-
-/* SERVICES CARDS */
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-margin-top:40px;
-}
-.card{
-background:rgba(255,255,255,.95);
-color:#020617;
-padding:30px;
-border-radius:18px;
-box-shadow:0 20px 40px rgba(0,0,0,.25);
-}
-
-/* FOOTER */
-footer{
-background:#020617;
-color:#cbd5e1;
-text-align:center;
-padding:20px;
-}
-</style>
-</head>
-
-<body>
-
-<div id="loader">Loading Swadesh Link...</div>
-
-<!-- NAVBAR -->
-<div class="navbar">
-  <img src="logo.png" alt="Swadesh Link">
-  <div>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swadesh Link | Trusted Services. Smart Solutions.</title>
+  <meta name="description" content="Swadesh Link provides global documentation, government & private sector support, IT & digital services, and expert consultation with transparent pricing." />
+  <meta name="robots" content="index, follow" />  <!-- Basic SEO -->  <link rel="canonical" href="https://swadeshlink.github.io/" />  <!-- Styles -->  <style>
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#222;background:#f9fafb}
+    header{background:#0f172a;color:#fff;padding:20px}
+    nav{display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:auto}
+    nav a{color:#fff;margin:0 10px;text-decoration:none;font-weight:500}
+    .hero{max-width:1200px;margin:auto;padding:60px 20px;text-align:center}
+    .hero h1{font-size:42px;margin-bottom:10px}
+    .hero p{font-size:18px;opacity:.9}
+    .badges span{display:inline-block;margin:8px;padding:8px 14px;background:#1e293b;border-radius:20px;font-size:14px}
+    .section{max-width:1200px;margin:auto;padding:60px 20px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+    .card{background:#fff;padding:24px;border-radius:14px;box-shadow:0 10px 25px rgba(0,0,0,.06)}
+    .card h3{margin-top:0}
+    .btn{display:inline-block;margin-top:14px;padding:12px 18px;background:#2563eb;color:#fff;border-radius:8px;text-decoration:none}
+    .trust{display:flex;flex-wrap:wrap;gap:20px;justify-content:center}
+    footer{background:#0f172a;color:#cbd5e1;padding:40px 20px}
+    footer a{color:#cbd5e1;text-decoration:none}
+    .footer-grid{max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:30px}
+    .whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;padding:14px 18px;border-radius:50px;text-decoration:none;font-weight:bold}
+  </style></head>
+<body><header>
+  <nav>
+    <div><strong>SWADESH LINK</strong></div>
+    <div>
+      <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact Us</a>
+    </div>
+  </nav>
+</header><section class="hero">
+  <h1>Trusted Services. Smart Solutions.</h1>
+  <p>Global documentation, sector-based services, IT & digital solutions, and expert consultation under one professional platform.</p>
+  <div class="badges">
+    <span>Secure Payments</span>
+    <span>Global Services</span>
+    <span>Verified Process</span>
   </div>
-</div>
-
-<!-- HOME -->
-<section id="home" class="section" style="background-image:url('hero.jpg')">
-  <div class="overlay">
-    <h1>Trusted Services. Smart Digital Solutions.</h1>
-    <p>Documentation • Government Services • IT • Digital Growth</p>
-    <a href="#contact" class="btn">Get Started</a>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="section" style="background-image:url('about.jpg')">
-  <div class="overlay">
-    <h2>About Swadesh Link</h2>
-    <p>
-      Swadesh Link is a professional service platform providing documentation,
-      government & private assistance, IT solutions and digital services with
-      transparency and trust.
-    </p>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section id="services" class="section" style="background-image:url('services.jpg')">
-  <div class="overlay">
-    <h2>Our Services</h2>
-    <div class="cards">
-      <div class="card">📄 Documentation Services</div>
-      <div class="card">🏛 Government & Private Assistance</div>
-      <div class="card">💻 IT & Digital Solutions</div>
-      <div class="card">📊 Business & Tech Consultation</div>
+  <a class="btn" href="#contact">Get a Quote</a>
+</section><section id="services" class="section">
+  <h2>Our Services</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>📄 Documentation Services</h3>
+      <p>Drafting, typing, affidavits, applications, and document preparation for individuals and organizations.</p>
+    </div>
+    <div class="card">
+      <h3>🏢 Government & Private Sector</h3>
+      <p>File preparation, submissions, and sector-specific documentation with verified processes.</p>
+    </div>
+    <div class="card">
+      <h3>💻 IT & Digital Services</h3>
+      <p>Website & app development, SEO, digital marketing, and technical services at market-aligned rates.</p>
+    </div>
+    <div class="card">
+      <h3>🎓 Expert Consultation</h3>
+      <p>Legal, business, IT, and professional consultations via call or video session.</p>
     </div>
   </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="section" style="background-image:url('contact.jpg')">
-  <div class="overlay">
-    <h2>Contact Us</h2>
-    <p>📞 +91 8307619156<br>✉ swadeshlink@gmail.com</p>
-    <a class="btn" href="https://wa.me/918307619156">WhatsApp Now</a>
+</section><section id="pricing" class="section">
+  <h2>Transparent & Global Pricing</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Documentation</h3>
+      <p>Typing: Starting from ₹50 / $1 / €1 per page</p>
+      <p>Affidavits & applications: Starting from ₹100 / $2 / €2 per page</p>
+      <a class="btn" href="#contact">Request a Quote</a>
+    </div>
+    <div class="card">
+      <h3>Government & Private Sector</h3>
+      <p>Custom pricing based on department, sector, and country.</p>
+      <a class="btn" href="#contact">Get Consultation</a>
+    </div>
+    <div class="card">
+      <h3>IT & Digital Services</h3>
+      <p>Pricing is dynamic and aligned with current online market rates followed by companies and freelancers.</p>
+    </div>
   </div>
-</section>
-
-<footer>
-© 2026 Swadesh Link. All Rights Reserved.
-</footer>
-
-<script>
-window.onload = () => {
-  document.getElementById("loader").style.display="none";
-};
-</script>
+</section><section class="section">
+  <h2>Trust & Transparency</h2>
+  <div class="trust">
+    <div>🔐 Secure Transactions</div>
+    <div>🌐 Global Compliance</div>
+    <div>📑 Transparent Pricing</div>
+    <div>🤝 Professional Handling</div>
+  </div>
+</section><section id="contact" class="section">
+  <h2>Contact & Quotation</h2>
+  <p>Send your requirement and our team will respond with a verified quotation.</p>
+  <form>
+    <input type="text" placeholder="Your Name" required /><br><br>
+    <input type="email" placeholder="Your Email" required /><br><br>
+    <textarea placeholder="Your Requirement" rows="5" required></textarea><br><br>
+    <button class="btn" type="submit">Request a Quote</button>
+  </form>
+</section><footer>
+  <div class="footer-grid">
+    <div>
+      <strong>SWADESH LINK</strong>
+      <p>Trusted Services. Smart Solutions.</p>
+    </div>
+    <div>
+      <p><strong>Contact</strong></p>
+      <p>Email: swadeshlink@gmail.com</p>
+      <p>WhatsApp: +91 7015657213</p>
+    </div>
+    <div>
+      <p><strong>Legal</strong></p>
+      <p>Prices are indicative and may vary based on service scope, sector, country laws, and authority requirements.</p>
+    </div>
+  </div>
+</footer><a class="whatsapp" href="https://wa.me/917015657213">WhatsApp</a>
 
 </body>
 </html>
