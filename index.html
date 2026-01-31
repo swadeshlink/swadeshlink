@@ -21,7 +21,6 @@ align-items:center;
 justify-content:center;
 z-index:9999;
 font-size:22px;
-letter-spacing:1px;
 }
 
 /* NAVBAR */
@@ -41,17 +40,8 @@ align-items:center;
 justify-content:space-between;
 padding:15px 25px;
 }
-.logo{
-font-size:22px;
-font-weight:700;
-color:#38bdf8;
-}
-nav a{
-margin-left:22px;
-text-decoration:none;
-color:#fff;
-font-weight:500;
-}
+.logo{font-size:22px;font-weight:700;color:#38bdf8}
+nav a{margin-left:22px;text-decoration:none;color:#fff}
 nav a:hover{color:#38bdf8}
 
 /* SECTIONS */
@@ -74,7 +64,7 @@ background:rgba(2,6,23,.75);
 .content{
 position:relative;
 max-width:900px;
-padding:80px 25px;
+padding:90px 25px;
 }
 
 /* TEXT */
@@ -95,7 +85,7 @@ font-weight:600;
 }
 .btn:hover{background:#1d4ed8}
 
-/* SERVICES */
+/* CARDS */
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -103,20 +93,39 @@ gap:25px;
 margin-top:40px;
 }
 .card{
-background:#ffffff;
+background:#fff;
 color:#020617;
 padding:30px;
 border-radius:18px;
 box-shadow:0 20px 40px rgba(0,0,0,.3);
-font-weight:500;
 }
+
+/* FORM */
+form{
+display:grid;
+gap:15px;
+margin-top:30px;
+}
+input,textarea{
+padding:14px;
+border-radius:10px;
+border:none;
+font-size:16px;
+}
+textarea{min-height:120px}
 
 /* FOOTER */
 footer{
 background:#020617;
 text-align:center;
-padding:25px;
+padding:35px 20px;
 color:#cbd5e1;
+}
+.social a{
+margin:0 10px;
+color:#38bdf8;
+text-decoration:none;
+font-weight:600;
 }
 
 /* RESPONSIVE */
@@ -139,14 +148,14 @@ nav a{margin-left:14px}
       <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#services">Services</a>
+      <a href="#blog">Blog</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
 
 <!-- HOME -->
-<section id="home" class="section"
-style="background-image:url('https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1600&q=80')">
+<section id="home" class="section" style="background-image:url('https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1600&q=80')">
   <div class="content">
     <h1>Trusted Services. Smart Digital Solutions.</h1>
     <p>Documentation • Government Services • IT • Digital Growth</p>
@@ -155,47 +164,94 @@ style="background-image:url('https://images.unsplash.com/photo-1556761175-4b46a5
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="section"
-style="background-image:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80')">
+<section id="about" class="section" style="background-image:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80')">
   <div class="content">
     <h2>About Swadesh Link</h2>
     <p>
-      Swadesh Link is a professional service platform delivering
-      documentation support, government & private services,
-      IT solutions and digital assistance with trust and transparency.
+      Swadesh Link delivers professional documentation, government assistance,
+      IT solutions and business consulting with transparency and trust.
     </p>
   </div>
 </section>
 
 <!-- SERVICES -->
-<section id="services" class="section"
-style="background-image:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80')">
+<section id="services" class="section" style="background-image:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80')">
   <div class="content">
     <h2>Our Services</h2>
     <div class="cards">
       <div class="card">📄 Documentation & Verification</div>
       <div class="card">🏛 Government & Private Assistance</div>
       <div class="card">💻 IT & Digital Services</div>
-      <div class="card">📊 Business & Technology and Others Sectors Consulting</div>
+      <div class="card">📊 Business & Technology Consulting</div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="section"
-style="background-image:url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80')">
+<!-- BLOG -->
+<section id="blog" class="section" style="background-image:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80')">
   <div class="content">
-    <h2>Contact Us</h2>
+    <h2>Blog & Updates</h2>
+    <div class="cards">
+      <div class="card">Digital Services Roadmap for Small Businesses</div>
+      <div class="card">How Government Documentation Works in India</div>
+      <div class="card">Technology Trends for Growing Enterprises</div>
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section class="section" style="background-image:url('https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=1600&q=80')">
+  <div class="content">
+    <h2>Future Growth Roadmap</h2>
     <p>
-      📞 +91 8307619156<br>
-      ✉ swadeshlink@gmail.com
+      Want to improve this platform further?  
+      We provide a complete roadmap for scaling, automation, branding,
+      and digital expansion.
     </p>
+    <p style="margin-top:15px">
+      Need a client proposal or business pitch?  
+      <b>We’ll prepare it professionally for you.</b>
+    </p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section" style="background-image:url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80')">
+  <div class="content">
+    <h2>Contact for Queries</h2>
+    <p>📞 +91 8307619156<br>✉ swadeshlink@gmail.com</p>
+
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Query"></textarea>
+      <button class="btn">Send Query</button>
+    </form>
+
     <a class="btn" href="https://wa.me/918307619156">WhatsApp Now</a>
   </div>
 </section>
 
+<!-- TERMS -->
+<section class="section" style="background:#020617">
+  <div class="content">
+    <h2>Terms & Conditions</h2>
+    <p>
+      All services are provided transparently.  
+      Swadesh Link does not guarantee government approvals but assists
+      clients professionally as per legal guidelines.
+    </p>
+  </div>
+</section>
+
 <footer>
-© 2026 Swadesh Link. All Rights Reserved.
+  <p><b>Serving the World Digitally with Trust & Technology.</b></p>
+  <div class="social" style="margin-top:15px">
+    <a href="#">Instagram</a>
+    <a href="#">Facebook</a>
+    <a href="#">LinkedIn</a>
+  </div>
+  <p style="margin-top:15px">© 2026 Swadesh Link. All Rights Reserved.</p>
 </footer>
 
 <script>
