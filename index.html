@@ -87,15 +87,43 @@
       </nav>
     </div>
   </header>
-  <!-- HOME SECTION -->
-<section id="home" class="section" style="background-image:url('https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1600&q=80')">
-  <div class="content">
-    <h1>Swadesh Link<br>Your Global Trusted Partner</h1>
-    <p>Every Sector • Every Country • Every Language<br>Government | Private | IT | AI | Robotics | Visa | Legal | Real Estate | Vehicle Sales | Payments | Investments | Courses & More</p>
-    <a href="#contact" class="btn">Get Started Now</a>
+  <!-- HOME SECTION - Fixed: Normal heading + Button नीचे सेट -->
+<section id="home" class="section" 
+  style="background-image: url('https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1600&q=80'); 
+         background-size: cover; background-position: center; 
+         background-attachment: fixed; min-height: 100vh; 
+         padding: 120px 20px 80px; position: relative; color: white; 
+         text-align: center; text-shadow: 1px 1px 3px rgba(0,0,0,0.6);">
+
+  <!-- हल्का dark overlay (text साफ दिखे, जरूरत पड़ने पर opacity कम कर सकते हो) -->
+  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); z-index: 1;"></div>
+
+  <div class="content" style="position: relative; z-index: 2; max-width: 1100px; margin: 0 auto;">
+
+    <!-- Heading: normal, no extra shine/glow, bold और clean -->
+    <h1 style="font-size: 4.2rem; font-weight: 800; margin-bottom: 1.5rem; line-height: 1.1; letter-spacing: 1px;">
+      Swadesh Link<br>Your Global Trusted Partner
+    </h1>
+
+    <p style="font-size: 1.6rem; max-width: 900px; margin: 0 auto 3rem; line-height: 1.6; font-weight: 500;">
+      Every Sector • Every Country • Every Language<br>
+      Government | Private | IT | AI | Robotics | Visa | Legal | Real Estate | Vehicle Sales | Payments | Investments | Courses & More
+    </p>
+
+    <!-- Button: अब पूरी तरह नीचे, words के ठीक नीचे सेट -->
+    <div style="margin-top: 60px;">
+      <a href="#contact" class="btn" 
+         style="display: inline-block; padding: 20px 60px; font-size: 1.6rem; 
+                background: #0066ff; color: white; border-radius: 60px; 
+                text-decoration: none; font-weight: bold; 
+                box-shadow: 0 12px 35px rgba(0,102,255,0.5); 
+                transition: transform 0.3s, box-shadow 0.3s;">
+        Get Started Now
+      </a>
+    </div>
+
   </div>
 </section>
-
 <!-- ABOUT SECTION -->
 <section id="about" class="section" style="background-image:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80')">
   <div class="content">
@@ -104,21 +132,60 @@
     <p>Serving clients in USA, UK, UAE, Canada, Europe, Australia — instant, secure, 24×7 in any language. No limits. Ready for 2026 & beyond.</p>
   </div>
 </section>
-<!-- SERVICES SECTION -->
-<section id="services" class="section" style="background-image:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80')">
-  <div class="content">
-    <h2>Our Global Services</h2>
-    <p>Full-spectrum support — every sector, every country, every need. No limits.</p>
-    <div class="cards">
-      <div class="card">Government Sector: Aadhaar, PAN, Passport, Attestation, Filings, All Docs</div>
-      <div class="card">Private Sector: Licenses, Permits, Compliance, Approvals, Agent Services</div>
-      <div class="card">IT & AI: Websites, Apps, Software, Digital Marketing, AI/Robotics</div>
-      <div class="card">Legal & Visa: Advocate Support, Visa Consulting, Immigration, Business Law</div>
-      <div class="card">Business Setup: Company Registration, GST/FSSAI, Startup, Global Expansion</div>
-      <div class="card">Real Estate & Vehicles: Buy/Sell, Lease, Credit, Documentation (Worldwide)</div>
-      <div class="card">Payments: Secure Transfers India ↔ Abroad (UPI, Bank, Wise, Crypto)</div>
-      <div class="card">Investments: Business Partnerships, Startups, Ventures Globally</div>
+<!-- SERVICES SECTION - Fixed: Heading अब सही जगह पर आएगा, full screen feel -->
+<section id="services" class="section" 
+  style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80'); 
+         background-size: cover; background-position: center; 
+         background-attachment: fixed; min-height: 100vh; 
+         padding: 120px 20px 80px; position: relative; color: white; 
+         text-shadow: 1px 1px 4px rgba(0,0,0,0.7);">
+
+  <!-- Dark overlay for readability -->
+  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.45); z-index: 1;"></div>
+
+  <div class="content" style="position: relative; z-index: 2; max-width: 1300px; margin: 0 auto; text-align: center;">
+
+    <h2 style="font-size: 3.5rem; margin-bottom: 1.5rem; font-weight: 800;">Our Global Services</h2>
+    
+    <p style="font-size: 1.4rem; max-width: 900px; margin: 0 auto 4rem; line-height: 1.7;">
+      Full-spectrum support — every sector, every country, every need. No limits.
+    </p>
+
+    <div class="cards" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; margin: 0 auto;">
+      
+      <div class="card" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(12px); padding: 45px 30px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.25); min-height: 180px; display: flex; align-items: center; justify-content: center; font-size: 1.35rem; font-weight: 600;">
+        Government Sector: Aadhaar, PAN, Passport, Attestation, Filings, All Docs
+      </div>
+      
+      <div class="card" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(12px); padding: 45px 30px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.25); min-height: 180px; display: flex; align-items: center; justify-content: center; font-size: 1.35rem; font-weight: 600;">
+        Private Sector: Licenses, Permits, Compliance, Approvals, Agent Services
+      </div>
+      
+      <div class="card" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(12px); padding: 45px 30px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.25); min-height: 180px; display: flex; align-items: center; justify-content: center; font-size: 1.35rem; font-weight: 600;">
+        IT & AI: Websites, Apps, Software, Digital Marketing, AI/Robotics
+      </div>
+      
+      <div class="card" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(12px); padding: 45px 30px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.25); min-height: 180px; display: flex; align-items: center; justify-content: center; font-size: 1.35rem; font-weight: 600;">
+        Legal & Visa: Advocate Support, Visa Consulting, Immigration, Business Law
+      </div>
+      
+      <div class="card" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(12px); padding: 45px 30px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.25); min-height: 180px; display: flex; align-items: center; justify-content: center; font-size: 1.35rem; font-weight: 600;">
+        Business Setup: Company Registration, GST/FSSAI, Startup, Global Expansion
+      </div>
+      
+      <div class="card" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(12px); padding: 45px 30px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.25); min-height: 180px; display: flex; align-items: center; justify-content: center; font-size: 1.35rem; font-weight: 600;">
+        Real Estate & Vehicles: Buy/Sell, Lease, Credit, Documentation (Worldwide)
+      </div>
+      
+      <div class="card" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(12px); padding: 45px 30px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.25); min-height: 180px; display: flex; align-items: center; justify-content: center; font-size: 1.35rem; font-weight: 600;">
+        Payments: Secure Transfers India ↔ Abroad (UPI, Bank, Wise, Crypto)
+      </div>
+      
+      <div class="card" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(12px); padding: 45px 30px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.25); min-height: 180px; display: flex; align-items: center; justify-content: center; font-size: 1.35rem; font-weight: 600;">
+        Investments: Business Partnerships, Startups, Ventures Globally
+      </div>
     </div>
+
   </div>
 </section>
 
@@ -150,34 +217,107 @@
     </div>
   </div>
 </section>
-
-<!-- ROADMAP SECTION -->
+[17:16, 1/2/2026] .: <!-- ROADMAP SECTION -->
 <section id="roadmap" class="section" style="background-image:url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80')">
   <div class="content">
     <h2>Our Roadmap — Future 2026 & Beyond</h2>
     <p>We are building the future of global services: AI-powered automation, blockchain-secured payments, virtual real estate consulting, and zero-border business setup. Join us on this journey — every step is secure, transparent, and client-first.</p>
     <ul style="text-align:left;max-width:700px;margin:30px auto;font-size:18px;list-style-type:none;gap:15px;display:grid">
       <li>✔ Q1 2026: Launch AI Chat for Instant Visa & Legal Queries</li>
-      <li>✔ Q2 2026: Global Real Estate Marketplace with VR Tours</li>
-      <li>✔ Q3 2026: Zero-Fee Crypto-to-INR Bridge</li>
-      <li>✔ Q4 2026: Full Robotics Integration for Business Automation</li>
-      <li>✔ 2027+: One-Click Global Company Registration</li>
-    </ul>
-    <a href="#contact" class="btn">Join Our Journey</a>
+      <li>✔ Q2 2026: Global Real Estate Marketplace wit…
+[17:23, 1/2/2026] .: <!-- ROADMAP SECTION - Final Box Style (तुम्हें पसंद वाला) -->
+<section id="roadmap" class="section" 
+  style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80'); 
+         background-size: cover; background-position: center; 
+         background-attachment: fixed; padding: 90px 20px; min-height: 80vh; 
+         position: relative; color: white; text-shadow: 1px 1px 4px rgba(0,0,0,0.8);">
+
+  <!-- Light dark overlay (text साफ दिखे) -->
+  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.35);"></div>
+
+  <div class="content" style="position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; text-align: center;">
+
+    <h2 style="font-size: 3.4rem; margin-bottom: 1.5rem; font-weight: 800;">Our Roadmap — 2026 & Beyond</h2>
+    
+    <p style="font-size: 1.35rem; max-width: 900px; margin: 0 auto 3rem; line-height: 1.7;">
+      AI-first, secure, seamless global services. Client-driven milestones — transparency, speed, no borders.  
+      The future is here. Join us.
+    </p>
+
+    <div class="cards" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 35px; max-width: 1150px; margin: 0 auto 90px;">
+      
+      <div class="card" style="background: rgba(255,255,255,0.18); backdrop-filter: blur(10px); padding: 40px 25px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.25); min-height: 150px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; font-weight: 700;">
+        <strong>Q1 2026:</strong><br>AI Chatbot for Instant Visa/Legal Queries
+      </div>
+      
+      <div class="card" style="background: rgba(255,255,255,0.18); backdrop-filter: blur(10px); padding: 40px 25px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.25); min-height: 150px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; font-weight: 700;">
+        <strong>Q2 2026:</strong><br>Virtual Real Estate Tours + Global Deals
+      </div>
+      
+      <div class="card" style="background: rgba(255,255,255,0.18); backdrop-filter: blur(10px); padding: 40px 25px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.25); min-height: 150px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; font-weight: 700;">
+        <strong>Q3 2026:</strong><br>Blockchain-Based Zero-Fee Payments
+      </div>
+      
+      <div class="card" style="background: rgba(255,255,255,0.18); backdrop-filter: blur(10px); padding: 40px 25px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.25); min-height: 150px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; font-weight: 700;">
+        <strong>Q4 2026:</strong><br>Robotics Automation for Business Setup
+      </div>
+      
+      <div class="card" style="background: rgba(255,255,255,0.18); backdrop-filter: blur(10px); padding: 40px 25px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.25); min-height: 150px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; font-weight: 700;">
+        <strong>2027+:</strong><br>One-Click Worldwide Company Registration
+      </div>
+    </div>
+
+    <!-- Button अब नीचे, स्पेस के साथ -->
+    <div style="margin-top: 100px;">
+      <a href="#contact" class="btn" style="display: inline-block; padding: 20px 60px; font-size: 1.5rem; background: #0066ff; color: white; border-radius: 60px; text-decoration: none; box-shadow: 0 12px 40px rgba(0,102,255,0.5); transition: transform 0.3s, box-shadow 0.3s;">
+        Join the Journey
+      </a>
+    </div>
+
   </div>
 </section>
+
+</section>
 <!-- PAYMENTS SECTION -->
-<section id="payments" class="section" style="background-image:url('https://images.unsplash.com/photo-1556740714-a8395b3a74dd?auto=format&fit=crop&w=1600&q=80')">
-  <div class="content">
-    <h2>Secure Payments — India ↔ Worldwide</h2>
-    <p>Instant, low-fee, fully encrypted — any amount, any country, no hassle.</p>
-    <div class="cards">
-      <div class="card">UPI / PhonePe / Google Pay — Instant to India</div>
-      <div class="card">Bank Transfer (NEFT/RTGS/IMPS) — Any Indian Bank</div>
-      <div class="card">International: Wise, PayPal, Remitly, Stripe — USA, UK, UAE</div>
-      <div class="card">Crypto Conversion (BTC, USDT) — Fast INR Deposit</div>
-      <div class="card">Any Currency, Any Destination — 24×7 Support</div>
+<section id="payments" class="section" 
+  style="background-image: url('https://images.unsplash.com/photo-1556740714-a8395b3a74dd?auto=format&fit=crop&w=1600&q=80'); 
+         background-size: cover; 
+         background-position: center; 
+         background-repeat: no-repeat; 
+         min-height: 80vh; 
+         padding: 80px 20px; 
+         color: #fff; 
+         text-align: center; 
+         position: relative;">
+  
+  <!-- Optional overlay for better text visibility (काला हल्का लेयर) -->
+  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.45); z-index: 1;"></div>
+  
+  <div class="content" style="position: relative; z-index: 2; max-width: 1200px; margin: 0 auto;">
+    <h2 style="font-size: 3.2rem; margin-bottom: 1.2rem; font-weight: 700;">Secure Payments — India ↔ Worldwide</h2>
+    
+    <p style="font-size: 1.4rem; max-width: 800px; margin: 0 auto 3.5rem; line-height: 1.6;">
+      Instant, low-fee, fully encrypted — any amount, any country, no hassle.
+    </p>
+
+    <div class="cards" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 35px; margin: 0 auto;">
+      <div class="card" style="background: rgba(255,255,255,0.12); backdrop-filter: blur(12px); padding: 45px 30px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.2); min-height: 180px; display: flex; align-items: center; justify-content: center; font-size: 1.35rem; font-weight: 600;">
+        UPI / PhonePe / Google Pay — Instant to India
+      </div>
+      <div class="card" style="background: rgba(255,255,255,0.12); backdrop-filter: blur(12px); padding: 45px 30px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.2); min-height: 180px; display: flex; align-items: center; justify-content: center; font-size: 1.35rem; font-weight: 600;">
+        Bank Transfer (NEFT/RTGS/IMPS) — Any Indian Bank
+      </div>
+      <div class="card" style="background: rgba(255,255,255,0.12); backdrop-filter: blur(12px); padding: 45px 30px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.2); min-height: 180px; display: flex; align-items: center; justify-content: center; font-size: 1.35rem; font-weight: 600;">
+        International: Wise, PayPal, Remitly, Stripe — USA, UK, UAE
+      </div>
+      <div class="card" style="background: rgba(255,255,255,0.12); backdrop-filter: blur(12px); padding: 45px 30px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.2); min-height: 180px; display: flex; align-items: center; justify-content: center; font-size: 1.35rem; font-weight: 600;">
+        Crypto Conversion (BTC, USDT) — Fast INR Deposit
+      </div>
     </div>
+
+    <a href="#contact" class="btn" style="display: inline-block; margin-top: 60px; padding: 20px 60px; font-size: 1.5rem; background: #00c853; color: white; border-radius: 60px; text-decoration: none; box-shadow: 0 12px 35px rgba(0,200,83,0.45); transition: transform 0.3s, box-shadow 0.3s;">
+      Make a Payment Now
+    </a>
   </div>
 </section>
 
@@ -205,21 +345,6 @@
       <a href="https://www.youtube.com/@swadeshlink" target="_blank"><i class="fab fa-youtube"></i></a>
       <a href="https://www.pinterest.com/swadeshlink/" target="_blank"><i class="fab fa-pinterest"></i></a>
     </div>
-  </div>
-</section>
-<!-- ROADMAP SECTION -->
-<section id="roadmap" class="section" style="background-image:url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80')">
-  <div class="content">
-    <h2>Our Roadmap — 2026 & Beyond</h2>
-    <p>Building tomorrow's global services: AI-first, secure, seamless. Every milestone is client-driven — transparency, speed, no borders. Join the future.</p>
-    <div class="cards" style="max-width:1000px;margin:auto;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
-      <div class="card"><strong>Q1 2026:</strong> AI Chatbot for Instant Visa/Legal Queries</div>
-      <div class="card"><strong>Q2 2026:</strong> Virtual Real Estate Tours + Global Deals</div>
-      <div class="card"><strong>Q3 2026:</strong> Blockchain-Based Zero-Fee Payments</div>
-      <div class="card"><strong>Q4 2026:</strong> Robotics Automation for Business Setup</div>
-      <div class="card"><strong>2027+:</strong> One-Click Worldwide Company Registration</div>
-    </div>
-    <a href="#contact" class="btn">Join the Journey</a>
   </div>
 </section>
 
