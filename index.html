@@ -3,191 +3,217 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Swadesh Link | Global Digital & Government Services</title>
-  <meta name="description" content="Trusted worldwide: Govt docs, IT, business, money transfer to India. Any language, any country.">
-  <meta name="keywords" content="Swadesh Link, government services, IT solutions, money transfer India, UPI PayPal Wise">
-  <meta property="og:title" content="Swadesh Link - Your Global Partner">
-  <meta property="og:description" content="Fast, secure services worldwide - in your language.">
+  <title>Swadesh Link | Global Services Across All Sectors</title>
+  <meta name="description" content="Government documents, private & public sector, IT solutions, visa & legal consulting, business setup, global money transfer—everything, anywhere, in your language.">
+  <meta name="keywords" content="global services, government docs, IT development, business registration, money transfer India, visa consulting, legal assistance">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
-    *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',system-ui,sans-serif}
     body{background:#020617;color:#fff;line-height:1.6;overflow-x:hidden}
     #loader{position:fixed;inset:0;background:#020617;z-index:9999;display:flex;align-items:center;justify-content:center;color:#38bdf8;font-size:28px}
-    header{position:fixed;top:0;width:100%;background:rgba(2,6,23,.92);backdrop-filter:blur(12px);z-index:1000}
+    header{position:fixed;top:0;width:100%;background:rgba(2,6,23,.95);backdrop-filter:blur(12px);z-index:1000}
     .navbar{max-width:1400px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:15px 30px}
-    .logo{font-size:32px;font-weight:800;color:#38bdf8}
-    nav a{margin-left:30px;color:#fff;text-decoration:none;font-weight:500;transition:.3s}
+    .logo{font-size:34px;font-weight:900;color:#38bdf8}
+    nav a{margin-left:30px;color:#fff;text-decoration:none;font-weight:600;transition:.3s}
     nav a:hover{color:#38bdf8}
     .section{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;background-size:cover;background-position:center;position:relative}
     .section::before{content:'';position:absolute;inset:0;background:rgba(2,6,23,.78)}
-    .content{position:relative;max-width:1100px;padding:140px 30px}
-    h1{font-size:64px;line-height:1.1;margin-bottom:25px}
-    h2{font-size:42px;margin:40px 0 20px}
-    p{font-size:20px;opacity:.9}
-    .btn{padding:16px 40px;background:#2563eb;color:#fff;border:none;border-radius:50px;font-size:18px;font-weight:600;cursor:pointer;transition:.3s}
-    .btn:hover{background:#1d4ed8;transform:scale(1.05)}
-    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;margin-top:50px}
-    .card{background:#0f172a;padding:35px;border-radius:20px;box-shadow:0 15px 40px rgba(0,0,0,.5);transition:.4s}
-    .card:hover{transform:translateY(-15px)}
+    .content{position:relative;max-width:1100px;padding:160px 30px}
+    h1{font-size:72px;line-height:1.1;margin-bottom:25px;font-weight:900}
+    h2{font-size:46px;margin:50px 0 20px}
+    p{font-size:22px;opacity:.95}
+    .btn{padding:18px 45px;background:#2563eb;color:#fff;border:none;border-radius:50px;font-size:20px;font-weight:600;cursor:pointer;transition:.3s;margin-top:50px}
+    .btn:hover{background:#1d4ed8;transform:scale(1.08)}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:35px;margin-top:60px}
+    .card{background:#0f172a;padding:40px;border-radius:20px;box-shadow:0 20px 50px rgba(0,0,0,.6);transition:.4s}
+    .card:hover{transform:translateY(-12px)}
     .floating-btn{position:fixed;bottom:30px;z-index:1000;width:70px;height:70px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px;box-shadow:0 10px 25px rgba(0,0,0,.6);transition:.3s}
     .whatsapp-btn{right:30px;background:#25D366;color:#fff}
     .call-btn{left:30px;background:#00A884;color:#fff}
     .floating-btn:hover{transform:scale(1.15)}
-    .lang-switch{position:fixed;top:20px;right:30px;z-index:1000;background:#1e293b;padding:10px 15px;border-radius:30px;cursor:pointer;font-size:16px}
+    .lang-switch{position:fixed;top:20px;right:30px;z-index:1000;background:#1e293b;padding:10px 15px;border-radius:30px;cursor:pointer}
     form{max-width:550px;margin:50px auto;display:grid;gap:20px}
     input,textarea{padding:18px;border-radius:12px;border:none;background:#1e293b;color:#fff;font-size:18px}
     footer{background:#020617;padding:60px 30px;text-align:center;color:#94a3b8}
-    .terms-content{max-width:900px;margin:40px auto;padding:20px;background:#0f172a;border-radius:12px;line-height:1.8}
-    @media(max-width:768px){h1{font-size:48px}h2{font-size:34px}.navbar{flex-wrap:wrap;padding:15px 20px}nav a{margin-left:12px;font-size:15px}.lang-switch{top:10px;right:15px;padding:8px 12px;font-size:14px}}
+    .social-icons{display:flex;justify-content:center;gap:20px;margin:30px 0}
+    .social-icons a{font-size:40px;color:#fff}
+    .social-icons a:hover{transform:scale(1.2)}
+    #popup{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:9998;align-items:center;justify-content:center}
+    .popup-content{background:#0f172a;padding:40px;border-radius:20px;max-width:500px;width:90%;text-align:center;position:relative}
+    .close-btn{position:absolute;top:15px;right:20px;font-size:30px;color:#38bdf8;cursor:pointer}
+    @media(max-width:768px){h1{font-size:50px}h2{font-size:36px}.btn{margin-top:30px}}
   </style>
 </head>
 <body>
-  <div id="loader">Swadesh Link — Global Services Loading...</div>
+  <div id="loader">Swadesh Link — Loading Global Services...</div>
 
-<div class="lang-switch" onclick="changeLanguage('en')">Language: <span id="currentLang">English</span></div>
+<!-- ON-LOAD POPUP -->
+<div id="popup">
+  <div class="popup-content">
+    <span class="close-btn" onclick="document.getElementById('popup').style.display='none'">×</span>
+    <h2 style="color:#38bdf8">Instant Help - Get Started</h2>
+    <p>Any service worldwide? Tell us now.</p>
+    <form id="popupForm">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Query / Service Needed" required></textarea>
+      <button type="submit" class="btn">Send Now</button>
+    </form>
+  </div>
+</div>
 
 <header>
   <div class="navbar">
     <div class="logo">Swadesh Link</div>
-    <nav id="nav">
-      <a href="#home" data-en="Home" data-hi="होम">Home</a>
-      <a href="#about" data-en="About" data-hi="हमारे बारे में">About</a>
-      <a href="#services" data-en="Services" data-hi="सेवाएँ">Services</a>
-      <a href="#payment" data-en="Payments" data-hi="पेमेंट">Payments</a>
-      <a href="#blog" data-en="Blog" data-hi="ब्लॉग">Blog</a>
-      <a href="#contact" data-en="Contact" data-hi="संपर्क">Contact</a>
-      <a href="#terms" data-en="Terms & Conditions" data-hi="शर्तें">Terms</a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#payment">Money Transfer</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
 <!-- HOME SECTION -->
 <section id="home" class="section" style="background-image:url('https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1600&q=80')">
   <div class="content">
-    <h1 id="homeTitle">Trusted Global Services.<br>Any Country, Any Language</h1>
-    <p id="homeSub">Government • IT • Business • Money Transfer to India • 24×7 Support</p>
-    <a href="#contact" class="btn" id="getStarted">Get Started</a>
+    <h1>Global Trusted Services<br>Every Sector, Every Country</h1>
+    <p>Government • Private • Public • IT • Legal • Visa • Consulting • Money Transfer Worldwide</p>
+    <a href="#contact" class="btn">Get Started</a>
   </div>
 </section>
 
 <!-- ABOUT SECTION -->
 <section id="about" class="section" style="background-image:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80')">
   <div class="content">
-    <h2 id="aboutTitle">About Swadesh Link</h2>
-    <p id="aboutText">We connect the world to India — fast, secure government documentation, IT solutions, business registration, international money transfer (UPI, Bank, PayPal, Wise). Serving clients from USA, UK, UAE, Canada, Australia, Europe — in your language.</p>
-    <p>Founded in 2025, we believe in transparency, speed, and trust. No hidden fees. No delays.</p>
+    <h2>About Swadesh Link</h2>
+    <p>We are your one-stop global partner. From government documents & filings to private/public sector solutions, IT development, full business setup, visa & legal consulting, advocate support, and secure money transfers anywhere—to India or abroad.</p>
+    <p>Every field, every sector, every language. Clients from USA, UK, UAE, Canada, Europe, Australia—served instantly, securely, 24×7.</p>
   </div>
 </section>
 <!-- SERVICES SECTION -->
 <section id="services" class="section" style="background-image:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80')">
   <div class="content">
-    <h2 id="servicesTitle">Our Services</h2>
+    <h2>Our Comprehensive Global Services</h2>
+    <p>We cover every sector, every field, every country — no limits, no exceptions.</p>
     <div class="cards">
-      <div class="card">📄 Govt Documentation (Aadhaar, PAN, Passport, Visa, Attestation)</div>
-      <div class="card">🏛 Public & Private Sector Assistance (Licenses, Permits)</div>
-      <div class="card">💻 IT Solutions: Website/App Development, Digital Marketing</div>
-      <div class="card">📊 Business Consulting: GST/FSSAI/Company Registration</div>
-      <div class="card">💸 Global Money Transfer to India: UPI/Bank/PayPal/Wise</div>
-      <div class="card">🌍 24/7 Multi-Language Support (Hindi, English, Spanish, French)</div>
+      <div class="card">Government Sector: All Documents, Filings, Aadhaar, PAN, Passport, Visa, Attestation</div>
+      <div class="card">Private & Public Sector: Licenses, Permits, Compliance, Approvals, Full Assistance</div>
+      <div class="card">IT Sector: Website, App, Software, Digital Marketing, Cloud, AI Solutions</div>
+      <div class="card">Business Sector: Company Registration, GST/FSSAI, Startup Setup, International Expansion</div>
+      <div class="card">Legal & Consulting: Visa Consulting, Advocate Support, Business Law, HR Consulting</div>
+      <div class="card">Money Transfer: India & Abroad — Bank, UPI, PayPal, Wise, Remitly, Crypto-to-INR</div>
+      <div class="card">24×7 Support: Every Language (Hindi, English, Arabic, Spanish, French, German, Chinese)</div>
     </div>
   </div>
 </section>
-
-<!-- PAYMENTS SECTION -->
-<section id="payment" class="section" style="background-image:url('https://images.unsplash.com/photo-1563013544-69b614f7ff1c?auto=format&fit=crop&w=1600&q=80')">
+<!-- PAYMENT & MONEY TRANSFER SECTION -->
+<section id="payment" class="section" style="background-image:url('https://images.unsplash.com/photo-1556740714-a8395b3a74dd?auto=format&fit=crop&w=1600&q=80')">
   <div class="content">
-    <h2 id="paymentTitle">Secure Payments & Transfers</h2>
-    <p>We accept payments from anywhere — instant & safe.</p>
+    <h2>Secure Money Transfers — India & Worldwide</h2>
+    <p>Instant, safe, low-cost transfers using trusted platforms — no hidden charges.</p>
     <div class="cards">
-      <div class="card">Instant UPI (Google Pay, PhonePe, BHIM)</div>
+      <div class="card">UPI (PhonePe, Google Pay, BHIM) — Instant to any Indian account</div>
       <div class="card">Bank Transfer (NEFT/RTGS/IMPS) — Any Indian Bank</div>
-      <div class="card">International: PayPal, Wise, Stripe, Remitly</div>
-      <div class="card">Crypto to INR (USDT/BTC) — Optional & Secure</div>
+      <div class="card">International: PayPal, Wise, Stripe, Remitly, Western Union</div>
+      <div class="card">Crypto → INR Conversion (USDT, BTC) — Secure & Fast</div>
+      <div class="card">Transfers to/from any country — USA, UK, UAE, Canada, Europe</div>
     </div>
   </div>
 </section>
 
-<!-- BLOG SECTION -->
+<!-- BLOG & UPDATES SECTION -->
 <section id="blog" class="section" style="background-image:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80')">
   <div class="content">
-    <h2 id="blogTitle">Blog & Updates</h2>
+    <h2>Blog & Latest Updates</h2>
     <div class="cards">
-      <div class="card">Digital Growth Roadmap for Businesses</div>
-      <div class="card">Complete Guide: Govt Documentation in India</div>
-      <div class="card">Latest Tech Trends 2026</div>
-      <div class="card">How to Send Money to India from Abroad (Safe Ways)</div>
+      <div class="card">How to Get Any Govt Document in India from Abroad</div>
+      <div class="card">Visa & Immigration Consulting Guide 2026</div>
+      <div class="card">Best Ways to Transfer Money to India Securely</div>
+      <div class="card">Starting a Business in India: Step-by-Step for Foreigners</div>
+      <div class="card">IT Trends & Digital Transformation Tips</div>
     </div>
   </div>
 </section>
 <!-- CONTACT SECTION -->
 <section id="contact" class="section" style="background-image:url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80')">
   <div class="content">
-    <h2 id="contactTitle">Contact Us</h2>
-    <p id="contactText">Ready to start? Call, WhatsApp, or message us anytime. We reply within minutes.</p>
-    <p>📞 +91 8307619156<br>✉ swadeshlink@gmail.com</p>
+    <h2>Contact Us Anytime</h2>
+    <p>24×7 support in any language. Call, WhatsApp or message us.</p>
+    <p>📞 +91 7015657213<br>✉ swadeshlink@gmail.com</p>
     
     <form id="contactForm">
-      <input type="text" id="name" placeholder="Your Name" required>
-      <input type="email" id="email" placeholder="Your Email" required>
-      <textarea id="query" placeholder="Your Message/Query" required></textarea>
-      <button type="submit" class="btn" id="sendBtn">Send Message</button>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Query / Service Needed" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
     </form>
     
-    <a href="https://wa.me/918307619156?text=हैलो%20Swadesh%20Link!%20मैं%20आपकी%20सर्विस%20के%20बारे%20में%20जानना%20चाहता%20हूँ।" class="btn">WhatsApp Now</a>
-  </div>
-</section>
-
-<!-- TERMS & CONDITIONS SECTION -->
-<section id="terms" class="section" style="background-image:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80')">
-  <div class="content">
-    <h2 id="termsTitle">Terms & Conditions</h2>
-    <div class="terms-content">
-      <p><strong>1. Agreement:</strong> By using Swadesh Link services, you agree to these terms.</p>
-      <p><strong>2. Liability:</strong> We provide assistance only. All government processes depend on official authorities—we are not responsible for rejections or delays.</p>
-      <p><strong>3. Payments:</strong> Fees are non-refundable after service start. International transfers via third-party (PayPal/Wise) may have extra charges.</p>
-      <p><strong>4. Data Privacy:</strong> We follow DPDP Act 2023. Your info is encrypted, not shared without consent.</p>
-      <p><strong>5. Service Scope:</strong> We cover govt docs, IT, business, transfers—but no illegal activities allowed.</p>
-      <p><strong>6. Updates:</strong> Terms can change. Check here regularly.</p>
-      <p><strong>7. Governing Law:</strong> Laws of India apply. Disputes in Delhi courts.</p>
-      <p>Last updated: February 2026.</p>
+    <a href="https://wa.me/917015657213?text=Hello%20Swadesh%20Link,%20I%20need%20help%20with..." target="_blank" class="btn">WhatsApp Us</a>
+    
+    <!-- SOCIAL MEDIA ICONS -->
+    <div class="social-icons">
+      <a href="https://www.instagram.com/swadeshlink" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61567560955458" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://x.com/LinkSwades69046" target="_blank"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://www.youtube.com/@swadeshlink" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.pinterest.com/swadeshlink/" target="_blank"><i class="fab fa-pinterest"></i></a>
+      <a href="https://www.reddit.com/user/Plenty-Tumbleweed926/" target="_blank"><i class="fab fa-reddit"></i></a>
+      <a href="https://www.quora.com/profile/Swadesh-Link" target="_blank"><i class="fab fa-quora"></i></a>
     </div>
   </div>
 </section>
 
+<!-- TERMS & CONDITIONS -->
+<section id="terms" class="section" style="background-image:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80')">
+  <div class="content">
+    <h2>Terms & Conditions</h2>
+    <div class="terms-content">
+      <p><strong>1. Scope:</strong> We provide assistance across all sectors: government, private, public, IT, legal, visa consulting, business setup, money transfer, and more — worldwide.</p>
+      <p><strong>2. Services:</strong> Consulting by experts, advocates, visa experts, IT professionals. All services are advisory—final approvals depend on official authorities.</p>
+      <p><strong>3. Payments:</strong> Non-refundable post-initiation. Third-party platforms (PayPal, Wise, etc.) may charge extra.</p>
+      <p><strong>4. Privacy:</strong> Data encrypted as per DPDP Act. Not shared without consent.</p>
+      <p><strong>5. No Illegal Services:</strong> Strictly no illegal activities or documents.</p>
+      <p><strong>6. Changes:</strong> Terms can be updated. Check regularly.</p>
+      <p><strong>7. Law:</strong> Governed by Indian laws. Disputes in Delhi courts.</p>
+      <p>Last updated: Feb 2026.</p>
+    </div>
+  </div>
+</section>
 <!-- FOOTER -->
 <footer>
-  <p><b>Serving the World with Trust & Technology.</b></p>
-  <p>© 2026 Swadesh Link. All Rights Reserved. | Made in India</p>
+  <p><b>We provide every service worldwide—Government, Private, IT, Legal, Visa, Business, Money Transfer to India & Abroad.</b></p>
+  <p>© 2026 Swadesh Link. All Rights Reserved | Made with Trust & Technology</p>
 </footer>
 
 <!-- FLOATING BUTTONS -->
 <div class="floating-btn whatsapp-btn">
-  <a href="https://wa.me/918307619156?text=हैलो Swadesh Link!" target="_blank" style="color:#fff"><i class="fab fa-whatsapp"></i></a>
+  <a href="https://wa.me/917015657213?text=Hello%20Swadesh%20Link,%20I%20need%20help%20with..." target="_blank" style="color:#fff"><i class="fab fa-whatsapp"></i></a>
 </div>
 <div class="floating-btn call-btn">
-  <a href="tel:+918307619156" style="color:#fff"><i class="fas fa-phone"></i></a>
+  <a href="tel:+917015657213" style="color:#fff"><i class="fas fa-phone"></i></a>
 </div>
 
-<!-- JAVASCRIPT: Language switch + Form submit + Loader -->
+<!-- JAVASCRIPT: Loader, Popup, Language, Form -->
 <script>
-  function changeLanguage(lang) {
-    document.querySelectorAll(' [data-hi]').forEach(el => {
-      el.textContent = (lang === 'hi') ? el.dataset.hi : el.dataset.en;
-    });
-    document.getElementById('currentLang').textContent = (lang === 'hi') ? 'हिंदी' : 'English';
-  }
-
-  // Auto-detect browser language (Hindi first if possible)
-  window.onload = () => {
+  // Hide loader on load
+  window.onload = function() {
     document.getElementById('loader').style.display = 'none';
-    if (navigator.language.includes('hi') || navigator.languages.includes('hi')) {
-      changeLanguage('hi');
-    }
+    // Show popup automatically
+    document.getElementById('popup').style.display = 'flex';
   };
 
-  // Fake form submit alert (real में backend ऐड करो)
-  document.getElementById('contactForm').addEventListener('submit', (e) => {
+  // Fake form submit (real backend add later)
+  document.getElementById('popupForm').addEventListener('submit', (e) => {
     e.preventDefault();
-    alert('Message sent! We will reply soon. 😊');
+    alert('Thank you! We will reply within minutes.');
+    document.getElementById('popup').style.display = 'none';
+  });
+
+  document.getElementById('contactForm')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Message sent successfully!');
   });
 </script>
 </body>
