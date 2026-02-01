@@ -3,10 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Swadesh Link | Global Service Hub</title>
   <meta name="description" content="Worldwide: Government, Private Agents, IT/AI/Robotics, Visa/Legal, Real Estate & Vehicles, Payments, Investments, Courses — Fast, Secure, Global.">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
+    <style>
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;   /* ye line sabse zaroori hai – side scroll band karegi */
+}
     *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
     body{background:#020617;color:#fff;line-height:1.7;overflow-x:hidden}
     #loader{position:fixed;inset:0;background:#020617;z-index:9999;display:flex;align-items:center;justify-content:center;color:#38bdf8;font-size:28px;transition:opacity 1s}
@@ -52,6 +60,36 @@
       h1{font-size:40px}
       p{font-size:16px}
     }
+    }
+    /* Phone pe side scroll fix + better layout */
+@media only screen and (max-width: 768px) {
+    body, html {
+        overflow-x: hidden !important;
+    }
+    .navbar {
+        max-width: 100% !important;
+        width: 100% !important;
+        padding: 10px !important;
+        margin: 0 !important;
+        box-sizing: border-box;
+    }
+    nav {
+        flex-direction: column !important;
+        gap: 15px !important;
+        align-items: center !important;
+    }
+    section {
+        padding: 40px 15px !important;
+        width: 100% !important;
+    }
+    /* Agar cards ya blocks wide hain to ye add karo */
+    div, .card, .service {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 15px 0 !important;
+    }
+}
+    
   </style>
 </head>
 <body>
