@@ -87,37 +87,38 @@
       </nav>
     </div>
   </header>
-  <!-- HOME SECTION - Fixed: Normal heading + Button नीचे सेट -->
+<!-- HOME SECTION - Final: No Glow, No Brown Line, Normal Heading -->
 <section id="home" class="section" 
   style="background-image: url('https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1600&q=80'); 
          background-size: cover; background-position: center; 
          background-attachment: fixed; min-height: 100vh; 
-         padding: 120px 20px 80px; position: relative; color: white; 
-         text-align: center; text-shadow: 1px 1px 3px rgba(0,0,0,0.6);">
+         padding: 120px 20px 100px; position: relative; color: white; 
+         text-align: center;">
 
-  <!-- हल्का dark overlay (text साफ दिखे, जरूरत पड़ने पर opacity कम कर सकते हो) -->
-  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); z-index: 1;"></div>
+  <!-- Overlay for text clarity (केवल जरूरत जितना) -->
+  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.45); z-index: 1;"></div>
 
   <div class="content" style="position: relative; z-index: 2; max-width: 1100px; margin: 0 auto;">
 
-    <!-- Heading: normal, no extra shine/glow, bold और clean -->
-    <h1 style="font-size: 4.2rem; font-weight: 800; margin-bottom: 1.5rem; line-height: 1.1; letter-spacing: 1px;">
+    <!-- Heading: बिल्कुल नॉर्मल, कोई ग्लो/लाइट/लाइन नहीं -->
+    <h1 style="font-size: 4.5rem; font-weight: 900; margin-bottom: 1.8rem; line-height: 1.1; letter-spacing: 0.5px; color: white; 
+               -webkit-text-stroke: 0px; text-shadow: none; /* कोई shadow, कोई stroke नहीं */">
       Swadesh Link<br>Your Global Trusted Partner
     </h1>
 
-    <p style="font-size: 1.6rem; max-width: 900px; margin: 0 auto 3rem; line-height: 1.6; font-weight: 500;">
+    <p style="font-size: 1.7rem; max-width: 950px; margin: 0 auto 4rem; line-height: 1.6; font-weight: 500; color: #f0f0f0;">
       Every Sector • Every Country • Every Language<br>
       Government | Private | IT | AI | Robotics | Visa | Legal | Real Estate | Vehicle Sales | Payments | Investments | Courses & More
     </p>
 
-    <!-- Button: अब पूरी तरह नीचे, words के ठीक नीचे सेट -->
-    <div style="margin-top: 60px;">
+    <!-- Button नीचे, स्पेस के साथ -->
+    <div style="margin-top: 80px;">
       <a href="#contact" class="btn" 
-         style="display: inline-block; padding: 20px 60px; font-size: 1.6rem; 
-                background: #0066ff; color: white; border-radius: 60px; 
+         style="display: inline-block; padding: 22px 70px; font-size: 1.7rem; 
+                background: #0066ff; color: white; border-radius: 70px; 
                 text-decoration: none; font-weight: bold; 
                 box-shadow: 0 12px 35px rgba(0,102,255,0.5); 
-                transition: transform 0.3s, box-shadow 0.3s;">
+                transition: all 0.3s;">
         Get Started Now
       </a>
     </div>
