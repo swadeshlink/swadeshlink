@@ -466,7 +466,7 @@
   </div>
 </section>
 
-<!-- FLOATING BUTTONS - All Combined (WhatsApp, Call + Legal Pages) -->
+<!-- FLOATING BUTTONS - Clean & Professional -->
 <div class="floating-container">
   <div class="floating-btn whatsapp-btn">
     <a href="https://wa.me/917015657213?text=Hi%20Swadesh%20Link,%20I%20need%20help..." target="_blank" title="Chat on WhatsApp">
@@ -505,7 +505,7 @@
   </div>
 </div>
 
-<!-- Updated Footer - Clean, Professional & Matching -->
+<!-- FOOTER - Clean & Professional -->
 <footer style="background: #0f0f1a; color: white; padding: 80px 20px 40px; text-align: center; margin-top: 100px; border-top: 1px solid rgba(255,255,255,0.08);">
   <div style="max-width: 1200px; margin: 0 auto;">
     <!-- Quick Navigation Links -->
@@ -537,11 +537,16 @@
   </div>
 </footer>
 
-<!-- Floating Buttons CSS - Modern, Matching & Responsive -->
+<!-- Floating Buttons CSS - Clean, Matching & Responsive -->
 <style>
-  .floating-btn {
+  .floating-container {
     position: fixed;
+    bottom: 20px;
     right: 20px;
+    z-index: 1000;
+  }
+
+  .floating-btn {
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -551,37 +556,37 @@
     color: white;
     font-size: 1.6rem;
     box-shadow: 0 6px 20px rgba(0,0,0,0.35);
-    z-index: 1000;
+    margin-bottom: 15px;
     transition: all 0.3s ease;
     text-decoration: none;
   }
 
   .floating-btn:hover {
-    transform: translateY(-4px) scale(1.1);
+    transform: translateY(-5px) scale(1.1);
     box-shadow: 0 12px 30px rgba(0,0,0,0.5);
   }
 
-  /* Stacked from bottom - WhatsApp & Call at bottom, legal above */
-  .whatsapp-btn { bottom: 20px;  background: #25D366; }
-  .call-btn     { bottom: 80px;  background: #00c853; }
-  .terms-btn    { bottom: 140px; background: #0066ff; }
-  .privacy-btn  { bottom: 200px; background: #00aaff; }
-  .refund-btn   { bottom: 260px; background: #ff6b00; }
-  .faq-btn      { bottom: 320px; background: #8e44ad; }
+  /* Colors */
+  .whatsapp-btn { background: #25D366; }
+  .call-btn     { background: #00c853; }
+  .terms-btn    { background: #0066ff; }
+  .privacy-btn  { background: #00aaff; }
+  .refund-btn   { background: #ff6b00; }
+  .faq-btn      { background: #8e44ad; }
 
-  /* Responsive - Smaller & better spacing on mobile */
+  /* Mobile Responsive */
   @media (max-width: 768px) {
     .floating-btn {
       width: 45px;
       height: 45px;
       font-size: 1.4rem;
-      right: 15px;
+      margin-bottom: 12px;
     }
-    .whatsapp-btn { bottom: 15px; }
-    .call-btn     { bottom: 70px; }
-    .terms-btn    { bottom: 125px; }
-    .privacy-btn  { bottom: 180px; }
-    .refund-btn   { bottom: 235px; }
-    .faq-btn      { bottom: 290px; }
+    .floating-container {
+      right: 15px;
+      bottom: 15px;
+    }
   }
 </style>
+</body>
+</html>
