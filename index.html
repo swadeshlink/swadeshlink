@@ -66,7 +66,19 @@
       transform:translateY(0); 
       opacity:1; 
     }
-    .close-btn { position:absolute; top:15px; right:20px; font-size:36px; color:#38bdf8; cursor:pointer; font-weight:bold; }
+    .close-btn { 
+      position:absolute; 
+      top:15px; 
+      right:20px; 
+      font-size:36px; 
+      color:#38bdf8; 
+      cursor:pointer; 
+      font-weight:bold; 
+      background:none; 
+      border:none; 
+      padding:0; 
+    }
+    .close-btn:hover { color:#ff4d4d; }
     form input, form textarea { width:100%; padding:16px; margin:12px 0; border:none; border-radius:10px; background:#1e293b; color:#fff; font-size:16px; }
     footer { background:#020617; padding:50px 20px; text-align:center; color:#94a3b8; font-size:16px; }
     .social-icons { display:flex; justify-content:center; gap:20px; margin:30px 0; }
@@ -111,7 +123,7 @@
       100% { transform: translate(1px, -2px) rotate(-1deg); }
     }
     .btn.shake-on-click:active { animation: shake 0.5s; }
-    /* Google Translate Button - Top-Left */
+    /* Google Translate Button */
     #google_translate_element { 
       position: fixed; 
       top: 20px; 
@@ -137,10 +149,10 @@
 <body>
   <div id="loader">Swadesh Link — Loading...</div>
 
-  <!-- POPUP (Slide-up from bottom) -->
+  <!-- SLIDE-UP POPUP (Quick Inquiry) -->
   <div id="popup" onclick="event.target === this && closePopup()">
     <div class="popup-content">
-      <span class="close-btn" onclick="closePopup()">×</span>
+      <button class="close-btn" onclick="closePopup()">×</button>
       <h2 style="color:#38bdf8">Quick Inquiry</h2>
       <p>Get in touch — Any service, any time.</p>
       <form id="popupForm">
@@ -332,7 +344,7 @@
     </div>
   </section>
 
-  <!-- BLOG SECTION (comma-separated) -->
+  <!-- BLOG SECTION -->
   <section id="blog" class="section" style="background-image:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80')">
     <div class="content">
       <h2>Latest Blog & Updates</h2>
@@ -530,18 +542,18 @@
       document.getElementById('loader').style.opacity = '0';
       setTimeout(() => document.getElementById('loader').style.display = 'none', 1000);
 
-      // Show popup with slide-up animation
+      // Show slide-up popup on every visit (client can close it to see full website)
       setTimeout(() => {
         const popup = document.getElementById('popup');
         popup.style.display = 'flex';
-        setTimeout(() => popup.classList.add('show'), 100); // small delay for transition
+        setTimeout(() => popup.classList.add('show'), 100);
       }, 1500);
     };
 
     function closePopup() {
       const popup = document.getElementById('popup');
       popup.classList.remove('show');
-      setTimeout(() => popup.style.display = 'none', 600); // match transition time
+      setTimeout(() => popup.style.display = 'none', 600);
     }
 
     // Mobile dropdown toggle
