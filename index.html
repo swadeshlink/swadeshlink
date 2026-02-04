@@ -466,55 +466,122 @@
   </div>
 </section>
 
-,<!-- FOOTER -->
-<footer>
-  <p>© 2026 Swadesh Link | All Rights Reserved</p>
-  <p>Global Services | Real Estate | Payments | Investments | Courses | 24×7 Worldwide Support</p>
-  <p>Phone: +91 8307619156 | Email: swadeshlink@gmail.com</p>
+<!-- FLOATING BUTTONS - All Combined (WhatsApp, Call + Legal Pages) -->
+<div class="floating-container">
+  <div class="floating-btn whatsapp-btn">
+    <a href="https://wa.me/917015657213?text=Hi%20Swadesh%20Link,%20I%20need%20help..." target="_blank" title="Chat on WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <div class="floating-btn call-btn">
+    <a href="tel:+918307619156" title="Call Us">
+      <i class="fas fa-phone"></i>
+    </a>
+  </div>
+
+  <div class="floating-btn terms-btn">
+    <a href="/terms.html" title="Terms & Conditions">
+      <i class="fas fa-file-contract"></i>
+    </a>
+  </div>
+
+  <div class="floating-btn privacy-btn">
+    <a href="/privacy-policy.html" title="Privacy Policy">
+      <i class="fas fa-shield-alt"></i>
+    </a>
+  </div>
+
+  <div class="floating-btn refund-btn">
+    <a href="/refund-policy.html" title="Refund & Cancellation">
+      <i class="fas fa-undo"></i>
+    </a>
+  </div>
+
+  <div class="floating-btn faq-btn">
+    <a href="/faq.html" title="FAQ">
+      <i class="fas fa-question-circle"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Updated Footer - Clean, Professional & Matching -->
+<footer style="background: #0f0f1a; color: white; padding: 80px 20px 40px; text-align: center; margin-top: 100px; border-top: 1px solid rgba(255,255,255,0.08);">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <!-- Quick Navigation Links -->
+    <div style="margin-bottom: 40px; font-size: 1.15rem; letter-spacing: 0.5px;">
+      <a href="/" style="color: #00aaff; margin: 0 15px; text-decoration: none; transition: color 0.3s;">Home</a> •
+      <a href="#about" style="color: #00aaff; margin: 0 15px; text-decoration: none; transition: color 0.3s;">About</a> •
+      <a href="#services" style="color: #00aaff; margin: 0 15px; text-decoration: none; transition: color 0.3s;">Services</a> •
+      <a href="#blog" style="color: #00aaff; margin: 0 15px; text-decoration: none; transition: color 0.3s;">Blog</a> •
+      <a href="#courses" style="color: #00aaff; margin: 0 15px; text-decoration: none; transition: color 0.3s;">Courses</a> •
+      <a href="#roadmap" style="color: #00aaff; margin: 0 15px; text-decoration: none; transition: color 0.3s;">Roadmap</a> •
+      <a href="#contact" style="color: #00aaff; margin: 0 15px; text-decoration: none; transition: color 0.3s;">Contact</a>
+    </div>
+
+    <!-- Legal Pages - Clean Text Links -->
+    <div style="margin-bottom: 30px; font-size: 1.1rem; opacity: 0.9;">
+      <a href="/terms.html" style="color: #ffffff; margin: 0 15px; text-decoration: none; transition: color 0.3s;">Terms & Conditions</a> •
+      <a href="/privacy-policy.html" style="color: #ffffff; margin: 0 15px; text-decoration: none; transition: color 0.3s;">Privacy Policy</a> •
+      <a href="/disclaimer.html" style="color: #ffffff; margin: 0 15px; text-decoration: none; transition: color 0.3s;">Disclaimer</a> •
+      <a href="/refund-policy.html" style="color: #ffffff; margin: 0 15px; text-decoration: none; transition: color 0.3s;">Refund & Cancellation</a> •
+      <a href="/faq.html" style="color: #ffffff; margin: 0 15px; text-decoration: none; transition: color 0.3s;">FAQ</a>
+    </div>
+
+    <!-- Copyright & Contact Info -->
+    <p style="font-size: 1rem; opacity: 0.8; margin: 0;">
+      © 2026 Swadesh Link. All rights reserved.<br>
+      Your Global Trusted Partner | Panipat, Haryana, India<br>
+      WhatsApp: +91 7015657213 | Phone: +91 8307619156 | Email: info@swadeshlink.com
+    </p>
+  </div>
 </footer>
 
-<!-- FLOATING BUTTONS -->
-<div class="floating-btn whatsapp-btn">
-  <a href="https://wa.me/917015657213?text=Hi%20Swadesh%20Link,%20I%20need%20help..." target="_blank" style="color:#fff"><i class="fab fa-whatsapp"></i></a>
-</div>
-<div class="floating-btn call-btn">
-  <a href="tel:+918307619156" style="color:#fff"><i class="fas fa-phone"></i></a>
-</div>
-
-<!-- JAVASCRIPT -->
-<script>
-  window.onload = () => {
-    document.getElementById('loader').style.opacity = '0';
-    setTimeout(() => document.getElementById('loader').style.display = 'none', 800);
-    setTimeout(() => {
-      document.getElementById('popup').style.display = 'flex';
-      setTimeout(() => {
-        document.querySelector('.popup-content').style.transform = 'translateY(0)';
-        document.querySelector('.popup-content').style.opacity = '1';
-      }, 300);
-    }, 1500);
-  };
-
-  function closePopup() {
-    document.getElementById('popup').style.display = 'none';
+<!-- Floating Buttons CSS - Modern, Matching & Responsive -->
+<style>
+  .floating-btn {
+    position: fixed;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.6rem;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    text-decoration: none;
   }
 
-  // Form submits (fake)
-  document.querySelectorAll('form').forEach(f => {
-    f.addEventListener('submit', e => {
-      e.preventDefault();
-      alert('Thanks! We’ll reply soon.');
-      f.reset();
-    });
-  });
+  .floating-btn:hover {
+    transform: translateY(-4px) scale(1.1);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+  }
 
-  // Smooth scroll for nav
-  document.querySelectorAll('nav a').forEach(a => {
-    a.addEventListener('click', e => {
-      e.preventDefault();
-      document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});
-    });
-  });
-</script>
-</body>
-</html>
+  /* Stacked from bottom - WhatsApp & Call at bottom, legal above */
+  .whatsapp-btn { bottom: 20px;  background: #25D366; }
+  .call-btn     { bottom: 80px;  background: #00c853; }
+  .terms-btn    { bottom: 140px; background: #0066ff; }
+  .privacy-btn  { bottom: 200px; background: #00aaff; }
+  .refund-btn   { bottom: 260px; background: #ff6b00; }
+  .faq-btn      { bottom: 320px; background: #8e44ad; }
+
+  /* Responsive - Smaller & better spacing on mobile */
+  @media (max-width: 768px) {
+    .floating-btn {
+      width: 45px;
+      height: 45px;
+      font-size: 1.4rem;
+      right: 15px;
+    }
+    .whatsapp-btn { bottom: 15px; }
+    .call-btn     { bottom: 70px; }
+    .terms-btn    { bottom: 125px; }
+    .privacy-btn  { bottom: 180px; }
+    .refund-btn   { bottom: 235px; }
+    .faq-btn      { bottom: 290px; }
+  }
+</style>
