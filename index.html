@@ -2,96 +2,289 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0", maximum-scale=5.0,  maximum-scale=0.5, user-scalable=yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Swadesh Link | Global Service Hub</title>
   <meta name="description" content="Worldwide: Government, Private Agents, IT/AI/Robotics, Visa/Legal, Real Estate & more.">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
     html, body {
-    margin: 0 !important;
-    padding: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    overflow-x: hidden !important; 
-    front-size: 16px !important; /* base font size set kar do taaki text bohot bada na ho */
-}
-    *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
-    body{background:#020617;color:#fff;line-height:1.7;overflow-x:hidden}
-    #loader{position:fixed;inset:0;background:#020617;z-index:9999;display:flex;align-items:center;justify-content:center;color:#38bdf8;font-size:28px;transition:opacity 1s}
-    header{position:fixed;top:0;width:100%;background:rgba(2,6,23,.95);backdrop-filter:blur(12px);z-index:1000;padding:10px 0}
-    .navbar{max-width:1400px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:0 20px}
-    .logo{font-size:32px;font-weight:900;color:#38bdf8}
-    nav{display:flex;gap:24px;flex-wrap:wrap;justify-content:flex-end}
-    nav a{color:#fff;text-decoration:none;font-weight:600;font-size:16px;transition:.3s}
-    nav a:hover{color:#38bdf8;transform:scale(1.05)}
-    .section{padding:100px 20px 60px;min-height:80vh;display:flex;align-items:center;justify-content:center;text-align:center;background-size:cover;background-position:center;position:relative}
-    .section::before{content:'';position:absolute;inset:0;background:rgba(2,6,23,.78)}
-    .content{position:relative;max-width:1200px;padding:0 15px}
-    h1{font-size:64px;line-height:1.1;margin-bottom:25px;font-weight:900;text-shadow:0 0 15px #38bdf8}
-    h2{font-size:44px;margin:35px 0 20px;font-weight:800}
-    p{font-size:18px;opacity:.9;max-width:800px;margin:auto}
-    .btn{padding:16px 40px;background:#2563eb;color:#fff;border:none;border-radius:50px;font-size:18px;font-weight:700;cursor:pointer;transition:.4s;margin-top:30px}
-    .btn:hover{background:#1d4ed8;transform:scale(1.08);box-shadow:0 0 20px #2563eb}
-    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;margin-top:50px}
-    .card{background:#0f172a;padding:30px;border-radius:18px;box-shadow:0 15px 40px rgba(0,0,0,.6);transition:.4s;font-size:16px}
-    .card:hover{transform:translateY(-10px);box-shadow:0 20px 50px rgba(56,189,248,.3)}
-    #popup{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:9998;align-items:center;justify-content:center}
-    .popup-content{background:#0f172a;padding:40px;border-radius:20px;max-width:480px;width:90%;text-align:center;position:relative;transform:translateY(-50px);opacity:0;transition:all .6s}
-    .close-btn{position:absolute;top:15px;right:20px;font-size:36px;color:#38bdf8;cursor:pointer;font-weight:bold}
-    form input,textarea{width:100%;padding:16px;margin:12px 0;border:none;border-radius:10px;background:#1e293b;color:#fff;font-size:16px}
-    footer{background:#020617;padding:50px 20px;text-align:center;color:#94a3b8;font-size:16px}
-    .social-icons{display:flex;justify-content:center;gap:20px;margin:30px 0}
-    .social-icons a{font-size:36px;color:#fff;transition:.3s}
-    .social-icons a:hover{transform:scale(1.15);color:#38bdf8}
-    .floating-btn{position:fixed;bottom:20px;z-index:1000;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;box-shadow:0 8px 20px rgba(0,0,0,.6);transition:.3s}
-    .whatsapp-btn{right:20px;background:#25D366;color:#fff}
-    .call-btn{left:20px;background:#00A884;color:#fff}
-    .floating-btn:hover{transform:scale(1.12)}
-    @media (max-width:768px){
-      h1{font-size:48px}
-      h2{font-size:36px}
-      nav{gap:12px; font-size:14px}
-      .navbar{flex-direction:column;padding:15px}
-      .section{padding:80px 15px 50px}
-      .popup-content{padding:30px}
-      .close-btn{top:10px;right:15px;font-size:32px}
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow-x: hidden;
+      font-size: 16px;
+      font-family: 'Segoe UI', sans-serif;
     }
-    @media (max-width:480px){
-      h1{font-size:40px}
-      p{font-size:16px}
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
+
+    body {
+      background: #020617;
+      color: #fff;
+      line-height: 1.7;
+      overflow-x: hidden;
     }
-    /* Phone pe side scroll fix + better layout */
-@media only screen and (max-width: 768px) {
-    body, html {
-        overflow-x: hidden !important;
+
+    /* Loader removed to fix stuck loading */
+    #loader {
+      display: none;
     }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(2,6,23,0.95);
+      backdrop-filter: blur(12px);
+      z-index: 1000;
+      padding: 10px 0;
+    }
+
     .navbar {
-        max-width: 100% !important;
-        width: 100% !important;
-        padding: 10px !important;
-        margin: 0 !important;
-        box-sizing: border-box;
+      max-width: 1400px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
     }
+
+    .logo {
+      font-size: 32px;
+      font-weight: 900;
+      color: #38bdf8;
+    }
+
     nav {
-        flex-direction: column !important;
-        gap: 15px !important;
-        align-items: center !important;
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
-    section {
-        padding: 40px 15px !important;
-        width: 100% !important;
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      transition: 0.3s;
     }
-   .hero, main, section {
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 20px 15px !important;
-    box-sizing: border-box !important;
-}
-</style>
+
+    nav a:hover {
+      color: #38bdf8;
+      transform: scale(1.05);
+    }
+
+    .section {
+      padding: 100px 20px 60px;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(2,6,23,0.78);
+    }
+
+    .content {
+      position: relative;
+      max-width: 1200px;
+      padding: 0 15px;
+    }
+
+    h1 {
+      font-size: 64px;
+      line-height: 1.1;
+      margin-bottom: 25px;
+      font-weight: 900;
+      text-shadow: 0 0 15px #38bdf8;
+    }
+
+    h2 {
+      font-size: 44px;
+      margin: 35px 0 20px;
+      font-weight: 800;
+    }
+
+    p {
+      font-size: 18px;
+      opacity: 0.9;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .btn {
+      padding: 16px 40px;
+      background: #2563eb;
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      font-size: 18px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.4s;
+      margin-top: 30px;
+    }
+
+    .btn:hover {
+      background: #1d4ed8;
+      transform: scale(1.08);
+      box-shadow: 0 0 20px #2563eb;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
+
+    .card {
+      background: #0f172a;
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+      transition: 0.4s;
+      font-size: 16px;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 50px rgba(56,189,248,0.3);
+    }
+
+    #popup {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      z-index: 9998;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .popup-content {
+      background: #0f172a;
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 480px;
+      width: 90%;
+      text-align: center;
+      position: relative;
+      transform: translateY(-50px);
+      opacity: 0;
+      transition: all 0.6s;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 36px;
+      color: #38bdf8;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    form input, textarea {
+      width: 100%;
+      padding: 16px;
+      margin: 12px 0;
+      border: none;
+      border-radius: 10px;
+      background: #1e293b;
+      color: #fff;
+      font-size: 16px;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 30px 0;
+    }
+
+    .social-icons a {
+      font-size: 36px;
+      color: #fff;
+      transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.15);
+      color: #38bdf8;
+    }
+
+    .floating-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .floating-btn {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.6rem;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .floating-btn:hover {
+      transform: translateY(-5px) scale(1.1);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+    }
+
+    .whatsapp-btn { background: #25D366; }
+    .call-btn     { background: #00c853; }
+    .terms-btn    { background: #0066ff; }
+    .privacy-btn  { background: #00aaff; }
+    .refund-btn   { background: #ff6b00; }
+    .faq-btn      { background: #8e44ad; }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 48px; }
+      h2 { font-size: 36px; }
+      nav { gap: 12px; font-size: 14px; }
+      .navbar { flex-direction: column; padding: 15px; }
+      .section { padding: 80px 15px 50px; }
+      .popup-content { padding: 30px; }
+      .close-btn { top: 10px; right: 15px; font-size: 32px; }
+      .floating-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1.4rem;
+        margin-bottom: 12px;
+      }
+      .floating-container { right: 15px; bottom: 15px; }
+    }
+  </style>
 </head>
 <body>
-  <div id="loader">Swadesh Link — Loading...</div>
+
+  <!-- Loader removed to fix stuck loading -->
+
   <!-- POPUP -->
   <div id="popup" onclick="event.target === this && closePopup()">
     <div class="popup-content">
@@ -106,6 +299,7 @@
       </form>
     </div>
   </div>
+
   <!-- HEADER -->
   <header>
     <div class="navbar">
@@ -121,415 +315,245 @@
       </nav>
     </div>
   </header>
-<!-- HOME SECTION - Final: No Glow, No Brown Line, Normal Heading -->
-<section id="home" class="section" 
-  style="background-image: url('https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1600&q=80'); 
-         background-size: cover; background-position: center; 
-         background-attachment: fixed; min-height: 100vh; 
-         padding: 120px 20px 100px; position: relative; color: white; 
-         text-align: center;">
 
-  <!-- Overlay for text clarity (केवल जरूरत जितना) -->
-  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.45); z-index: 1;"></div>
+  <!-- HOME SECTION -->
+  <section id="home" class="section" 
+    style="background-image: url('https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1600&q=80'); 
+           background-size: cover; background-position: center; 
+           background-attachment: fixed; min-height: 100vh; 
+           padding: 120px 20px 100px; position: relative; color: white; 
+           text-align: center;">
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.45); z-index: 1;"></div>
+    <div class="content" style="position: relative; z-index: 2; max-width: 1100px; margin: 0 auto;">
+      <h1 style="font-size: 4.5rem; font-weight: 900; margin-bottom: 1.8rem; line-height: 1.1; letter-spacing: 0.5px; color: white;">
+        Swadesh Link<br>Your Global Trusted Partner
+      </h1>
+      <p style="font-size: 1.7rem; max-width: 950px; margin: 0 auto 4rem; line-height: 1.6; font-weight: 500; color: #f0f0f0;">
+        Every Sector • Every Country • Every Language<br>
+        Government | Private | IT | AI | Robotics | Visa | Legal | Real Estate | Vehicle Sales & Purchase | Payments | Investments | Courses & More
+      </p>
+      <div style="margin-top: 80px;">
+        <a href="#contact" class="btn" 
+           style="display: inline-block; padding: 22px 70px; font-size: 1.7rem; 
+                  background: #0066ff; color: white; border-radius: 70px; 
+                  text-decoration: none; font-weight: bold; 
+                  box-shadow: 0 12px 35px rgba(0,102,255,0.5); 
+                  transition: all 0.3s;">
+          Get Started Now
+        </a>
+      </div>
+    </div>
+  </section>
 
-  <div class="content" style="position: relative; z-index: 2; max-width: 1100px; margin: 0 auto;">
+  <!-- ABOUT SECTION -->
+  <section id="about" class="section" style="background-image:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80')">
+    <div class="content">
+      <h2>About Swadesh Link</h2>
+      <p>We are your one-stop global partner — from government documents to private agents, IT development, AI & Robotics solutions, full business setup, visa & legal support, real estate & vehicle deals, secure payments (India ↔ Worldwide), investments, and online/offline courses.</p>
+      <p>Serving clients in USA, UK, UAE, Canada, Europe, Australia — instant, secure, 24×7 in any language. No limits. Ready for 2026 & beyond.</p>
+    </div>
+  </section>
 
-    <!-- Heading: बिल्कुल नॉर्मल, कोई ग्लो/लाइट/लाइन नहीं -->
-    <h1 style="font-size: 4.5rem; font-weight: 900; margin-bottom: 1.8rem; line-height: 1.1; letter-spacing: 0.5px; color: white; 
-               -webkit-text-stroke: 0px; text-shadow: none; /* कोई shadow, कोई stroke नहीं */">
-      Swadesh Link<br>Your Global Trusted Partner
-    </h1>
+  <!-- SERVICES SECTION -->
+  <section id="services" class="section" 
+    style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80'); 
+           background-size: cover; background-position: center; 
+           background-attachment: fixed; min-height: 100vh; 
+           padding: 120px 20px 80px; position: relative; color: white; 
+           text-shadow: 1px 1px 4px rgba(0,0,0,0.7);">
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.45); z-index: 1;"></div>
+    <div class="content" style="position: relative; z-index: 2; max-width: 1300px; margin: 0 auto; text-align: center;">
+      <h2 style="font-size: 3.5rem; margin-bottom: 1rem; font-weight: 800;">Our Global Services</h2>
+      <p style="font-size: 1.4rem; max-width: 900px; margin: 0 auto 2rem; line-height: 1.7;">
+        Full-spectrum support — every sector, every country, every need. No limits.
+      </p>
 
-    <p style="font-size: 1.7rem; max-width: 950px; margin: 0 auto 4rem; line-height: 1.6; font-weight: 500; color: #f0f0f0;">
-      Every Sector • Every Country • Every Language<br>
-      Government | Private | IT | AI | Robotics | Visa | Legal | Real Estate | Vehicle Sales & Purchase | Payments | Investments | Courses & More
-    </p>
+      <!-- Legal Terms Box -->
+      <div style="background: rgba(0,0,0,0.58); padding: 30px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.25); max-width: 1000px; margin: 0 auto 4.5rem; text-align: left; font-size: 1.35rem; line-height: 1.8; box-shadow: 0 12px 35px rgba(0,0,0,0.65);">
+        <strong style="font-size: 1.55rem; color: white; display: block; margin-bottom: 15px;">Important Terms & Payment Policy</strong><br>
+        • Private / Consulting / Non-Government Services: 50% advance payment required before commencement of work. The remaining 50% is due only upon successful completion and client satisfaction.<br><br>
+        • All Government-related Services: 100% full advance payment mandatory upfront.<br><br>
+        • Client Default / Bad-Faith Non-Payment: Immediate legal action will be initiated.<br><br>
+        • Company’s Obligation & Client Protection: If the Company is unable to complete the agreed services within the committed timeframe solely due to its own fault, the Client shall be entitled to a full 100% refund.<br><br>
+        • This policy is fully compliant with RBI, FEMA, PCI-DSS, and other laws.
+      </div>
 
-    <!-- Button नीचे, स्पेस के साथ -->
-    <div style="margin-top: 80px;">
-      <a href="#contact" class="btn" 
-         style="display: inline-block; padding: 22px 70px; font-size: 1.7rem; 
-                background: #0066ff; color: white; border-radius: 70px; 
-                text-decoration: none; font-weight: bold; 
-                box-shadow: 0 12px 35px rgba(0,102,255,0.5); 
-                transition: all 0.3s;">
-        Get Started Now
+      <div class="cards">
+        <!-- Your services cards code here (Government, Private, etc.) -->
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG SECTION -->
+  <section id="blog" class="section" style="background-image:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80')">
+    <div class="content">
+      <h2>Latest Blog & Updates</h2>
+      <p>Stay ahead — tips, guides, and insights on global business, tech, visas, real estate, and more.</p>
+      <div class="cards">
+        <!-- Your blog cards code here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- COURSES SECTION -->
+  <section id="courses" class="section" style="background-image:url('https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1600&q=80')">
+    <div class="content">
+      <h2>Online & Offline Courses</h2>
+      <p>Practical skills for real-world success — beginner to expert. Earn while you learn.</p>
+      <div class="cards">
+        <!-- Your courses cards code here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ROADMAP SECTION -->
+  <section id="roadmap" class="section" 
+    style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80'); 
+           background-size: cover; background-position: center; 
+           background-attachment: fixed; padding: 90px 20px; min-height: 80vh; 
+           position: relative; color: white; text-shadow: 1px 1px 4px rgba(0,0,0,0.8);">
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.35);"></div>
+    <div class="content" style="position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; text-align: center;">
+      <h2 style="font-size: 3.4rem; margin-bottom: 1.5rem; font-weight: 800;">Our Roadmap — 2026 & Beyond</h2>
+      <p style="font-size: 1.35rem; max-width: 900px; margin: 0 auto 3rem; line-height: 1.7;">
+        AI-first, secure, seamless global services. Client-driven milestones — transparency, speed, no borders.  
+        The future is here. Join us.
+      </p>
+
+      <div class="cards">
+        <!-- Your roadmap cards code here -->
+      </div>
+
+      <div style="margin-top: 100px;">
+        <a href="#contact" class="btn" style="display: inline-block; padding: 20px 60px; font-size: 1.5rem; background: #0066ff; color: white; border-radius: 60px; text-decoration: none; box-shadow: 0 12px 40px rgba(0,102,255,0.5); transition: transform 0.3s, box-shadow 0.3s;">
+          Join the Journey
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="section" style="background-image:url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80')">
+    <div class="content">
+      <h2>Contact Us — Always Online</h2>
+      <p>Any need, any time, any language. We respond in minutes.</p>
+      <p style="font-size:28px;margin:35px 0">📞 +91 8307619156<br>✉ swadeshlink@gmail.com</p>
+      
+      <form id="contactForm" style="max-width:550px;margin:40px auto;display:grid;gap:20px">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message / Service Needed" required rows="6"></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+      
+      <a href="https://wa.me/917015657213?text=Hi%20Swadesh%20Link,%20I%20need%20help..." target="_blank" class="btn" style="margin-top:35px">WhatsApp Now</a>
+      
+      <div class="social-icons">
+        <a href="https://www.instagram.com/swadeshlink" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61567560955458" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://x.com/LinkSwades69046" target="_blank"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.youtube.com/@swadeshlink" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.pinterest.com/swadeshlink/" target="_blank"><i class="fab fa-pinterest"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLOATING BUTTONS -->
+  <div class="floating-container">
+    <div class="floating-btn whatsapp-btn">
+      <a href="https://wa.me/917015657213?text=Hi%20Swadesh%20Link,%20I%20need%20help..." target="_blank" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
       </a>
     </div>
 
-  </div>
-</section>
-<!-- ABOUT SECTION -->
-<section id="about" class="section" style="background-image:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80')">
-  <div class="content">
-    <h2>About Swadesh Link</h2>
-    <p>We are your one-stop global partner — from government documents to private agents, IT development, AI & Robotics solutions, full business setup, visa & legal support, real estate & vehicle deals, secure payments (India ↔ Worldwide), investments, and online/offline courses.</p>
-    <p>Serving clients in USA, UK, UAE, Canada, Europe, Australia — instant, secure, 24×7 in any language. No limits. Ready for 2026 & beyond.</p>
-  </div>
-</section>
-<!-- SERVICES SECTION - Final Mixed Version with All Legal Terms at Top -->
-<section id="services" class="section" 
-  style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80'); 
-         background-size: cover; background-position: center; 
-         background-attachment: fixed; min-height: 100vh; 
-         padding: 120px 20px 80px; position: relative; color: white; 
-         text-shadow: 1px 1px 4px rgba(0,0,0,0.7);">
-
-  <!-- Dark overlay for readability -->
-  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.45); z-index: 1;"></div>
-
-  <div class="content" style="position: relative; z-index: 2; max-width: 1300px; margin: 0 auto; text-align: center;">
-
-    <h2 style="font-size: 3.5rem; margin-bottom: 1rem; font-weight: 800;">Our Global Services</h2>
-    
-    <p style="font-size: 1.4rem; max-width: 900px; margin: 0 auto 2rem; line-height: 1.7;">
-      Full-spectrum support — every sector, every country, every need. No limits.
-    </p>
-
-    <!-- All Important Legal & Payment Terms (Strong, Professional Box) -->
-    <div style="background: rgba(0,0,0,0.58); padding: 30px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.25); max-width: 1000px; margin: 0 auto 4.5rem; text-align: left; font-size: 1.35rem; line-height: 1.8; box-shadow: 0 12px 35px rgba(0,0,0,0.65);">
-      <strong style="font-size: 1.55rem; color: white; display: block; margin-bottom: 15px;">Important Terms & Payment Policy  
-      (Applicable to All Clients – Indian & Foreign – Strictly Enforced)</strong><br>
-
-      • <strong>Private / Consulting / Non-Government Services</strong> (IT, AI, Real Estate, Business Setup, Investments, etc.):  
-      <strong>50% advance payment</strong> required before commencement of work. The remaining <strong>50%</strong> is due only upon successful completion of services and written/confirmed client satisfaction — fully legal, secure & documented.<br><br>
-
-      • <strong>All Government-related Services</strong> (Aadhaar, PAN, Passport, Attestation, Visa, Official Filings, Approvals, etc.):  
-      <strong>100% full advance payment mandatory upfront</strong> due to non-refundable government fees, third-party charges and fixed processing timelines. Work commences <strong>only after full payment receipt</strong> — no exceptions allowed.<br><br>
-
-      • <strong>Client Default / Bad-Faith Non-Payment (Non-Government Services):</strong>  
-      If the Client (Indian or Foreign) fails, refuses, delays, or makes false statements/representations to avoid paying the remaining 50% balance after successful completion and satisfaction confirmation, the Company shall immediately initiate full recovery through all available <strong>lawful legal remedies</strong> under Indian law and applicable international laws. Remedies include but are not limited to:<br>
-      &nbsp;&nbsp;– Formal legal demand notices and pre-litigation reminders<br>
-      &nbsp;&nbsp;– Filing of summary civil recovery suits under Order 37 of the Code of Civil Procedure, 1908 (fast-track recovery)<br>
-      &nbsp;&nbsp;– Arbitration proceedings under the Arbitration and Conciliation Act, 1996 (if agreed or applicable)<br>
-      &nbsp;&nbsp;– Interest at <strong>18% per annum</strong> on overdue amounts + recovery of all legal costs & expenses from the Client<br>
-      &nbsp;&nbsp;– Suspension/termination of any ongoing or related services<br>
-      &nbsp;&nbsp;– Reporting to credit bureaus/authorities (where legally permissible)<br>
-      &nbsp;&nbsp;– Pursuit of enforcement in foreign jurisdictions for international clients<br><br>
-
-      • All dues shall be recovered <strong>exclusively through judicial, arbitral, regulatory and other lawful channels only</strong>. The Company will <strong>never</strong> resort to any illegal, unauthorised, coercive, unethical, forceful, or extra-legal methods under any circumstances.<br><br>
-
-      • <strong>Company’s Obligation & Client Protection:</strong>  
-      In the event the Company is unable to complete the agreed services within the committed timeframe <strong>solely due to its own fault, negligence or default</strong>, or if the services are found deficient under law, the Client shall be entitled to a <strong>full 100% refund</strong> of all amounts paid. Any additional compensation or damages (if claimed) shall be as per the <strong>Consumer Protection Act, 2019</strong> and other relevant consumer laws. The Client may approach the appropriate Consumer Dispute Redressal Commission if desired.<br><br>
-
-      • This policy is <strong>fully compliant</strong> with RBI guidelines, FEMA regulations, PCI-DSS standards, Consumer Protection Act 2019, Indian Contract Act 1872, Information Technology Act 2000, and all applicable Indian & international laws. It applies <strong>uniformly and mandatorily</strong> to every Client — Indian or Foreign — with <strong>no exceptions</strong>.<br><br>
-
-      <span style="color: #ff4d4d; font-weight: 700; font-size: 1.2rem;">Important Note:</span> Any act of bad faith, false representation, intentional refusal to pay after benefiting from completed work, or fraudulent conduct may attract additional civil and/or criminal consequences under applicable laws (including provisions related to cheating, breach of trust, and unfair trade practices).
-    </div>
-
-    <!-- Cards with Bold Sector Headings + Only 5 Services -->
-    <div class="cards" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; margin: 0 auto;">
-      
-      <div class="card" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(12px); padding: 45px 30px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.25); min-height: 220px; text-align: center;">
-        <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 15px; color: #00aaff;">Government Sector</h3>
-        <p style="font-size: 1.3rem; line-height: 1.6;">
-          Aadhaar, PAN, Passport, Attestation, Filings
-        </p>
-      </div>
-      
-      <div class="card" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(12px); padding: 45px 30px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.25); min-height: 220px; text-align: center;">
-        <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 15px; color: #00aaff;">Private Sector</h3>
-        <p style="font-size: 1.3rem; line-height: 1.6;">
-          Licenses, Permits, Compliance, Approvals, Agent Services
-        </p>
-      </div>
-      
-      <div class="card" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(12px); padding: 45px 30px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.25); min-height: 220px; text-align: center;">
-        <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 15px; color: #00aaff;">IT & AI Sector</h3>
-        <p style="font-size: 1.3rem; line-height: 1.6;">
-          Websites, Apps, Software, Digital Marketing, AI/Robotics
-        </p>
-      </div>
-      
-      <div class="card" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(12px); padding: 45px 30px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.25); min-height: 220px; text-align: center;">
-        <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 15px; color: #00aaff;">Legal & Visa Sector</h3>
-        <p style="font-size: 1.3rem; line-height: 1.6;">
-          Advocate Support, Visa Consulting, Immigration, Business Law
-        </p>
-      </div>
-      
-      <div class="card" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(12px); padding: 45px 30px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.25); min-height: 220px; text-align: center;">
-        <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 15px; color: #00aaff;">Business Setup Sector</h3>
-        <p style="font-size: 1.3rem; line-height: 1.6;">
-          Company Registration, GST/FSSAI, Startup, Global Expansion
-        </p>
-      </div>
-      
-      <div class="card" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(12px); padding: 45px 30px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.25); min-height: 220px; text-align: center;">
-        <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 15px; color: #00aaff;">Real Estate & Vehicles Sector</h3>
-        <p style="font-size: 1.3rem; line-height: 1.6;">
-          Buy/Sell, Lease, Credit, Documentation (Worldwide)
-        </p>
-      </div>
-      
-      <div class="card" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(12px); padding: 45px 30px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.25); min-height: 220px; text-align: center;">
-        <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 15px; color: #00aaff;">Payments Sector</h3>
-        <p style="font-size: 1.3rem; line-height: 1.6;">
-          Secure Transfers India ↔ Abroad (UPI, Bank, Wise, Crypto)
-        </p>
-      </div>
-      
-      <div class="card" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(12px); padding: 45px 30px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.25); min-height: 220px; text-align: center;">
-        <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 15px; color: #00aaff;">Investments Sector</h3>
-        <p style="font-size: 1.3rem; line-height: 1.6;">
-          Business Partnerships, Startups, Ventures Globally
-        </p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- BLOG SECTION -->
-<section id="blog" class="section" style="background-image:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80')">
-  <div class="content">
-    <h2>Latest Blog & Updates</h2>
-    <p>Stay ahead — tips, guides, and insights on global business, tech, visas, real estate, and more.</p>
-    <div class="cards">
-      <!-- 1. Government Sector -->
-      <div class="card">
-        <h3><strong>Government Sector</strong></h3>
-        <p>Public sector companies & departments (PSUs like SBI, ONGC, Railways).<br>
-        Services: Secure jobs, pension, national policies.<br>
-        Info: Jobs, schemes, tenders from our blog.</p>
-      </div>
-
-      <!-- 2. Private Sector -->
-      <div class="card">
-        <h3><strong>Private Sector</strong></h3>
-        <p>Private companies (Reliance, Tata, Infosys, startups).<br>
-        Services: High salary, fast growth, funding.<br>
-        Info: Jobs, business tips — read our blogs.</p>
-      </div>
-
-      <!-- 3. Primary Sector -->
-      <div class="card">
-        <h3><strong>Primary Sector</strong></h3>
-        <p>Agriculture, mining, fishing, forestry.<br>
-        Services: Subsidies, farming tools, exports.<br>
-        Info: Crop prices, rural jobs — check blogs.</p>
-      </div>
-
-      <!-- 4. Secondary Sector -->
-      <div class="card">
-        <h3><strong>Secondary Sector</strong></h3>
-        <p>Manufacturing (cars, steel, textiles).<br>
-        Services: Factories, supply chain, machinery.<br>
-        Info: Production trends, exports — blog updates.</p>
-      </div>
-
-      <!-- 5. Tertiary Sector -->
-      <div class="card">
-        <h3><strong>Tertiary Sector</strong></h3>
-        <p>Services (banking, retail, healthcare, tourism).<br>
-        Services: Hospitals, shops, transport.<br>
-        Info: Consumer trends, market demand — read now.</p>
-      </div>
-
-      <!-- 6. IT Sector -->
-      <div class="card">
-        <h3><strong>IT & AI Sector</strong></h3>
-        <p>Software, AI, robotics, cloud.<br>
-        Services: Development, training, tech tools.<br>
-        Info: Skills, latest trends — our blog has it.</p>
-      </div>
-
-      <!-- 7. Financial Sector -->
-      <div class="card">
-        <h3><strong>Financial Sector</strong></h3>
-        <p>Banks, insurance, stocks, crypto.<br>
-        Services: Loans, investments, trading.<br>
-        Info: Rates, tips, news — check blogs.</p>
-      </div>
-
-      <!-- 8. Real Estate Sector -->
-      <div class="card">
-        <h3><strong>Real Estate Sector</strong></h3>
-        <p>Property in India, UAE, USA.<br>
-        Services: Deals, loans, legal help.<br>
-        Info: Prices, best locations — blog guides.</p>
-      </div>
-
-      <!-- 9. Quaternary Sector -->
-      <div class="card">
-        <h3><strong>Quaternary Sector</strong></h3>
-        <p>Knowledge & Intelligence (research, data, AI).<br>
-        Services: R&D, analytics, consulting.<br>
-        Info: Research papers, tech insights — blog se पढ़ो.</p>
-      </div>
-
-      <!-- 10. Quinary Sector -->
-      <div class="card">
-        <h3><strong>Quinary Sector</strong></h3>
-        <p>Top-level decision makers (CEOs, ministers, experts).<br>
-        Services: Strategy, policy advising.<br>
-        Info: Leadership tips, global trends — our blogs.</p>
-      </div>
-    </div>
-    <p style="text-align:center; margin-top:30px; font-weight:bold; font-size:1.1rem;">
-      We provide services & detailed information on ALL these sectors — just read our blogs for everything you need!
-    </p>
-  </div>
-</section>
-<!-- COURSES SECTION -->
-<section id="courses" class="section" style="background-image:url('https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1600&q=80')">
-  <div class="content">
-    <h2>Online & Offline Courses</h2>
-    <p>Practical skills for real-world success — beginner to expert. Earn while you learn.</p>
-    <div class="cards">
-      <div class="card">CSC Center Setup: Full Registration, Training, ₹50k+/month Earnings Guide</div>
-      <div class="card">Government Work: PAN/Aadhaar, Licenses, RTO, G2C Services Training</div>
-      <div class="card">Private Agent Skills: Client Handling, Deals, Commissions Worldwide</div>
-      <div class="card">IT & Tech: Websites, Apps, AI Basics, Robotics Fundamentals</div>
-      <div class="card">Business & Legal: Company Filing, Visa Process, Real Estate Tips</div>
-      <div class="card">Finance Mastery: Secure Payments, Crypto, Investment Strategies</div>
-    </div>
-  </div>
-</section>
-
-   <!-- ROADMAP SECTION -->
- <!-- ROADMAP SECTION - Final Box Style (तुम्हें पसंद वाला) -->
-<section id="roadmap" class="section" 
-  style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80'); 
-         background-size: cover; background-position: center; 
-         background-attachment: fixed; padding: 90px 20px; min-height: 80vh; 
-         position: relative; color: white; text-shadow: 1px 1px 4px rgba(0,0,0,0.8);">
-
-  <!-- Light dark overlay (text साफ दिखे) -->
-  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.35);"></div>
-
-  <div class="content" style="position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; text-align: center;">
-
-    <h2 style="font-size: 3.4rem; margin-bottom: 1.5rem; font-weight: 800;">Our Roadmap — 2026 & Beyond</h2>
-    
-    <p style="font-size: 1.35rem; max-width: 900px; margin: 0 auto 3rem; line-height: 1.7;">
-      AI-first, secure, seamless global services. Client-driven milestones — transparency, speed, no borders.  
-      The future is here. Join us.
-    </p>
-
-    <div class="cards" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 35px; max-width: 1150px; margin: 0 auto 90px;">
-      
-      <div class="card" style="background: rgba(255,255,255,0.18); backdrop-filter: blur(10px); padding: 40px 25px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.25); min-height: 150px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; font-weight: 700;">
-        <strong>Q1 2026:</strong><br>AI Chatbot for Instant Visa/Legal Queries
-      </div>
-      
-      <div class="card" style="background: rgba(255,255,255,0.18); backdrop-filter: blur(10px); padding: 40px 25px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.25); min-height: 150px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; font-weight: 700;">
-        <strong>Q2 2026:</strong><br>Virtual Real Estate Tours + Global Deals
-      </div>
-      
-      <div class="card" style="background: rgba(255,255,255,0.18); backdrop-filter: blur(10px); padding: 40px 25px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.25); min-height: 150px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; font-weight: 700;">
-        <strong>Q3 2026:</strong><br>Blockchain-Based Zero-Fee Payments
-      </div>
-      
-      <div class="card" style="background: rgba(255,255,255,0.18); backdrop-filter: blur(10px); padding: 40px 25px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.25); min-height: 150px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; font-weight: 700;">
-        <strong>Q4 2026:</strong><br>Robotics Automation for Business Setup
-      </div>
-      
-      <div class="card" style="background: rgba(255,255,255,0.18); backdrop-filter: blur(10px); padding: 40px 25px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.25); min-height: 150px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; font-weight: 700;">
-        <strong>2027+:</strong><br>One-Click Worldwide Company Registration
-      </div>
-    </div>
-
-    <!-- Button अब नीचे, स्पेस के साथ -->
-    <div style="margin-top: 100px;">
-      <a href="#contact" class="btn" style="display: inline-block; padding: 20px 60px; font-size: 1.5rem; background: #0066ff; color: white; border-radius: 60px; text-decoration: none; box-shadow: 0 12px 40px rgba(0,102,255,0.5); transition: transform 0.3s, box-shadow 0.3s;">
-        Join the Journey
+    <div class="floating-btn call-btn">
+      <a href="tel:+918307619156" title="Call Us">
+        <i class="fas fa-phone"></i>
       </a>
     </div>
 
-  </div>
-</section>
-<!-- CONTACT SECTION -->
-<section id="contact" class="section" style="background-image:url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80')">
-  <div class="content">
-    <h2>Contact Us — Always Online</h2>
-    <p>Any need, any time, any language. We respond in minutes.</p>
-    <p style="font-size:28px;margin:35px 0">📞 +91 8307619156<br>✉ swadeshlink@gmail.com</p>
-    
-    <form id="contactForm" style="max-width:550px;margin:40px auto;display:grid;gap:20px">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message / Service Needed" required rows="6"></textarea>
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-    
-    <a href="https://wa.me/917015657213?text=Hi%20Swadesh%20Link,%20I%20need%20help..." target="_blank" class="btn" style="margin-top:35px">WhatsApp Now</a>
-    
-    <!-- SOCIAL ICONS -->
-    <div class="social-icons">
-      <a href="https://www.instagram.com/swadeshlink" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.facebook.com/profile.php?id=61567560955458" target="_blank"><i class="fab fa-facebook"></i></a>
-      <a href="https://x.com/LinkSwades69046" target="_blank"><i class="fab fa-x-twitter"></i></a>
-      <a href="https://www.youtube.com/@swadeshlink" target="_blank"><i class="fab fa-youtube"></i></a>
-      <a href="https://www.pinterest.com/swadeshlink/" target="_blank"><i class="fab fa-pinterest"></i></a>
-    </div>
-  </div>
-</section>
-  <!-- FLOATING BUTTONS - Clean & Final -->
-<div class="floating-container">
-  <div class="floating-btn whatsapp-btn">
-    <a href="https://wa.me/917015657213?text=Hi%20Swadesh%20Link,%20I%20need%20help..." target="_blank" title="Chat on WhatsApp">
-      <i class="fab fa-whatsapp"></i>
-    </a>
-  </div>
-
-  <div class="floating-btn call-btn">
-    <a href="tel:+918307619156" title="Call Us">
-      <i class="fas fa-phone"></i>
-    </a>
-  </div>
-
-  <div class="floating-btn terms-btn">
-    <a href="/terms.html" title="Terms & Conditions">
-      <i class="fas fa-file-contract"></i>
-    </a>
-  </div>
-
-  <div class="floating-btn privacy-btn">
-    <a href="/privacy-policy.html" title="Privacy Policy">
-      <i class="fas fa-shield-alt"></i>
-    </a>
-  </div>
-
-  <div class="floating-btn refund-btn">
-    <a href="/refund-policy.html" title="Refund & Cancellation">
-      <i class="fas fa-undo"></i>
-    </a>
-  </div>
-
-  <div class="floating-btn faq-btn">
-    <a href="/faq.html" title="FAQ">
-      <i class="fas fa-question-circle"></i>
-    </a>
-  </div>
-</div>
-  <!-- FOOTER - Clean & Professional (No Phone/Email) -->
-<footer style="background: #0f0f1a; color: white; padding: 80px 20px 40px; text-align: center; margin-top: 100px; border-top: 1px solid rgba(255,255,255,0.08);">
-  <div style="max-width: 1200px; margin: 0 auto;">
-    <!-- Quick Navigation Links -->
-    <div style="margin-bottom: 40px; font-size: 1.15rem; letter-spacing: 0.5px;">
-      <a href="/" style="color: #00aaff; margin: 0 15px; text-decoration: none;">Home</a> •
-      <a href="#about" style="color: #00aaff; margin: 0 15px; text-decoration: none;">About</a> •
-      <a href="#services" style="color: #00aaff; margin: 0 15px; text-decoration: none;">Services</a> •
-      <a href="#blog" style="color: #00aaff; margin: 0 15px; text-decoration: none;">Blog</a> •
-      <a href="#courses" style="color: #00aaff; margin: 0 15px; text-decoration: none;">Courses</a> •
-      <a href="#roadmap" style="color: #00aaff; margin: 0 15px; text-decoration: none;">Roadmap</a> •
-      <a href="#contact" style="color: #00aaff; margin: 0 15px; text-decoration: none;">Contact</a>
+    <div class="floating-btn terms-btn">
+      <a href="/terms.html" title="Terms & Conditions">
+        <i class="fas fa-file-contract"></i>
+      </a>
     </div>
 
-    <!-- Legal Pages Links -->
-    <div style="margin-bottom: 30px; font-size: 1.1rem; opacity: 0.9;">
-      <a href="/terms.html" style="color: #ffffff; margin: 0 15px; text-decoration: none;">Terms & Conditions</a> •
-      <a href="/privacy-policy.html" style="color: #ffffff; margin: 0 15px; text-decoration: none;">Privacy Policy</a> •
-      <a href="/disclaimer.html" style="color: #ffffff; margin: 0 15px; text-decoration: none;">Disclaimer</a> •
-      <a href="/refund-policy.html" style="color: #ffffff; margin: 0 15px; text-decoration: none;">Refund & Cancellation</a> •
-      <a href="/faq.html" style="color: #ffffff; margin: 0 15px; text-decoration: none;">FAQ</a>
+    <div class="floating-btn privacy-btn">
+      <a href="/privacy-policy.html" title="Privacy Policy">
+        <i class="fas fa-shield-alt"></i>
+      </a>
     </div>
 
-    <!-- Copyright Only -->
-    <p style="font-size: 1rem; opacity: 0.8;">
-      © 2026 Swadesh Link. All rights reserved.<br>
-      Your Global Trusted Partner | Panipat, Haryana, India
-    </p>
+    <div class="floating-btn refund-btn">
+      <a href="/refund-policy.html" title="Refund & Cancellation">
+        <i class="fas fa-undo"></i>
+      </a>
+    </div>
+
+    <div class="floating-btn faq-btn">
+      <a href="/faq.html" title="FAQ">
+        <i class="fas fa-question-circle"></i>
+      </a>
+    </div>
   </div>
-</footer>
+
+  <!-- FOOTER -->
+  <footer style="background: #0f0f1a; color: white; padding: 80px 20px 40px; text-align: center; margin-top: 100px; border-top: 1px solid rgba(255,255,255,0.08);">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div style="margin-bottom: 40px; font-size: 1.15rem;">
+        <a href="/" style="color: #00aaff; margin: 0 15px;">Home</a> •
+        <a href="#about" style="color: #00aaff; margin: 0 15px;">About</a> •
+        <a href="#services" style="color: #00aaff; margin: 0 15px;">Services</a> •
+        <a href="#blog" style="color: #00aaff; margin: 0 15px;">Blog</a> •
+        <a href="#courses" style="color: #00aaff; margin: 0 15px;">Courses</a> •
+        <a href="#roadmap" style="color: #00aaff; margin: 0 15px;">Roadmap</a> •
+        <a href="#contact" style="color: #00aaff; margin: 0 15px;">Contact</a>
+      </div>
+
+      <div style="margin-bottom: 30px; font-size: 1.1rem;">
+        <a href="/terms.html" style="color: #ffffff; margin: 0 15px;">Terms & Conditions</a> •
+        <a href="/privacy-policy.html" style="color: #ffffff; margin: 0 15px;">Privacy Policy</a> •
+        <a href="/disclaimer.html" style="color: #ffffff; margin: 0 15px;">Disclaimer</a> •
+        <a href="/refund-policy.html" style="color: #ffffff; margin: 0 15px;">Refund & Cancellation</a> •
+        <a href="/faq.html" style="color: #ffffff; margin: 0 15px;">FAQ</a>
+      </div>
+
+      <p style="font-size: 1rem; opacity: 0.8;">
+        © 2026 Swadesh Link. All rights reserved.<br>
+        Your Global Trusted Partner | Panipat, Haryana, India
+      </p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    window.onload = () => {
+      // Loader is disabled - no code needed
+      setTimeout(() => {
+        const popup = document.getElementById('popup');
+        if (popup) popup.style.display = 'flex';
+      }, 1500);
+
+      document.querySelectorAll('form').forEach(f => {
+        f.addEventListener('submit', e => {
+          e.preventDefault();
+          alert('Thanks! We’ll reply soon.');
+          f.reset();
+        });
+      });
+
+      document.querySelectorAll('nav a').forEach(a => {
+        a.addEventListener('click', e => {
+          e.preventDefault();
+          const target = document.querySelector(a.getAttribute('href'));
+          if (target) target.scrollIntoView({behavior: 'smooth'});
+        });
+      });
+    };
+
+    function closePopup() {
+      document.getElementById('popup').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
