@@ -283,8 +283,6 @@
 </head>
 <body>
 
-  <!-- Loader removed to fix stuck loading -->
-
   <!-- POPUP -->
   <div id="popup" onclick="event.target === this && closePopup()">
     <div class="popup-content">
@@ -379,7 +377,7 @@
       </div>
 
       <div class="cards">
-        <!-- Your services cards code here (Government, Private, etc.) -->
+        <!-- Your services cards here -->
       </div>
     </div>
   </section>
@@ -390,7 +388,7 @@
       <h2>Latest Blog & Updates</h2>
       <p>Stay ahead — tips, guides, and insights on global business, tech, visas, real estate, and more.</p>
       <div class="cards">
-        <!-- Your blog cards code here -->
+        <!-- Your blog cards here -->
       </div>
     </div>
   </section>
@@ -401,7 +399,7 @@
       <h2>Online & Offline Courses</h2>
       <p>Practical skills for real-world success — beginner to expert. Earn while you learn.</p>
       <div class="cards">
-        <!-- Your courses cards code here -->
+        <!-- Your courses cards here -->
       </div>
     </div>
   </section>
@@ -421,7 +419,7 @@
       </p>
 
       <div class="cards">
-        <!-- Your roadmap cards code here -->
+        <!-- Your roadmap cards here -->
       </div>
 
       <div style="margin-top: 100px;">
@@ -528,7 +526,7 @@
   <!-- JavaScript -->
   <script>
     window.onload = () => {
-      // Loader is disabled - no code needed
+      // No loader code - removed to fix stuck loading
       setTimeout(() => {
         const popup = document.getElementById('popup');
         if (popup) popup.style.display = 'flex';
