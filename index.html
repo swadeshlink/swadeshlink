@@ -7,16 +7,9 @@
     <meta name="description" content="Worldwide: Government, Private Agents, IT/AI/Robotics, Visa/Legal, Real Estate & more. Providing services in all sectors across the globe.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        html, body {
-            margin: 0 !important;
-            padding: 0 !important;
-            width: 100% !important;
-            height: 100% !important;
-            overflow-x: hidden !important;
-            font-size: 16px !important;
-        }
+        html, body { margin:0; padding:0; width:100%; height:100%; overflow-x:hidden; font-size:16px; }
         * { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI',sans-serif; }
-        body { background:#020617; color:#fff; line-height:1.7; overflow-x:hidden; }
+        body { background:#020617; color:#fff; line-height:1.7; }
         #loader { position:fixed; inset:0; background:#020617; z-index:9999; display:flex; align-items:center; justify-content:center; color:#38bdf8; font-size:28px; transition:opacity 1s; }
         header { position:fixed; top:0; width:100%; background:rgba(2,6,23,.95); backdrop-filter:blur(12px); z-index:1000; padding:10px 0; }
         .navbar { max-width:1400px; margin:auto; display:flex; justify-content:space-between; align-items:center; padding:0 20px; }
@@ -29,55 +22,21 @@
         .dropdown:hover .dropdown-menu { display:block; }
         .dropdown-menu li a { color:#fff; text-decoration:none; display:block; padding:5px 10px; }
         .dropdown-menu li a:hover { color:#38bdf8; }
-        .section { padding:100px 20px 60px; min-height:80vh; display:flex; align-items:center; justify-content:center; text-align:center; background-size:cover; background-position:center; position:relative; }
+        .section { padding:100px 20px 60px; min-height:80vh; display:flex; align-items:center; justify-content:center; text-align:center; background-size:cover !important; background-position:center !important; background-attachment:fixed !important; position:relative; }
         .section::before { content:''; position:absolute; inset:0; background:rgba(2,6,23,.78); }
         .content { position:relative; max-width:1200px; padding:0 15px; }
-        h1 { font-size:64px; line-height:1.1; margin-bottom:25px; font-weight:900; text-shadow:none; }
-        h2 { font-size:44px; margin:35px 0 20px; font-weight:800; }
-        p { font-size:18px; opacity:.9; max-width:800px; margin:auto; }
-        .btn { padding:16px 40px; background:#2563eb; color:#fff; border:none; border-radius:50px; font-size:18px; font-weight:700; cursor:pointer; transition:.4s; margin-top:30px; }
+        h1 { font-size:clamp(48px, 8vw, 64px); line-height:1.1; margin-bottom:25px; font-weight:900; }
+        h2 { font-size:clamp(36px, 6vw, 44px); margin:35px 0 20px; font-weight:800; }
+        p { font-size:clamp(16px, 3vw, 18px); opacity:.9; max-width:800px; margin:auto; }
+        .btn { padding:16px 40px; background:#2563eb; color:#fff; border:none; border-radius:50px; font-size:clamp(16px, 2.5vw, 18px); font-weight:700; cursor:pointer; transition:.4s; margin-top:30px; }
         .btn:hover { background:#1d4ed8; transform:scale(1.08); box-shadow:0 0 20px #2563eb; }
         .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:30px; margin-top:50px; }
-        .card { background:#0f172a; padding:30px; border-radius:18px; box-shadow:0 15px 40px rgba(0,0,0,.6); transition:.4s; font-size:16px; }
+        .card { background:#0f172a; padding:30px; border-radius:18px; box-shadow:0 15px 40px rgba(0,0,0,.6); transition:.4s; font-size:clamp(15px, 2.2vw, 16px); }
         .card:hover { transform:translateY(-10px); box-shadow:0 20px 50px rgba(56,189,248,.3); }
-        #popup {
-            display:none;
-            position:fixed;
-            inset:0;
-            background:rgba(0,0,0,.85);
-            z-index:9998;
-            align-items:flex-end;
-            justify-content:center;
-        }
-        .popup-content {
-            background:#0f172a;
-            padding:40px;
-            border-radius:20px 20px 0 0;
-            max-width:480px;
-            width:100%;
-            text-align:center;
-            position:relative;
-            transform:translateY(100%);
-            opacity:0;
-            transition:all .6s ease-out;
-            box-shadow:0 -10px 30px rgba(0,0,0,0.5);
-        }
-        #popup.show .popup-content {
-            transform:translateY(0);
-            opacity:1;
-        }
-        .close-btn {
-            position:absolute;
-            top:15px;
-            right:20px;
-            font-size:36px;
-            color:#38bdf8;
-            cursor:pointer;
-            font-weight:bold;
-            background:none;
-            border:none;
-            padding:0;
-        }
+        #popup { display:none; position:fixed; inset:0; background:rgba(0,0,0,.85); z-index:9998; align-items:flex-end; justify-content:center; }
+        .popup-content { background:#0f172a; padding:40px; border-radius:20px 20px 0 0; max-width:480px; width:100%; text-align:center; position:relative; transform:translateY(100%); opacity:0; transition:all .6s ease-out; box-shadow:0 -10px 30px rgba(0,0,0,0.5); }
+        #popup.show .popup-content { transform:translateY(0); opacity:1; }
+        .close-btn { position:absolute; top:15px; right:20px; font-size:36px; color:#38bdf8; cursor:pointer; font-weight:bold; background:none; border:none; padding:0; }
         .close-btn:hover { color:#ff4d4d; }
         form input, form textarea { width:100%; padding:16px; margin:12px 0; border:none; border-radius:10px; background:#1e293b; color:#fff; font-size:16px; }
         footer { background:#020617; padding:50px 20px; text-align:center; color:#94a3b8; font-size:16px; }
@@ -93,7 +52,7 @@
             h2 { font-size:36px; }
             nav ul { gap:12px; font-size:14px; flex-direction:column; align-items:center; }
             .navbar { flex-direction:column; padding:15px; }
-            .section { padding:80px 15px 50px; }
+            .section { padding:80px 15px 50px; min-height:70vh; }
             .popup-content { padding:30px; border-radius:20px 20px 0 0; }
             .close-btn { top:10px; right:15px; font-size:32px; }
             .dropdown-menu { position:static; display:none; }
@@ -102,12 +61,6 @@
         @media (max-width:480px) {
             h1 { font-size:40px; }
             p { font-size:16px; }
-        }
-        @media only screen and (max-width: 768px) {
-            body, html { overflow-x: hidden !important; }
-            .navbar { max-width: 100% !important; width: 100% !important; padding: 10px !important; margin: 0 !important; box-sizing: border-box; }
-            nav ul { flex-direction: column !important; gap: 15px !important; align-items: center !important; }
-            section { padding: 40px 15px !important; width: 100% !important; }
         }
         @keyframes shake {
             0% { transform: translate(1px, 1px) rotate(0deg); }
@@ -123,7 +76,6 @@
             100% { transform: translate(1px, -2px) rotate(-1deg); }
         }
         .btn.shake-on-click:active { animation: shake 0.5s; }
-        /* Google Translate Button */
         #google_translate_element {
             position: fixed;
             top: 20px;
@@ -142,13 +94,12 @@
             transition: all 0.3s;
         }
         #google_translate_element:hover { background: #1d4ed8; transform: translateY(-2px); }
-        #google_translate_element select { background: transparent; color: white; border: none; font-size: 16px; cursor: pointer; appearance: none; }
-        #google_translate_element i { font-size: 18px; }
     </style>
 </head>
 <body>
     <div id="loader">Swadesh Link — Loading...</div>
-        <!-- SLIDE-UP POPUP (Quick Inquiry) -->
+
+    <!-- Quick Inquiry Popup -->
     <div id="popup" onclick="event.target === this && closePopup()">
         <div class="popup-content">
             <button class="close-btn" onclick="closePopup()">×</button>
@@ -162,7 +113,8 @@
             </form>
         </div>
     </div>
-    <!-- HEADER -->
+
+    <!-- Header -->
     <header>
         <div class="navbar">
             <div class="logo">Swadesh Link</div>
@@ -224,29 +176,23 @@
             </nav>
         </div>
     </header>
-    <!-- Google Translate Button -->
+
+    <!-- Google Translate -->
     <div id="google_translate_element">
         <i class="fas fa-globe"></i> Language
     </div>
-    <!-- HOME SECTION -->
-    <section id="home" class="section" style="background-image: url('https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1600&q=80'); background-size: cover; background-position: center; background-attachment: fixed; min-height: 100vh; padding: 120px 20px 100px; position: relative; color: white; text-align: center;">
+
+    <!-- Home Section -->
+    <section id="home" class="section" style="background-image: url('https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1600&q=80');">
         <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.45); z-index: 1;"></div>
         <div class="content" style="position: relative; z-index: 2; max-width: 1100px; margin: 0 auto;">
-            <h1 style="font-size: 4.5rem; font-weight: 900; margin-bottom: 1.8rem; line-height: 1.1; letter-spacing: 0.5px; color: white; text-shadow: none;">
-                Swadesh Link<br>Your Global Trusted Partner
-            </h1>
-            <p style="font-size: 1.7rem; max-width: 950px; margin: 0 auto 4rem; line-height: 1.6; font-weight: 500; color: #f0f0f0;">
-                Every Sector • Every Country • Every Language<br>
-                Government | Private | IT | AI | Robotics | Visa | Legal | Real Estate | Vehicle Sales & Purchase | Payments | Investments | Courses & More
-            </p>
-            <div style="margin-top: 80px;">
-                <a href="#contact" class="btn shake-on-click" style="display: inline-block; padding: 22px 70px; font-size: 1.7rem; background: #0066ff; color: white; border-radius: 70px; text-decoration: none; font-weight: bold; box-shadow: 0 12px 35px rgba(0,102,255,0.5); transition: all 0.3s;">
-                    Get Started Now
-                </a>
-            </div>
+            <h1>Swadesh Link<br>Your Global Trusted Partner</h1>
+            <p>Every Sector • Every Country • Every Language<br>Government | Private | IT | AI | Robotics | Visa | Legal | Real Estate | Vehicle Sales & Purchase | Payments | Investments | Courses & More</p>
+            <a href="#contact" class="btn shake-on-click">Get Started Now</a>
         </div>
     </section>
-    <!-- ABOUT SECTION -->
+
+    <!-- About Section -->
     <section id="about" class="section" style="background-image:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80')">
         <div class="content">
             <h2>About Swadesh Link</h2>
@@ -254,103 +200,48 @@
             <p>Serving clients in USA, UK, UAE, Canada, Europe, Australia — instant, secure, 24×7 in any language. No limits. Ready for 2026 & beyond. Providing services in all sectors worldwide.</p>
         </div>
     </section>
-    <!-- SERVICES SECTION -->
-    <section id="services" class="section" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80'); background-size: cover; background-position: center; background-attachment: fixed; min-height: 100vh; padding: 120px 20px 80px; position: relative; color: white; text-shadow: 1px 1px 4px rgba(0,0,0,0.7);">
+
+    <!-- Services Section -->
+    <section id="services" class="section" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80');">
         <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.45); z-index: 1;"></div>
         <div class="content" style="position: relative; z-index: 2; max-width: 1300px; margin: 0 auto; text-align: center;">
-            <h2 style="font-size: 3.5rem; margin-bottom: 1rem; font-weight: 800;">Our Global Services</h2>
-            <p style="font-size: 1.4rem; max-width: 900px; margin: 0 auto 2rem; line-height: 1.7;">
-                Full-spectrum support — every sector, every country, every need. No limits.
-            </p>
-                <div class="cards">
-                <div class="card" id="government-sector">
-                    <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 15px; color: #00aaff;">Government Sector</h3>
-                    <p style="font-size: 1.3rem; line-height: 1.6;">Aadhaar Services, PAN Card Issuance, Passport Processing, Document Attestation, Official Filings & Approvals</p>
-                </div>
-                <div class="card" id="private-sector">
-                    <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 15px; color: #00aaff;">Private Sector</h3>
-                    <p style="font-size: 1.3rem; line-height: 1.6;">Business Licenses, Compliance Certifications, Permit Acquisitions, Agent Networking, Worldwide Private Consulting</p>
-                </div>
-                <div class="card" id="it-ai-sector">
-                    <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 15px; color: #00aaff;">IT & AI Sector</h3>
-                    <p style="font-size: 1.3rem; line-height: 1.6;">Website Development, Mobile App Creation, Software Solutions, AI Integration, Robotics Engineering</p>
-                </div>
-                <div class="card" id="legal-visa-sector">
-                    <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 15px; color: #00aaff;">Legal & Visa Sector</h3>
-                    <p style="font-size: 1.3rem; line-height: 1.6;">Legal Advocacy, Visa Applications, Immigration Assistance, Business Law Consulting, Contract Drafting</p>
-                </div>
-                <div class="card" id="business-setup-sector">
-                    <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 15px; color: #00aaff;">Business Setup Sector</h3>
-                    <p style="font-size: 1.3rem; line-height: 1.6;">Company Registration, GST/FSSAI Compliance, Startup Incubation, Global Expansion Strategies, Franchise Setup</p>
-                </div>
-                <div class="card" id="real-estate-vehicles-sector">
-                    <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 15px; color: #00aaff;">Real Estate & Vehicles Sector</h3>
-                    <p style="font-size: 1.3rem; line-height: 1.6;">Property Buying/Selling, Leasing Agreements, Vehicle Purchase/Sale, Credit Financing, Global Documentation</p>
-                </div>
-                <div class="card" id="payments-sector">
-                    <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 15px; color: #00aaff;">Payments Sector</h3>
-                    <p style="font-size: 1.3rem; line-height: 1.6;">Secure International Transfers, UPI Integration, Bank Wire Services, Wise Payments, Cryptocurrency Transactions</p>
-                </div>
-                <div class="card" id="investments-sector">
-                    <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 15px; color: #00aaff;">Investments Sector</h3>
-                    <p style="font-size: 1.3rem; line-height: 1.6;">Business Partnerships, Startup Funding, Venture Capital, Global Investments, Portfolio Management</p>
-                </div>
+            <h2>Our Global Services</h2>
+            <p>Full-spectrum support — every sector, every country, every need. No limits.</p>
+            <div class="cards">
+                <div class="card" id="government-sector"><h3>Government Sector</h3><p>Aadhaar Services, PAN Card Issuance, Passport Processing, Document Attestation, Official Filings & Approvals</p></div>
+                <div class="card" id="private-sector"><h3>Private Sector</h3><p>Business Licenses, Compliance Certifications, Permit Acquisitions, Agent Networking, Worldwide Private Consulting</p></div>
+                <div class="card" id="it-ai-sector"><h3>IT & AI Sector</h3><p>Website Development, Mobile App Creation, Software Solutions, AI Integration, Robotics Engineering</p></div>
+                <div class="card" id="legal-visa-sector"><h3>Legal & Visa Sector</h3><p>Legal Advocacy, Visa Applications, Immigration Assistance, Business Law Consulting, Contract Drafting</p></div>
+                <div class="card" id="business-setup-sector"><h3>Business Setup Sector</h3><p>Company Registration, GST/FSSAI Compliance, Startup Incubation, Global Expansion Strategies, Franchise Setup</p></div>
+                <div class="card" id="real-estate-vehicles-sector"><h3>Real Estate & Vehicles Sector</h3><p>Property Buying/Selling, Leasing Agreements, Vehicle Purchase/Sale, Credit Financing, Global Documentation</p></div>
+                <div class="card" id="payments-sector"><h3>Payments Sector</h3><p>Secure International Transfers, UPI Integration, Bank Wire Services, Wise Payments, Cryptocurrency Transactions</p></div>
+                <div class="card" id="investments-sector"><h3>Investments Sector</h3><p>Business Partnerships, Startup Funding, Venture Capital, Global Investments, Portfolio Management</p></div>
             </div>
         </div>
     </section>
-    <!-- BLOG SECTION -->
+
+    <!-- Blog Section -->
     <section id="blog" class="section" style="background-image:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80')">
         <div class="content">
             <h2>Latest Blog & Updates</h2>
             <p>Stay ahead — tips, guides, and insights on global business, tech, visas, real estate, and more. Covering all sectors worldwide.</p>
             <div class="cards">
-                <div class="card" id="government-blog">
-                    <h3><strong>Government Sector</strong></h3>
-                    <p style="font-size: 1.3rem; line-height: 1.6;">Public sector jobs and recruitment, Government schemes and subsidies, Tender bidding and contracts, Policy analysis and compliance, International government collaborations</p>
-                </div>
-                <div class="card" id="private-blog">
-                    <h3><strong>Private Sector</strong></h3>
-                    <p style="font-size: 1.3rem; line-height: 1.6;">Corporate job opportunities, Business funding and investments, Market expansion strategies, Private consulting services, Global private partnerships</p>
-                </div>
-                <div class="card" id="primary-blog">
-                    <h3><strong>Primary Sector</strong></h3>
-                    <p style="font-size: 1.3rem; line-height: 1.6;">Agriculture subsidies and tools, Mining permits and operations, Fishing industry regulations, Forestry management services, Export guidance for primary goods</p>
-                </div>
-                <div class="card" id="secondary-blog">
-                    <h3><strong>Secondary Sector</strong></h3>
-                    <p style="font-size: 1.3rem; line-height: 1.6;">Manufacturing plant setup, Supply chain optimization, Machinery procurement, Export manufacturing trends, Industrial compliance services</p>
-                </div>
-                <div class="card" id="tertiary-blog">
-                    <h3><strong>Tertiary Sector</strong></h3>
-                    <p style="font-size: 1.3rem; line-height: 1.6;">Banking and financial services, Retail business setup, Healthcare facility management, Tourism visa and planning, Transport logistics solutions</p>
-                </div>
-                <div class="card" id="it-ai-blog">
-                    <h3><strong>IT & AI Sector</strong></h3>
-                    <p style="font-size: 1.3rem; line-height: 1.6;">Software development training, AI implementation guides, Robotics engineering tips, Cloud computing services, Cybersecurity solutions</p>
-                </div>
-                <div class="card" id="financial-blog">
-                    <h3><strong>Financial Sector</strong></h3>
-                    <p style="font-size: 1.3rem; line-height: 1.6;">Loan and credit services, Insurance policy guidance, Stock market investments, Cryptocurrency trading, Financial planning consultations</p>
-                </div>
-                <div class="card" id="real-estate-blog">
-                    <h3><strong>Real Estate Sector</strong></h3>
-                    <p style="font-size: 1.3rem; line-height: 1.6;">Property buying guides, Leasing and rental services, Real estate loans, Legal property documentation, Global market price trends</p>
-                </div>
-                <div class="card" id="quaternary-blog">
-                    <h3><strong>Quaternary Sector</strong></h3>
-                    <p style="font-size: 1.3rem; line-height: 1.6;">Research and development support, Data analytics services, AI-based knowledge consulting, Innovation patent filing, Global research collaborations</p>
-                </div>
-                <div class="card" id="quinary-blog">
-                    <h3><strong>Quinary Sector</strong></h3>
-                    <p style="font-size: 1.3rem; line-height: 1.6;">Executive strategy advising, Policy decision support, Leadership training programs, Global trend analysis, High-level consulting services</p>
-                </div>
+                <div class="card" id="government-blog"><h3>Government Sector</h3><p>Public sector jobs and recruitment, Government schemes and subsidies, Tender bidding and contracts, Policy analysis and compliance, International government collaborations</p></div>
+                <div class="card" id="private-blog"><h3>Private Sector</h3><p>Corporate job opportunities, Business funding and investments, Market expansion strategies, Private consulting services, Global private partnerships</p></div>
+                <div class="card" id="primary-blog"><h3>Primary Sector</h3><p>Agriculture subsidies and tools, Mining permits and operations, Fishing industry regulations, Forestry management services, Export guidance for primary goods</p></div>
+                <div class="card" id="secondary-blog"><h3>Secondary Sector</h3><p>Manufacturing plant setup, Supply chain optimization, Machinery procurement, Export manufacturing trends, Industrial compliance services</p></div>
+                <div class="card" id="tertiary-blog"><h3>Tertiary Sector</h3><p>Banking and financial services, Retail business setup, Healthcare facility management, Tourism visa and planning, Transport logistics solutions</p></div>
+                <div class="card" id="it-ai-blog"><h3>IT & AI Sector</h3><p>Software development training, AI implementation guides, Robotics engineering tips, Cloud computing services, Cybersecurity solutions</p></div>
+                <div class="card" id="financial-blog"><h3>Financial Sector</h3><p>Loan and credit services, Insurance policy guidance, Stock market investments, Cryptocurrency trading, Financial planning consultations</p></div>
+                <div class="card" id="real-estate-blog"><h3>Real Estate Sector</h3><p>Property buying guides, Leasing and rental services, Real estate loans, Legal property documentation, Global market price trends</p></div>
+                <div class="card" id="quaternary-blog"><h3>Quaternary Sector</h3><p>Research and development support, Data analytics services, AI-based knowledge consulting, Innovation patent filing, Global research collaborations</p></div>
+                <div class="card" id="quinary-blog"><h3>Quinary Sector</h3><p>Executive strategy advising, Policy decision support, Leadership training programs, Global trend analysis, High-level consulting services</p></div>
             </div>
-            <p style="text-align:center; margin-top:30px; font-weight:bold; font-size:1.1rem;">
-                We provide services & detailed information on ALL these sectors — just read our blogs for everything you need!
-            </p>
+            <p style="text-align:center; margin-top:30px; font-weight:bold; font-size:1.1rem;">We provide services & detailed information on ALL these sectors — just read our blogs for everything you need!</p>
         </div>
     </section>
-    <!-- COURSES SECTION -->
+
+    <!-- Courses Section -->
     <section id="courses" class="section" style="background-image:url('https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1600&q=80')">
         <div class="content">
             <h2>Online & Offline Courses</h2>
@@ -365,15 +256,13 @@
             </div>
         </div>
     </section>
-    <!-- ROADMAP SECTION -->
-    <section id="roadmap" class="section" style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80'); background-size: cover; background-position: center; background-attachment: fixed; padding: 90px 20px; min-height: 80vh; position: relative; color: white; text-shadow: 1px 1px 4px rgba(0,0,0,0.8);">
+
+    <!-- Roadmap Section -->
+    <section id="roadmap" class="section" style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80');">
         <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.35);"></div>
-        <div class="content" style="position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; text-align: center;">
-            <h2 style="font-size: 3.4rem; margin-bottom: 1.5rem; font-weight: 800;">Our Roadmap — 2026 & Beyond</h2>
-            <p style="font-size: 1.35rem; max-width: 900px; margin: 0 auto 3rem; line-height: 1.7;">
-                AI-first, secure, seamless global services across all sectors worldwide. Client-driven milestones — transparency, speed, no borders.
-                The future is here. Join us for services in every sector globally.
-            </p>
+        <div class="content" style="position: relative; z-index: 2;">
+            <h2>Our Roadmap — 2026 & Beyond</h2>
+            <p>AI-first, secure, seamless global services across all sectors worldwide. Client-driven milestones — transparency, speed, no borders. The future is here. Join us for services in every sector globally.</p>
             <div class="cards">
                 <div class="card" id="q1-2026"><strong>Q1 2026:</strong><br>AI Chatbot for Instant Visa/Legal Queries in All Sectors Worldwide</div>
                 <div class="card" id="q2-2026"><strong>Q2 2026:</strong><br>Virtual Real Estate Tours + Global Deals Across All Sectors</div>
@@ -381,14 +270,11 @@
                 <div class="card" id="q4-2026"><strong>Q4 2026:</strong><br>Robotics Automation for Business Setup in Global Sectors</div>
                 <div class="card" id="2027-plus"><strong>2027+:</strong><br>One-Click Worldwide Company Registration in All Sectors</div>
             </div>
-            <div style="margin-top: 100px;">
-                <a href="#contact" class="btn shake-on-click" style="display: inline-block; padding: 20px 60px; font-size: 1.5rem; background: #0066ff; color: white; border-radius: 60px; text-decoration: none; box-shadow: 0 12px 40px rgba(0,102,255,0.5); transition: transform 0.3s, box-shadow 0.3s;">
-                    Join the Journey
-                </a>
-            </div>
+            <a href="#contact" class="btn shake-on-click" style="margin-top:50px;">Join the Journey</a>
         </div>
     </section>
-    <!-- CONTACT SECTION -->
+
+    <!-- Contact Section -->
     <section id="contact" class="section" style="background-image:url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80')">
         <div class="content">
             <h2>Contact Us — Always Online</h2>
@@ -410,31 +296,8 @@
             </div>
         </div>
     </section>
-    <!-- FLOATING BUTTONS -->
-    <div class="floating-container">
-        <div class="floating-btn whatsapp-btn">
-            <a href="https://wa.me/917015657213?text=Hi%20Swadesh%20Link,%20I%20need%20help..." target="_blank" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
-        </div>
-        <div class="floating-btn call-btn">
-            <a href="tel:+918307619156" title="Call Us"><i class="fas fa-phone"></i></a>
-        </div>
-        <div class="floating-btn" style="background: #0066ff; right: 20px; bottom: 100px;">
-            <a href="terms-and-conditions.html" title="Terms & Conditions"><i class="fas fa-file-contract"></i></a>
-        </div>
-        <div class="floating-btn" style="background: #00aaff; right: 20px; bottom: 170px;">
-            <a href="privacy-policy.html" title="Privacy Policy"><i class="fas fa-shield-alt"></i></a>
-        </div>
-        <div class="floating-btn" style="background: #ff6b00; right: 20px; bottom: 240px;">
-            <a href="refund-and-cancellation.html" title="Refund & Service Cancellation"><i class="fas fa-undo"></i></a>
-        </div>
-        <div class="floating-btn" style="background: #8e44ad; right: 20px; bottom: 310px;">
-            <a href="faq.html" title="FAQ"><i class="fas fa-question-circle"></i></a>
-        </div>
-        <div class="floating-btn" style="background: #e74c3c; right: 20px; bottom: 380px;">
-            <a href="disclaimer.html" title="Disclaimer"><i class="fas fa-exclamation-triangle"></i></a>
-        </div>
-    </div>
-    <!-- FOOTER -->
+
+    <!-- Footer -->
     <footer style="background: #0f0f1a; color: white; padding: 80px 20px 40px; text-align: center; margin-top: 100px; border-top: 1px solid rgba(255,255,255,0.08);">
         <div style="max-width: 1200px; margin: 0 auto;">
             <div style="margin-bottom: 40px; font-size: 1.15rem; letter-spacing: 0.5px;">
@@ -450,18 +313,45 @@
             </p>
         </div>
     </footer>
-    <!-- Google Translate Script -->
+
+    <!-- Floating Buttons (jitne pehle the utne hi – 7 total) -->
+    <div class="floating-btn whatsapp-btn">
+        <a href="https://wa.me/917015657213?text=Hi%20Swadesh%20Link,%20I%20need%20help..." target="_blank" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <div class="floating-btn call-btn">
+        <a href="tel:+918307619156" title="Call Us"><i class="fas fa-phone"></i></a>
+    </div>
+    <div class="floating-btn" style="background: #0066ff; right:20px; bottom:100px;">
+        <a href="terms-and-conditions.html" title="Terms & Conditions"><i class="fas fa-file-contract"></i></a>
+    </div>
+    <div class="floating-btn" style="background: #00aaff; right:20px; bottom:170px;">
+        <a href="privacy-policy.html" title="Privacy Policy"><i class="fas fa-shield-alt"></i></a>
+    </div>
+    <div class="floating-btn" style="background: #ff6b00; right:20px; bottom:240px;">
+        <a href="refund-and-cancellation.html" title="Refund & Service Cancellation"><i class="fas fa-undo"></i></a>
+    </div>
+    <div class="floating-btn" style="background: #8e44ad; right:20px; bottom:310px;">
+        <a href="faq.html" title="FAQ"><i class="fas fa-question-circle"></i></a>
+    </div>
+    <div class="floating-btn" style="background: #e74c3c; right:20px; bottom:380px;">
+        <a href="disclaimer.html" title="Disclaimer"><i class="fas fa-exclamation-triangle"></i></a>
+    </div>
+
+    <!-- Scripts -->
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script type="text/javascript">
         function googleTranslateElementInit() {
-            new google.translate.TranslateElement({pageLanguage: 'en', autoDisplay: true}, 'google_translate_element');
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
         }
     </script>
     <script>
         window.onload = function() {
             document.getElementById('loader').style.opacity = '0';
             setTimeout(() => document.getElementById('loader').style.display = 'none', 1000);
-            // Show slide-up popup on every visit (client can close it to see full website)
             setTimeout(() => {
                 const popup = document.getElementById('popup');
                 popup.style.display = 'flex';
@@ -473,7 +363,6 @@
             popup.classList.remove('show');
             setTimeout(() => popup.style.display = 'none', 600);
         }
-        // Mobile dropdown toggle
         if (window.innerWidth <= 768) {
             document.querySelectorAll('.dropdown > a').forEach(el => {
                 el.addEventListener('click', e => {
