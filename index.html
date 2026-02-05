@@ -123,6 +123,31 @@
       100% { transform: translate(1px, -2px) rotate(-1deg); }
     }
     .btn.shake-on-click:active { animation: shake 0.5s; }
+     /* Google Translate Button */
+    #google_translate_element { 
+      position: fixed; 
+      top: 20px; 
+      left: 20px; 
+      z-index: 999; 
+      background: #2563eb; 
+      padding: 12px 20px; 
+      border-radius: 50px; 
+      box-shadow: 0 4px 15px rgba(37,99,235,0.5); 
+      display: flex; 
+      align-items: center; 
+      gap: 8px; 
+      color: white; 
+      font-weight: 600; 
+      cursor: pointer; 
+      transition: all 0.3s; 
+    }
+    #google_translate_element:hover { background: #1d4ed8; transform: translateY(-2px); }
+    #google_translate_element select { background: transparent; color: white; border: none; font-size: 16px; cursor: pointer; appearance: none; }
+    #google_translate_element i { font-size: 18px; }
+  </style>
+</head>
+<body>
+  <div id="loader">Swadesh Link — Loading...</div>
     <!-- SLIDE-UP POPUP (Quick Inquiry) -->
   <div id="popup" onclick="event.target === this && closePopup()">
     <div class="popup-content">
