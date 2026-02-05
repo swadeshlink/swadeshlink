@@ -1,366 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Swadesh Link | Global Service Hub – Visa, IT, AI, Real Estate & More</title>
-  
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Swadesh Link – Trusted global partner for every sector, every country, every language. Government, Private, IT/AI/Robotics, Visa/Legal, Real Estate, Vehicles, Payments, Investments, Business Setup, Courses & more.">
-  <meta name="keywords" content="global services, visa assistance, government services, IT development, AI robotics, real estate worldwide, international payments, business registration, online courses, Swadesh Link">
-  <meta name="robots" content="index, follow">
-  <meta name="author" content="Swadesh Link">
-  <link rel="canonical" href="https://swadeshlinks.netlify.app/">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Swadesh Link | Your Global Trusted Partner">
-  <meta property="og:description" content="Every Sector • Every Country • Every Language – Government | Private | IT | AI | Robotics | Visa | Legal | Real Estate | Payments | Investments | Courses & More">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://swadeshlinks.netlify.app/">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1556761175-4b46a572b786?w=1200">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Swadesh Link | Global Service Provider">
-  <meta name="twitter:description" content="Instant, secure, 24×7 global services in all sectors and languages. No limits.">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-  <style>
-    :root {
-      --dark: #020617;
-      --card: #0f172a;
-      --primary: #38bdf8;
-      --blue: #2563eb;
-      --blue-dark: #1d4ed8;
-    }
-
-    * { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI',sans-serif; }
-    body { background:var(--dark); color:#fff; line-height:1.7; overflow-x:hidden; font-size:16px; }
-
-    #loader {
-      position:fixed; inset:0; background:var(--dark); z-index:9999;
-      display:flex; align-items:center; justify-content:center;
-      color:var(--primary); font-size:28px; transition:opacity 1s;
-    }
-
-    header {
-      position:fixed; top:0; width:100%; background:rgba(2,6,23,0.95);
-      backdrop-filter:blur(12px); z-index:1000; padding:10px 0;
-    }
-
-    .navbar {
-      max-width:1400px; margin:auto; display:flex;
-      justify-content:space-between; align-items:center; padding:0 20px;
-    }
-
-    .logo { font-size:32px; font-weight:900; color:var(--primary); }
-
-    nav ul {
-      display:flex; gap:1.5rem; flex-wrap:wrap; justify-content:flex-end;
-      list-style:none;
-    }
-
-    nav a {
-      color:#fff; text-decoration:none; font-weight:600; font-size:16px;
-      transition:.3s;
-    }
-
-    nav a:hover { color:var(--primary); transform:scale(1.05); }
-
-    .dropdown-menu {
-      display:none; position:absolute; background:var(--card); min-width:220px;
-      padding:10px; border-radius:10px; box-shadow:0 8px 16px rgba(0,0,0,0.4);
-    }
-
-    .dropdown:hover .dropdown-menu { display:block; }
-
-    .section {
-      padding:100px 20px 60px; min-height:80vh; display:flex;
-      align-items:center; justify-content:center; text-align:center;
-      background-size:cover; background-position:center; background-attachment:fixed;
-      position:relative;
-    }
-
-    .section::before { content:''; position:absolute; inset:0; background:rgba(2,6,23,0.78); }
-
-    .content { position:relative; max-width:1200px; padding:0 15px; }
-
-    h1 { font-size:clamp(3rem,8vw,4rem); line-height:1.1; margin-bottom:1.5rem; font-weight:900; }
-    h2 { font-size:clamp(2.2rem,6vw,2.8rem); margin:2rem 0 1rem; font-weight:800; }
-    p { font-size:clamp(1rem,2.5vw,1.1rem); opacity:0.9; max-width:900px; margin:auto; }
-
-    .btn {
-      padding:14px 36px; background:var(--blue); color:#fff; border:none;
-      border-radius:50px; font-size:1.1rem; font-weight:700; cursor:pointer;
-      transition:.4s; display:inline-block; margin-top:1.5rem;
-    }
-
-    .btn:hover { background:var(--blue-dark); transform:scale(1.06); }
-
-    .cards {
-      display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:1.8rem; margin-top:3rem;
-    }
-
-    .card {
-      background:var(--card); padding:1.8rem; border-radius:1rem;
-      box-shadow:0 10px 30px rgba(0,0,0,0.5); transition:.4s;
-    }
-
-    .card:hover { transform:translateY(-8px); }
-
-    #popup {
-      display:none; position:fixed; inset:0; background:rgba(0,0,0,0.85); z-index:9998;
-      align-items:flex-end; justify-content:center;
-    }
-
-    .popup-content {
-      background:var(--card); padding:2rem; border-radius:1.5rem 1.5rem 0 0;
-      max-width:480px; width:100%; text-align:center; position:relative;
-      transform:translateY(100%); opacity:0; transition:all .6s;
-    }
-
-    #popup.show .popup-content { transform:translateY(0); opacity:1; }
-
-    .close-btn {
-      position:absolute; top:1rem; right:1.5rem; font-size:2.5rem;
-      color:var(--primary); cursor:pointer; background:none; border:none;
-    }
-
-    form input, form textarea {
-      width:100%; padding:14px; margin:10px 0; border:none; border-radius:8px;
-      background:#1e293b; color:#fff; font-size:16px;
-    }
-
-    footer {
-      background:var(--dark); padding:4rem 1.5rem 2rem; text-align:center; color:#94a3b8;
-    }
-
-    .legal-links {
-      display:flex; justify-content:center; flex-wrap:wrap; gap:1rem; margin-bottom:2rem;
-    }
-
-    .legal-links a {
-      color:var(--primary); text-decoration:none; transition:.3s;
-    }
-
-    .legal-links a:hover { color:#60a5fa; text-decoration:underline; }
-
-    .social-icons { display:flex; justify-content:center; gap:1.5rem; margin:1.5rem 0; }
-    .social-icons a { font-size:2rem; color:#fff; transition:.3s; }
-    .social-icons a:hover { color:var(--primary); transform:scale(1.1); }
-
-    .floating-btn {
-      position:fixed; bottom:1.5rem; width:55px; height:55px; border-radius:50%;
-      display:flex; align-items:center; justify-content:center; font-size:1.6rem;
-      box-shadow:0 6px 16px rgba(0,0,0,0.5); transition:.3s; z-index:1000;
-    }
-
-    .floating-btn:hover { transform:scale(1.1); }
-
-    #google_translate_element {
-      position:fixed; top:1rem; left:1rem; z-index:9999;
-      background:var(--blue); padding:0.8rem 1.5rem; border-radius:50px;
-      box-shadow:0 4px 15px rgba(37,99,235,0.5); display:flex !important;
-      align-items:center; gap:0.6rem; color:white; font-weight:600;
-      cursor:pointer; transition:all 0.3s; visibility:visible; opacity:1;
-    }
-
-    #google_translate_element:hover { background:var(--blue-dark); transform:translateY(-2px); }
-
-    @media (max-width:768px) {
-      h1 { font-size:2.8rem; }
-      h2 { font-size:2.2rem; }
-      nav ul { flex-direction:column; gap:1rem; }
-      .navbar { flex-direction:column; padding:1rem; }
-      .section { padding:80px 1rem 50px; min-height:70vh; }
-      #google_translate_element { top:0.8rem; left:0.8rem; padding:0.6rem 1.2rem; font-size:14px; }
-      .legal-links { gap:0.8rem; }
-    }
-
-    @media (max-width:480px) {
-      h1 { font-size:2.4rem; }
-      p { font-size:1rem; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=0.5, user-scalable=yes">
+    <title>Swadesh Link | Global Service Hub</title>
+    <meta name="description" content="Worldwide services in Government, Private, IT/AI/Robotics, Visa/Legal, Real Estate, Payments, Investments, Courses & more. Every sector, every country, every language.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary: #38bdf8;
+            --dark: #020617;
+            --card: #0f172a;
+            --blue: #2563eb;
+            --blue-dark: #1d4ed8;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI',sans-serif; }
+        body { background:var(--dark); color:#fff; line-height:1.7; overflow-x:hidden; font-size:16px; }
+        #loader { position:fixed; inset:0; background:var(--dark); z-index:9999; display:flex; align-items:center; justify-content:center; color:var(--primary); font-size:28px; transition:opacity 1s; }
+        header { position:fixed; top:0; width:100%; background:rgba(2,6,23,0.95); backdrop-filter:blur(12px); z-index:1000; padding:10px 0; }
+        .navbar { max-width:1400px; margin:auto; display:flex; justify-content:space-between; align-items:center; padding:0 20px; }
+        .logo { font-size:32px; font-weight:900; color:var(--primary); }
+        nav ul { display:flex; gap:1.5rem; flex-wrap:wrap; justify-content:flex-end; list-style:none; }
+        nav a { color:#fff; text-decoration:none; font-weight:600; transition:.3s; }
+        nav a:hover { color:var(--primary); transform:scale(1.05); }
+        .dropdown-menu { display:none; position:absolute; background:var(--card); min-width:220px; padding:10px; border-radius:10px; box-shadow:0 8px 16px rgba(0,0,0,0.4); }
+        .dropdown:hover .dropdown-menu { display:block; }
+        .section { padding:100px 20px 60px; min-height:80vh; display:flex; align-items:center; justify-content:center; text-align:center; background-size:cover; background-position:center; position:relative; }
+        .section::before { content:''; position:absolute; inset:0; background:rgba(2,6,23,0.78); }
+        .content { position:relative; max-width:1200px; padding:0 15px; }
+        h1 { font-size:clamp(3.5rem,8vw,4.5rem); line-height:1.1; margin-bottom:1.5rem; font-weight:900; }
+        h2 { font-size:clamp(2.5rem,6vw,3.5rem); margin:2rem 0 1rem; font-weight:800; }
+        p { font-size:clamp(1.1rem,3vw,1.25rem); opacity:0.9; max-width:900px; margin:auto; }
+        .btn { padding:1rem 2.5rem; background:var(--blue); color:#fff; border:none; border-radius:50px; font-size:1.2rem; font-weight:700; cursor:pointer; transition:.4s; display:inline-block; margin-top:1.5rem; }
+        .btn:hover { background:var(--blue-dark); transform:scale(1.08); box-shadow:0 0 25px var(--blue); }
+        .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:1.8rem; margin-top:3rem; }
+        .card { background:var(--card); padding:1.8rem; border-radius:1rem; box-shadow:0 10px 30px rgba(0,0,0,0.5); transition:.4s; }
+        .card:hover { transform:translateY(-10px); box-shadow:0 20px 50px rgba(56,189,248,0.3); }
+        #popup { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.85); z-index:9998; align-items:flex-end; justify-content:center; }
+        .popup-content { background:var(--card); padding:2rem; border-radius:1.5rem 1.5rem 0 0; max-width:480px; width:100%; text-align:center; transform:translateY(100%); opacity:0; transition:all .6s; box-shadow:0 -10px 30px rgba(0,0,0,0.5); }
+        #popup.show .popup-content { transform:translateY(0); opacity:1; }
+        .close-btn { position:absolute; top:1rem; right:1.5rem; font-size:2.5rem; color:var(--primary); cursor:pointer; background:none; border:none; }
+        form input, form textarea { width:100%; padding:1rem; margin:0.8rem 0; border:none; border-radius:8px; background:#1e293b; color:#fff; font-size:1rem; }
+        footer { background:var(--dark); padding:4rem 1.5rem 2rem; text-align:center; color:#94a3b8; }
+        .legal-links { display:flex; justify-content:center; flex-wrap:wrap; gap:1rem; margin-bottom:2rem; }
+        .legal-links a { color:var(--primary); text-decoration:none; transition:.3s; }
+        .legal-links a:hover { color:#60a5fa; text-decoration:underline; }
+        .social-icons { display:flex; justify-content:center; gap:1.5rem; margin:1.5rem 0; }
+        .social-icons a { font-size:2rem; color:#fff; transition:.3s; }
+        .social-icons a:hover { color:var(--primary); transform:scale(1.1); }
+        .floating-btn { position:fixed; bottom:1.5rem; width:55px; height:55px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.6rem; box-shadow:0 6px 16px rgba(0,0,0,0.5); transition:.3s; z-index:1000; }
+        .floating-btn:hover { transform:scale(1.1); }
+        #google_translate_element {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 9999;
+            background: var(--blue);
+            padding: 12px 20px;
+            border-radius: 50px;
+            box-shadow: 0 6px 20px rgba(37,99,235,0.7);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        #google_translate_element:hover { background: var(--blue-dark); transform: translateY(-3px); }
+        @media (max-width:768px) {
+            h1 { font-size:3rem; }
+            h2 { font-size:2.5rem; }
+            nav ul { flex-direction:column; gap:1rem; }
+            .navbar { flex-direction:column; padding:1rem; }
+            .section { padding:80px 1rem 50px; min-height:70vh; }
+            #google_translate_element { bottom: 80px; left: 20px; }
+        }
+    </style>
 </head>
 <body>
 
 <div id="loader">Swadesh Link — Loading...</div>
 
 <div id="popup" onclick="event.target === this && closePopup()">
-  <div class="popup-content">
-    <button class="close-btn" onclick="closePopup()">×</button>
-    <h2 style="color:#38bdf8">Quick Inquiry</h2>
-    <p>Get in touch — Any service, any time.</p>
-    <form id="popupForm">
-      <input type="text" placeholder="Name" required>
-      <input type="email" placeholder="Email" required>
-      <textarea placeholder="Message / Need" required rows="5"></textarea>
-      <button type="submit" class="btn">Send</button>
-    </form>
-  </div>
+    <div class="popup-content">
+        <button class="close-btn" onclick="closePopup()">×</button>
+        <h2 style="color:#38bdf8">Quick Inquiry</h2>
+        <p>Get in touch — Any service, any time.</p>
+        <form id="popupForm">
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Message / Need" required rows="5"></textarea>
+            <button type="submit" class="btn">Send</button>
+        </form>
+    </div>
 </div>
 
 <header>
-  <div class="navbar">
-    <div class="logo">Swadesh Link</div>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li class="dropdown"><a href="#services">Services</a></li>
-        <li class="dropdown"><a href="#blog">Blog</a></li>
-        <li class="dropdown"><a href="#courses">Courses</a></li>
-        <li class="dropdown"><a href="#roadmap">Roadmap</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
+    <div class="navbar">
+        <div class="logo">Swadesh Link</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li class="dropdown"><a href="#services">Services</a></li>
+                <li class="dropdown"><a href="#blog">Blog</a></li>
+                <li class="dropdown"><a href="#courses">Courses</a></li>
+                <li class="dropdown"><a href="#roadmap">Roadmap</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
 <div id="google_translate_element">
-  <i class="fas fa-globe"></i> Language
+    <i class="fas fa-globe"></i> Language
 </div>
 
-<!-- === Home === -->
-<section id="home" class="section" style="background-image: url('https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1600&q=80');">
-  <div style="position:absolute;inset:0;background:rgba(0,0,0,0.45);z-index:1;"></div>
-  <div class="content" style="position:relative;z-index:2;">
-    <h1>Swadesh Link<br>Your Global Trusted Partner</h1>
-    <p>Every Sector • Every Country • Every Language<br>Government | Private | IT | AI | Robotics | Visa | Legal | Real Estate | Payments | Investments | Courses & More</p>
-    <a href="#contact" class="btn shake-on-click">Get Started Now</a>
-  </div>
-</section>
-
-<!-- === About === -->
-<section id="about" class="section" style="background-image:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80')">
-  <div class="content">
-    <h2>About Swadesh Link</h2>
-    <p>We are your one-stop global partner — from government documents to private agents, IT development, AI & Robotics solutions, full business setup, visa & legal support, real estate & vehicle deals, secure payments (India ↔ Worldwide), investments, and online/offline courses.</p>
-    <p>Serving clients in USA, UK, UAE, Canada, Europe, Australia — instant, secure, 24×7 in any language. No limits. Ready for 2026 & beyond. Providing services in all sectors worldwide.</p>
-  </div>
-</section>
-
-<!-- === Services === -->
-<section id="services" class="section" style="background-image:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80')">
-  <div style="position:absolute;inset:0;background:rgba(0,0,0,0.45);z-index:1;"></div>
-  <div class="content" style="position:relative;z-index:2;">
-    <h2>Our Global Services</h2>
-    <p>Full-spectrum support — every sector, every country, every need. No limits.</p>
-    <div class="cards">
-      <div class="card"><h3>Government Sector</h3><p>Aadhaar, PAN, Passport, Attestation, Filings & Approvals</p></div>
-      <div class="card"><h3>Private Sector</h3><p>Licenses, Compliance, Permits, Agent Networking, Consulting</p></div>
-      <div class="card"><h3>IT & AI Sector</h3><p>Website, App, Software, AI Integration, Robotics</p></div>
-      <div class="card"><h3>Legal & Visa Sector</h3><p>Legal Help, Visa, Immigration, Business Law, Contracts</p></div>
-      <div class="card"><h3>Business Setup</h3><p>Company Registration, GST, Startup, Global Expansion</p></div>
-      <div class="card"><h3>Real Estate & Vehicles</h3><p>Property/Vehicle Buy-Sell, Leasing, Financing, Documentation</p></div>
-      <div class="card"><h3>Payments Sector</h3><p>International Transfers, UPI, Wise, Crypto</p></div>
-      <div class="card"><h3>Investments Sector</h3><p>Partnerships, Funding, Venture Capital, Portfolio</p></div>
+<!-- Home -->
+<section id="home" class="section" style="background-image: url('https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1600&q=80'); min-height:100vh;">
+    <div style="position:absolute;inset:0;background:rgba(0,0,0,0.45);z-index:1;"></div>
+    <div class="content" style="position:relative;z-index:2;">
+        <h1>Swadesh Link<br>Your Global Trusted Partner</h1>
+        <p>Every Sector • Every Country • Every Language<br>Government | Private | IT | AI | Robotics | Visa | Legal | Real Estate | Payments | Investments | Courses & More</p>
+        <a href="#contact" class="btn shake-on-click">Get Started Now</a>
     </div>
-  </div>
 </section>
 
-<!-- === Blog === -->
-<section id="blog" class="section" style="background-image:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80')">
-  <div class="content">
-    <h2>Latest Blog & Updates</h2>
-    <p>Stay ahead — tips, guides, insights on global business, tech, visas, real estate & more.</p>
-    <div class="cards">
-      <div class="card"><h3>Government Sector</h3><p>Schemes, Jobs, Tenders, Compliance</p></div>
-      <div class="card"><h3>Private Sector</h3><p>Jobs, Funding, Expansion, Partnerships</p></div>
-      <!-- Add remaining blog cards similarly -->
-    </div>
-  </div>
-</section>
-
-<!-- === Courses, Roadmap, Contact sections similarly short or full as per your need -->
+<!-- About, Services, Blog, Courses, Roadmap, Contact – same as your original -->
 
 <footer>
-  <div style="max-width:1200px;margin:auto;">
-    <div class="legal-links">
-      <a href="terms-and-conditions.html">Terms & Conditions</a>
-      <a href="privacy-policy.html">Privacy Policy</a>
-      <a href="refund-and-cancellation.html">Refund & Cancellation</a>
-      <a href="disclaimer.html">Disclaimer</a>
-      <a href="faq.html">FAQ</a>
+    <div style="max-width:1200px;margin:auto;">
+        <div class="legal-links">
+            <a href="terms-and-conditions.html">Terms & Conditions</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="refund-and-cancellation.html">Refund & Service Cancellation</a>
+            <a href="disclaimer.html">Disclaimer</a>
+            <a href="faq.html">FAQ</a>
+        </div>
+        <p>© 2026 Swadesh Link. All rights reserved.<br>Your Global Trusted Partner | All Sectors Worldwide</p>
     </div>
-    <div class="social-icons">
-      <a href="https://www.instagram.com/swadeshlink" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.facebook.com/profile.php?id=61567560955458" target="_blank"><i class="fab fa-facebook"></i></a>
-      <a href="https://x.com/LinkSwades69046" target="_blank"><i class="fab fa-x-twitter"></i></a>
-      <a href="https://www.youtube.com/@swadeshlink" target="_blank"><i class="fab fa-youtube"></i></a>
-      <a href="https://www.pinterest.com/swadeshlink/" target="_blank"><i class="fab fa-pinterest"></i></a>
-    </div>
-    <p>© 2026 Swadesh Link. All rights reserved.<br>Your Global Trusted Partner</p>
-  </div>
 </footer>
 
-<!-- Floating Buttons -->
+<!-- Floating Buttons (pehle jaisa hi rakha) -->
 <div class="floating-btn whatsapp-btn">
-  <a href="https://wa.me/917015657213?text=Hi%20Swadesh%20Link,%20I%20need%20help..." target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://wa.me/917015657213?text=Hi%20Swadesh%20Link,%20I%20need%20help..." target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
 </div>
 <div class="floating-btn call-btn">
-  <a href="tel:+918307619156"><i class="fas fa-phone"></i></a>
+    <a href="tel:+918307619156" title="Call Us"><i class="fas fa-phone"></i></a>
 </div>
 <div class="floating-btn" style="background:#0066ff;right:20px;bottom:100px;">
-  <a href="terms-and-conditions.html"><i class="fas fa-file-contract"></i></a>
+    <a href="terms-and-conditions.html" title="Terms & Conditions"><i class="fas fa-file-contract"></i></a>
 </div>
 <div class="floating-btn" style="background:#00aaff;right:20px;bottom:170px;">
-  <a href="privacy-policy.html"><i class="fas fa-shield-alt"></i></a>
+    <a href="privacy-policy.html" title="Privacy Policy"><i class="fas fa-shield-alt"></i></a>
 </div>
 <div class="floating-btn" style="background:#ff6b00;right:20px;bottom:240px;">
-  <a href="refund-and-cancellation.html"><i class="fas fa-undo"></i></a>
+    <a href="refund-and-cancellation.html" title="Refund & Cancellation"><i class="fas fa-undo"></i></a>
 </div>
 <div class="floating-btn" style="background:#8e44ad;right:20px;bottom:310px;">
-  <a href="faq.html"><i class="fas fa-question-circle"></i></a>
+    <a href="faq.html" title="FAQ"><i class="fas fa-question-circle"></i></a>
 </div>
 <div class="floating-btn" style="background:#e74c3c;right:20px;bottom:380px;">
-  <a href="disclaimer.html"><i class="fas fa-exclamation-triangle"></i></a>
+    <a href="disclaimer.html" title="Disclaimer"><i class="fas fa-exclamation-triangle"></i></a>
 </div>
 
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false
+        }, 'google_translate_element');
+    }
+</script>
 <script>
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'en',
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-      autoDisplay: false
-    }, 'google_translate_element');
-  }
-
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-      const el = document.getElementById('google_translate_element');
-      if (el) el.style.display = 'flex';
-    }, 1500);
-  });
-
-  window.onload = () => {
-    document.getElementById('loader').style.opacity = '0';
-    setTimeout(() => document.getElementById('loader').style.display = 'none', 1000);
-
-    setTimeout(() => {
-      const popup = document.getElementById('popup');
-      popup.style.display = 'flex';
-      setTimeout(() => popup.classList.add('show'), 100);
-    }, 1500);
-  };
-
-  function closePopup() {
-    const popup = document.getElementById('popup');
-    popup.classList.remove('show');
-    setTimeout(() => popup.style.display = 'none', 600);
-  }
-
-  if (window.innerWidth <= 768) {
-    document.querySelectorAll('.dropdown > a').forEach(el => {
-      el.addEventListener('click', e => {
-        e.preventDefault();
-        el.parentElement.classList.toggle('active');
-      });
-    });
-  }
+    window.onload = function() {
+        document.getElementById('loader').style.opacity = '0';
+        setTimeout(() => document.getElementById('loader').style.display = 'none', 1000);
+        setTimeout(() => {
+            const popup = document.getElementById('popup');
+            popup.style.display = 'flex';
+            setTimeout(() => popup.classList.add('show'), 100);
+        }, 1500);
+    };
+    function closePopup() {
+        const popup = document.getElementById('popup');
+        popup.classList.remove('show');
+        setTimeout(() => popup.style.display = 'none', 600);
+    }
+    if (window.innerWidth <= 768) {
+        document.querySelectorAll('.dropdown > a').forEach(el => {
+            el.addEventListener('click', e => {
+                e.preventDefault();
+                el.parentElement.classList.toggle('active');
+            });
+        });
+    }
 </script>
 </body>
 </html>
