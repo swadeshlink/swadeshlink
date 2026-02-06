@@ -41,29 +41,30 @@
     form { max-width: 750px; margin: 4rem auto; display: grid; gap: 1.8rem; }
     input, textarea { width: 100%; padding: 1.5rem; border: none; border-radius: 16px; background: #1e293b; color: #fff; font-size: 1.25rem; }
     textarea { resize: vertical; height: 180px; }
-    footer { background: var(--d); padding: 8rem 2rem 5rem; text-align: center; border-top: 1px solid rgba(56,189,248,0.2); }
+    footer { background: var(--dark); padding: 8rem 2rem 5rem; text-align: center; border-top: 1px solid rgba(56,189,248,0.2); }
     .footer-links a { color: var(--accent); margin: 0 1.5rem; text-decoration: none; font-weight: 500; font-size: 1.1rem; }
     .footer-links a:hover { color: #fff; text-decoration: underline; }
+    .social-icons { display: flex; justify-content: center; gap: 1.5rem; margin: 3rem 0; }
+    .social-icons a { color: var(--accent); font-size: 2.2rem; transition: all 0.3s; }
+    .social-icons a:hover { color: #fff; transform: scale(1.25); }
     .floating-btn { position: fixed; bottom: 2rem; width: 75px; height: 75px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.4rem; box-shadow: 0 12px 40px #000c; transition: .4s; }
     .floating-btn:hover { transform: scale(1.25); box-shadow: 0 20px 60px #000c; }
     .whatsapp-btn { right: 2.5rem; background: #25D366; color: #fff; }
     .call-btn { left: 2.5rem; background: #00A884; color: #fff; }
     #google_translate_element { position: fixed; top: 1.5rem; left: 1.5rem; z-index: 999; background: var(--p); padding: 1.2rem 2rem; border-radius: 999px; display: flex; align-items: center; gap: 0.9rem; color: #fff; cursor: pointer; box-shadow: 0 6px 25px rgba(37,99,235,0.5); transition: .3s; }
-    #google_translate_element:hover { background: var(--pd); transform: translateY(-4px); }
+    #google_translate_element:hover { background: var(--primary-dark); transform: translateY(-4px); }
     #popup { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.92); z-index: 9998; align-items: flex-end; justify-content: center; }
     .popup-content { background: var(--card); padding: 3.5rem; border-radius: 28px 28px 0 0; max-width: 580px; width: 95%; transform: translateY(100%); opacity: 0; transition: all 0.7s ease-out; box-shadow: 0 -25px 70px #000c; }
     #popup.show .popup-content { transform: translateY(0); opacity: 1; }
     .close-btn { position: absolute; top: 1.8rem; right: 2.5rem; font-size: 4rem; color: var(--accent); cursor: pointer; background: none; border: none; transition: .3s; }
     .close-btn:hover { color: #ff4d4d; transform: rotate(90deg); }
     @media (max-width: 768px) {
-      h1 { font-size: 4rem; }
-      h2 { font-size: 3rem; }
+      h1 { font-size: 4.2rem; }
+      h2 { font-size: 3.2rem; }
       .navbar { flex-direction: column; padding: 1.5rem; }
-      .section { padding: 100px 1.2rem 80px; }
+      .section { padding: 110px 1.2rem 90px; }
       .cards { gap: 2rem; }
       .floating-btn { width: 65px; height: 65px; font-size: 2rem; }
-      .whatsapp-btn { right: 1.5rem; }
-      .call-btn { left: 1.5rem; }
     }
   </style>
 </head>
@@ -139,7 +140,7 @@
           <li>• No Free Consultation/Information: No free advice or detailed info — contact only when ready for paid services</li>
         </ul>
         <p style="color:#ff4d4d;font-weight:bold;margin-top:1.5rem">Bad faith or fraud may attract legal consequences.</p>
-      </div>
+        </div>
       <div class="cards">
         <div class="card"><h3>Government Sector</h3><p>Aadhaar Services, PAN Card Issuance, Passport Processing, Document Attestation, Official Filings & Approvals</p></div>
         <div class="card"><h3>Private Sector</h3><p>Business Licenses, Compliance Certifications, Permit Acquisitions, Agent Networking, Worldwide Private Consulting</p></div>
@@ -163,12 +164,12 @@
         <div class="card"><h3>Private Sector</h3><p>Corporate jobs, funding, market expansion, consulting</p></div>
         <div class="card"><h3>IT & AI Sector</h3><p>Software training, AI guides, robotics, cloud, cybersecurity</p></div>
       </div>
-      <a href="#contact" class="btn" style="margin-top:3rem">Explore More Insights</a>
+      <a href="#contact" class="btn" style="margin-top:2.5rem">Explore More Insights</a>
     </div>
   </section>
 
   <!-- Courses -->
-  <section id="courses" class="section" style="background:#0f172a">
+  <section id="courses" class="section" style="background-image:url('https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1600&q=80')">
     <div class="content">
       <h2>Online & Offline Courses</h2>
       <p>Practical training for real-world success — beginner to expert. Earn while you learn.</p>
@@ -199,6 +200,13 @@
         <button type="submit" class="btn">Send Message</button>
       </form>
       <p style="margin-top:3.5rem"><a href="https://wa.me/917015657213?text=Hi%20Swadesh%20Link,%20I%20need%20help..." style="color:var(--a);font-size:1.6rem">Chat on WhatsApp Now</a></p>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/swadeshlink" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61567560955458" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://x.com/LinkSwades69046" target="_blank"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.youtube.com/@swadeshlink" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.pinterest.com/swadeshlink/" target="_blank"><i class="fab fa-pinterest"></i></a>
+      </div>
     </div>
   </section>
 
