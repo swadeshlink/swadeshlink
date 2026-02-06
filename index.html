@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Swadesh Link | Global Service Hub</title>
-  <meta name="description" content="Trusted worldwide partner for Government, Private, IT/AI, Visa/Legal, Real Estate, Payments, Investments & Courses — 24×7, any language, any country.">
+  <meta name="description" content="Trusted worldwide partner for Government, Private, IT/AI, Visa/Legal, Real Estate, Payments, Investments & Courses — 24×7, any language.">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
     :root{--p:#2563eb;--pd:#1d4ed8;--a:#38bdf8;--d:#020617;--c:#0f172a;--t:#e2e8f0;--lt:#94a3b8}
@@ -20,8 +20,8 @@
     section{padding:100px 1.5rem 80px;min-height:80vh;position:relative}
     section::before{content:'';position:absolute;inset:0;background:rgba(2,6,23,.78)}
     .content{position:relative;z-index:2;max-width:1300px;margin:0 auto}
-    h1{font-size:clamp(3.5rem,8vw,4.5rem);color:#fff;margin-bottom:1.5rem;text-align:center}
-    h2{font-size:clamp(2.5rem,6vw,3.5rem);color:var(--a);margin:3rem 0 1.5rem;text-align:center}
+    h1{font-size:4.5rem;font-weight:900;color:#fff;margin-bottom:1rem;text-align:center}
+    h2{font-size:3rem;color:var(--a);margin:3rem 0 1.5rem;text-align:center}
     .btn{padding:1rem 2.5rem;background:var(--p);color:#fff;border:none;border-radius:999px;font-size:1.25rem;font-weight:700;cursor:pointer;transition:all .4s;display:inline-block}
     .btn:hover{background:var(--pd);transform:translateY(-4px);box-shadow:0 12px 30px #2563eb66}
     .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem;margin:3rem auto;max-width:1300px}
@@ -29,30 +29,30 @@
     .card:hover{transform:translateY(-12px);box-shadow:0 20px 50px rgba(56,189,248,.2)}
     .card h3{color:var(--a);font-size:1.6rem;margin-bottom:1rem}
     .card p{font-size:1.15rem;color:var(--lt)}
-    #popup{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:9998;align-items:flex-end;justify-content:center}
-    .popup-content{background:var(--c);padding:2.5rem;border-radius:20px 20px 0 0;max-width:500px;width:100%;transform:translateY(100%);opacity:0;transition:all .6s ease-out}
-    #popup.show .popup-content{transform:translateY(0);opacity:1}
-    .close-btn{position:absolute;top:1rem;right:1.5rem;font-size:2.5rem;color:var(--a);cursor:pointer;background:none;border:none}
-    .close-btn:hover{color:#ff4d4d}
+    .policy-box{background:rgba(0,0,0,.6);padding:2rem;border-radius:16px;border:1px solid rgba(56,189,248,.2);margin:2rem auto;max-width:1100px;text-align:left;font-size:1.15rem}
     form{max-width:600px;margin:2rem auto;display:grid;gap:1.2rem}
     input,textarea{width:100%;padding:1rem;border:none;border-radius:10px;background:#1e293b;color:#fff;font-size:1.1rem}
     textarea{resize:vertical}
     footer{background:var(--d);padding:5rem 2rem 3rem;text-align:center;border-top:1px solid rgba(56,189,248,.1)}
     .footer-links a{color:var(--a);margin:0 .8rem;text-decoration:none}
-    .footer-links a:hover{color:#fff}
     .floating-btn{position:fixed;bottom:1.5rem;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.8rem;box-shadow:0 8px 25px #0008;transition:.3s}
     .floating-btn:hover{transform:scale(1.15)}
     .whatsapp-btn{right:1.5rem;background:#25D366;color:#fff}
     .call-btn{left:1.5rem;background:#00A884;color:#fff}
-    #google_translate_element{position:fixed;bottom:1.5rem;left:1.5rem;z-index:9999;background:var(--p);padding:.8rem 1.5rem;border-radius:999px;display:flex;align-items:center;gap:.6rem;color:#fff;cursor:pointer;box-shadow:0 4px 15px rgba(37,99,235,.5)}
+    #google_translate_element{position:fixed;top:1rem;left:1rem;z-index:999;background:var(--p);padding:.8rem 1.5rem;border-radius:999px;display:flex;align-items:center;gap:.6rem;color:#fff;cursor:pointer}
     #google_translate_element:hover{background:var(--pd)}
-    @media(max-width:768px){h1{font-size:3.5rem}h2{font-size:2.5rem}.navbar{flex-direction:column}.section{padding:90px 1rem 50px}}
+    #popup{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:9998;align-items:flex-end;justify-content:center}
+    .popup-content{background:var(--c);padding:2.5rem;border-radius:20px 20px 0 0;max-width:500px;width:100%;transform:translateY(100%);opacity:0;transition:all .6s ease-out}
+    #popup.show .popup-content{transform:translateY(0);opacity:1}
+    .close-btn{position:absolute;top:1rem;right:1.5rem;font-size:2.5rem;color:var(--a);cursor:pointer;background:none;border:none}
+    .close-btn:hover{color:#ff4d4d}
+    @media(max-width:768px){h1{font-size:3.5rem}h2{font-size:2.5rem}.navbar{flex-direction:column}.section{padding:100px 1rem 60px}}
   </style>
 </head>
 <body>
   <div id="loader">Swadesh Link — Loading...</div>
 
-  <!-- Slide-up Quick Inquiry Popup -->
+  <!-- Slide-up Popup -->
   <div id="popup" onclick="event.target===this&&closePopup()">
     <div class="popup-content">
       <button class="close-btn" onclick="closePopup()">×</button>
@@ -85,7 +85,7 @@
 
   <div id="google_translate_element"><i class="fas fa-globe"></i> Language</div>
 
-  <!-- Home / Hero -->
+  <!-- Hero / Home -->
   <section id="home" class="section" style="background-image:url('https://images.unsplash.com/photo-1556761175-4b46a572b786?w=1600')">
     <div class="content">
       <h1>Swadesh Link</h1>
@@ -101,7 +101,7 @@
       <h2>About Swadesh Link</h2>
       <p>We are your one-stop trusted global partner — delivering end-to-end solutions in Government Services, Private Sector Support, IT/AI/Robotics Development, Visa & Legal Assistance, Business Setup, Real Estate & Vehicle Transactions, Secure International Payments, Investments, and Professional Courses.</p>
       <p>Serving clients across USA, UK, UAE, Canada, Europe, Australia and worldwide — 24×7, in any language, with full transparency and security.</p>
-      <p><strong>Our Promise:</strong> Fast, transparent, and 100% reliable services — no limits, no borders.</p>
+      <p><strong>Our Mission:</strong> To make global services simple, secure, fast, and accessible for everyone — no borders, no limits.</p>
     </div>
   </section>
 
@@ -109,8 +109,19 @@
   <section id="services" class="section" style="background-image:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600')">
     <div class="content">
       <h2>Our Global Services</h2>
+      <div class="policy-box">
+        <strong>Important Terms & Payment Policy</strong>
+        <ul style="list-style:none;padding:0">
+          <li>• Private/Consulting: 50% advance, balance on success</li>
+          <li>• Government: 100% upfront (non-refundable fees)</li>
+          <li>• Non-Payment: Full legal recovery (18% interest + costs)</li>
+          <li>• Our Failure: 100% refund if we fail (Consumer Protection Act)</li>
+          <li>• No Free Info: Contact only for paid services — no free consultation or details</li>
+        </ul>
+        <p style="color:#ff4d4d;font-weight:bold;margin-top:1.5rem">Bad faith may attract legal action.</p>
+      </div>
       <div class="cards">
-        <div class="card"><h3>Government Sector</h3><p>Aadhaar, PAN, Passport, Attestation, Filings & Approvals</p></div>
+        <div class="card"><h3>Government Sector</h3><p>Aadhaar, PAN, Passport, Attestation, Official Filings</p></div>
         <div class="card"><h3>Private Sector</h3><p>Licenses, Compliance, Agent Networking, Consulting</p></div>
         <div class="card"><h3>IT & AI Sector</h3><p>Website/App, AI Integration, Robotics Engineering</p></div>
         <div class="card"><h3>Legal & Visa Sector</h3><p>Visa Applications, Legal Advocacy, Contract Drafting</p></div>
@@ -122,17 +133,17 @@
     </div>
   </section>
 
-  <!-- Blog -->
+  <!-- Blog Teaser -->
   <section id="blog" class="section" style="background-image:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1600')">
     <div class="content">
       <h2>Latest Blog & Insights</h2>
-      <p>Expert tips, guides & updates across all global sectors.</p>
+      <p>Stay updated with trends, guides & tips across all global sectors.</p>
       <div class="cards">
-        <div class="card"><h3>Government Sector</h3><p>Public jobs, schemes, tenders, policy analysis</p></div>
-        <div class="card"><h3>Private Sector</h3><p>Corporate jobs, funding, market expansion</p></div>
-        <div class="card"><h3>IT & AI Sector</h3><p>Software training, AI guides, robotics</p></div>
+        <div class="card"><h3>Government Sector</h3><p>Public jobs, schemes, tenders, policy analysis, collaborations</p></div>
+        <div class="card"><h3>Private Sector</h3><p>Corporate jobs, funding, market expansion, consulting</p></div>
+        <div class="card"><h3>IT & AI Sector</h3><p>Software training, AI guides, robotics, cloud, cybersecurity</p></div>
       </div>
-      <a href="#contact" class="btn" style="margin-top:2rem">Read More Blogs</a>
+      <a href="blog.html" class="btn" style="margin-top:2rem">Read More Blogs</a>
     </div>
   </section>
 
@@ -140,14 +151,14 @@
   <section id="courses" class="section" style="background:#0f172a">
     <div class="content">
       <h2>Online & Offline Courses</h2>
-      <p>Practical training for real-world success — beginner to expert.</p>
+      <p>Practical skills for real-world success — beginner to expert. Earn while you learn.</p>
       <div class="cards">
-        <div class="card"><h3>CSC Center Setup</h3><p>Registration, training, ₹50k+/month earnings</p></div>
-        <div class="card"><h3>Government Work</h3><p>PAN/Aadhaar, Licenses, RTO, G2C</p></div>
-        <div class="card"><h3>Private Agent Skills</h3><p>Client handling, deals, commissions</p></div>
-        <div class="card"><h3>IT & Tech</h3><p>Websites, Apps, AI Basics, Robotics</p></div>
+        <div class="card"><h3>CSC Center Setup</h3><p>Full registration, training, ₹50k+/month earnings guide</p></div>
+        <div class="card"><h3>Government Work</h3><p>PAN/Aadhaar, Licenses, RTO, G2C Services training</p></div>
+        <div class="card"><h3>Private Agent Skills</h3><p>Client handling, deals, commissions worldwide</p></div>
+        <div class="card"><h3>IT & Tech</h3><p>Websites, Apps, AI Basics, Robotics Fundamentals</p></div>
       </div>
-      <a href="#contact" class="btn" style="margin-top:3rem">Enroll Now</a>
+      <a href="contact.html" class="btn" style="margin-top:3rem">Enroll Now</a>
     </div>
   </section>
 
@@ -156,7 +167,9 @@
     <div class="content">
       <h2>Contact Us — Always Online</h2>
       <p>Any need, any time, any language. We respond in minutes.</p>
-      <p style="font-size:1.8rem;margin:2rem 0">📞 +91 83076 19156<br>📞 +91 70156 65721<br>✉ swadeshlink@gmail.com</p>
+      <div class="contact-info" style="font-size:1.3rem;margin:2rem 0">
+        <p>📞 +91 83076 19156<br>📞 +91 70156 65721<br>✉ swadeshlink@gmail.com</p>
+      </div>
       <form style="max-width:600px;margin:0 auto">
         <input type="text" placeholder="Your Name" required>
         <input type="email" placeholder="Your Email" required>
@@ -169,11 +182,11 @@
 
   <footer>
     <div class="footer-links">
-      <a href="terms.html">Terms & Conditions</a> •
-      <a href="privacy.html">Privacy Policy</a> •
-      <a href="refund.html">Refund & Cancellation</a> •
       <a href="disclaimer.html">Disclaimer</a> •
-      <a href="faq.html">FAQ</a>
+      <a href="refund.html">Refund & Cancellation</a> •
+      <a href="faq.html">FAQ</a> •
+      <a href="terms.html">Terms & Conditions</a> •
+      <a href="privacy.html">Privacy Policy</a>
     </div>
     <p>© 2026 Swadesh Link. All rights reserved. | Panipat, Haryana, India</p>
   </footer>
@@ -188,13 +201,15 @@
       document.getElementById('loader').style.opacity='0';
       setTimeout(()=>document.getElementById('loader').style.display='none',800);
       setTimeout(()=>{
-        document.getElementById('popup').style.display='flex';
-        setTimeout(()=>document.getElementById('popup').classList.add('show'),100);
+        const p=document.getElementById('popup');
+        p.style.display='flex';
+        setTimeout(()=>p.classList.add('show'),100);
       },1500);
     }
     function closePopup(){
-      document.getElementById('popup').classList.remove('show');
-      setTimeout(()=>document.getElementById('popup').style.display='none',600);
+      const p=document.getElementById('popup');
+      p.classList.remove('show');
+      setTimeout(()=>p.style.display='none',600);
     }
   </script>
 </body>
