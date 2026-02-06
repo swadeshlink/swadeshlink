@@ -7,47 +7,64 @@
   <meta name="description" content="Your trusted global partner for Government, Private, IT/AI, Visa/Legal, Real Estate, Payments, Investments & Courses — 24×7, any language, worldwide.">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
-    :root{--p:#2563eb;--pd:#1d4ed8;--a:#38bdf8;--d:#020617;--c:#0f172a;--t:#e2e8f0;--lt:#94a3b8}
-    *{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,sans-serif}
-    html,body{scroll-behavior:smooth;overflow-x:hidden;background:var(--d);color:var(--t)}
-    #loader{position:fixed;inset:0;background:var(--d);z-index:9999;display:flex;align-items:center;justify-content:center;color:var(--a);font-size:2rem;transition:opacity 1s}
-    header{position:fixed;top:0;width:100%;background:rgba(2,6,23,.95);backdrop-filter:blur(12px);z-index:1000;padding:1rem 0;box-shadow:0 2px 10px #0008}
-    .navbar{max-width:1400px;margin:0 auto;padding:0 1.5rem;display:flex;justify-content:space-between;align-items:center}
-    .logo{font-size:2rem;font-weight:900;color:var(--a)}
-    nav ul{display:flex;gap:1.5rem;list-style:none;flex-wrap:wrap}
-    nav a{color:#fff;text-decoration:none;font-weight:600;transition:.3s}
-    nav a:hover{color:var(--a);transform:scale(1.05)}
-    section{padding:100px 1.5rem 80px;min-height:80vh;position:relative;background-size:cover;background-position:center}
-    section::before{content:'';position:absolute;inset:0;background:rgba(2,6,23,.78)}
-    .content{position:relative;z-index:2;max-width:1300px;margin:0 auto;text-align:center}
-    h1{font-size:4.8rem;font-weight:900;color:#fff;margin-bottom:1.5rem;line-height:1.1}
-    h2{font-size:3.2rem;color:var(--a);margin:3rem 0 2rem}
-    .btn{padding:1.2rem 3rem;background:var(--p);color:#fff;border:none;border-radius:999px;font-size:1.3rem;font-weight:700;cursor:pointer;transition:all .4s;display:inline-block}
-    .btn:hover{background:var(--pd);transform:translateY(-5px);box-shadow:0 15px 35px #2563eb66}
-    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:2rem;margin:3rem auto}
-    .card{background:var(--c);padding:2.2rem;border-radius:18px;border:1px solid rgba(56,189,248,.2);transition:all .4s}
-    .card:hover{transform:translateY(-15px);box-shadow:0 25px 60px rgba(56,189,248,.25);border-color:var(--a)}
-    .card h3{color:var(--a);font-size:1.8rem;margin-bottom:1.2rem}
-    .card p{font-size:1.2rem;color:var(--lt);line-height:1.6}
-    .policy-box{background:rgba(0,0,0,.65);padding:2.2rem;border-radius:16px;border:1px solid rgba(56,189,248,.25);margin:3rem auto;max-width:1100px;text-align:left;font-size:1.18rem}
-    form{max-width:650px;margin:3rem auto;display:grid;gap:1.5rem}
-    input,textarea{width:100%;padding:1.2rem;border:none;border-radius:12px;background:#1e293b;color:#fff;font-size:1.15rem}
-    textarea{resize:vertical;height:150px}
-    footer{background:var(--d);padding:6rem 2rem 4rem;text-align:center;border-top:1px solid rgba(56,189,248,.15)}
-    .footer-links a{color:var(--a);margin:0 1rem;text-decoration:none;font-weight:500}
-    .footer-links a:hover{color:#fff}
-    .floating-btn{position:fixed;bottom:1.5rem;width:65px;height:65px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;box-shadow:0 10px 30px #0008;transition:.3s}
-    .floating-btn:hover{transform:scale(1.18)}
-    .whatsapp-btn{right:1.5rem;background:#25D366;color:#fff}
-    .call-btn{left:1.5rem;background:#00A884;color:#fff}
-    #google_translate_element{position:fixed;top:1rem;left:1rem;z-index:999;background:var(--p);padding:.9rem 1.6rem;border-radius:999px;display:flex;align-items:center;gap:.7rem;color:#fff;cursor:pointer;box-shadow:0 4px 15px #2563eb44}
-    #google_translate_element:hover{background:var(--pd);transform:translateY(-3px)}
-    #popup{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:9998;align-items:flex-end;justify-content:center}
-    .popup-content{background:var(--c);padding:2.8rem;border-radius:24px 24px 0 0;max-width:520px;width:95%;transform:translateY(100%);opacity:0;transition:all .6s ease-out;box-shadow:0 -15px 50px #0008}
-    #popup.show .popup-content{transform:translateY(0);opacity:1}
-    .close-btn{position:absolute;top:1.2rem;right:1.8rem;font-size:3rem;color:var(--a);cursor:pointer;background:none;border:none}
-    .close-btn:hover{color:#ff4d4d}
-    @media(max-width:768px){h1{font-size:3.8rem}h2{font-size:2.6rem}.navbar{flex-direction:column;padding:1.2rem}.section{padding:90px 1rem 60px}.cards{gap:1.5rem}}
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --accent: #38bdf8;
+      --dark: #020617;
+      --card: #0f172a;
+      --text: #e2e8f0;
+      --light: #94a3b8;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', sans-serif; }
+    html, body { scroll-behavior: smooth; overflow-x: hidden; background: var(--dark); color: var(--text); }
+    #loader { position: fixed; inset: 0; background: var(--dark); z-index: 9999; display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 2.5rem; transition: opacity 1s; }
+    header { position: fixed; top: 0; width: 100%; background: rgba(2,6,23,0.96); backdrop-filter: blur(15px); z-index: 1000; padding: 1.2rem 0; box-shadow: 0 4px 20px rgba(0,0,0,0.6); }
+    .navbar { max-width: 1400px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 2.4rem; font-weight: 900; color: var(--accent); letter-spacing: -1px; }
+    nav ul { display: flex; gap: 2.2rem; list-style: none; flex-wrap: wrap; }
+    nav a { color: #fff; text-decoration: none; font-weight: 600; font-size: 1.15rem; transition: all 0.3s; }
+    nav a:hover { color: var(--accent); transform: translateY(-3px); }
+    section { padding: 140px 2rem 100px; min-height: 100vh; position: relative; background-size: cover; background-position: center; background-attachment: fixed; }
+    section::before { content: ''; position: absolute; inset: 0; background: rgba(2,6,23,0.85); }
+    .content { position: relative; z-index: 2; max-width: 1400px; margin: 0 auto; text-align: center; }
+    h1 { font-size: 5.5rem; font-weight: 900; color: #fff; margin-bottom: 1.8rem; line-height: 1.1; letter-spacing: -1px; }
+    h2 { font-size: 3.8rem; color: var(--accent); margin: 4rem 0 2.5rem; }
+    .btn { padding: 1.4rem 4rem; background: var(--primary); color: #fff; border: none; border-radius: 999px; font-size: 1.5rem; font-weight: 700; cursor: pointer; transition: all 0.4s; display: inline-block; text-decoration: none; box-shadow: 0 10px 30px rgba(37,99,235,0.4); }
+    .btn:hover { background: var(--primary-dark); transform: translateY(-8px); box-shadow: 0 25px 60px rgba(37,99,235,0.6); }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 3rem; margin: 5rem auto; }
+    .card { background: var(--card); padding: 3rem; border-radius: 24px; border: 1px solid rgba(56,189,248,0.25); transition: all 0.5s; backdrop-filter: blur(10px); }
+    .card:hover { transform: translateY(-20px); box-shadow: 0 40px 90px rgba(56,189,248,0.35); border-color: var(--accent); }
+    .card h3 { color: var(--accent); font-size: 2.1rem; margin-bottom: 1.5rem; }
+    .card p { font-size: 1.3rem; color: var(--light); line-height: 1.8; }
+    .policy-box { background: rgba(0,0,0,0.7); padding: 3rem; border-radius: 24px; border: 1px solid rgba(56,189,248,0.3); margin: 4rem auto; max-width: 1200px; text-align: left; font-size: 1.25rem; backdrop-filter: blur(10px); }
+    form { max-width: 750px; margin: 4rem auto; display: grid; gap: 1.8rem; }
+    input, textarea { width: 100%; padding: 1.5rem; border: none; border-radius: 16px; background: #1e293b; color: #fff; font-size: 1.25rem; }
+    textarea { resize: vertical; height: 180px; }
+    footer { background: var(--d); padding: 8rem 2rem 5rem; text-align: center; border-top: 1px solid rgba(56,189,248,0.2); }
+    .footer-links a { color: var(--accent); margin: 0 1.5rem; text-decoration: none; font-weight: 500; font-size: 1.1rem; }
+    .footer-links a:hover { color: #fff; text-decoration: underline; }
+    .floating-btn { position: fixed; bottom: 2rem; width: 75px; height: 75px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.4rem; box-shadow: 0 12px 40px #000c; transition: .4s; }
+    .floating-btn:hover { transform: scale(1.25); box-shadow: 0 20px 60px #000c; }
+    .whatsapp-btn { right: 2.5rem; background: #25D366; color: #fff; }
+    .call-btn { left: 2.5rem; background: #00A884; color: #fff; }
+    #google_translate_element { position: fixed; top: 1.5rem; left: 1.5rem; z-index: 999; background: var(--p); padding: 1.2rem 2rem; border-radius: 999px; display: flex; align-items: center; gap: 0.9rem; color: #fff; cursor: pointer; box-shadow: 0 6px 25px rgba(37,99,235,0.5); transition: .3s; }
+    #google_translate_element:hover { background: var(--pd); transform: translateY(-4px); }
+    #popup { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.92); z-index: 9998; align-items: flex-end; justify-content: center; }
+    .popup-content { background: var(--card); padding: 3.5rem; border-radius: 28px 28px 0 0; max-width: 580px; width: 95%; transform: translateY(100%); opacity: 0; transition: all 0.7s ease-out; box-shadow: 0 -25px 70px #000c; }
+    #popup.show .popup-content { transform: translateY(0); opacity: 1; }
+    .close-btn { position: absolute; top: 1.8rem; right: 2.5rem; font-size: 4rem; color: var(--accent); cursor: pointer; background: none; border: none; transition: .3s; }
+    .close-btn:hover { color: #ff4d4d; transform: rotate(90deg); }
+    @media (max-width: 768px) {
+      h1 { font-size: 4rem; }
+      h2 { font-size: 3rem; }
+      .navbar { flex-direction: column; padding: 1.5rem; }
+      .section { padding: 100px 1.2rem 80px; }
+      .cards { gap: 2rem; }
+      .floating-btn { width: 65px; height: 65px; font-size: 2rem; }
+      .whatsapp-btn { right: 1.5rem; }
+      .call-btn { left: 1.5rem; }
+    }
   </style>
 </head>
 <body>
@@ -58,12 +75,12 @@
     <div class="popup-content">
       <button class="close-btn" onclick="closePopup()">×</button>
       <h2 style="color:var(--a)">Quick Inquiry</h2>
-      <p>Get in touch — Any service, any time, anywhere.</p>
+      <p>Get in touch — Any service, any time, anywhere in the world.</p>
       <form>
         <input type="text" placeholder="Your Name" required>
         <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Tell us what you need..." required rows="5"></textarea>
-        <button type="submit" class="btn">Send Inquiry</button>
+        <textarea placeholder="Tell us what you need... (Visa, Business, IT, Investment etc.)" required rows="6"></textarea>
+        <button type="submit" class="btn">Send Inquiry Now</button>
       </form>
     </div>
   </div>
@@ -93,7 +110,7 @@
     <div class="content">
       <h1>Swadesh Link</h1>
       <h1 style="color:var(--a)">Your Global Trusted Partner</h1>
-      <p>One platform for every sector — Government, Private, IT/AI, Visa/Legal, Real Estate, Payments, Investments & more.<br>Instant, secure, 24×7 support in any language, worldwide.</p>
+      <p>One platform for every sector — Government | Private | IT/AI | Visa/Legal | Real Estate | Payments | Investments & Courses.<br>Instant, secure, 24×7 support in any language, worldwide.</p>
       <a href="#contact" class="btn">Get Started Now</a>
     </div>
   </section>
@@ -102,9 +119,9 @@
   <section id="about" class="section" style="background-image:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80')">
     <div class="content">
       <h2>About Swadesh Link</h2>
-      <p>We are your reliable one-stop global partner — providing complete solutions in Government Services, Private Sector Support, IT/AI/Robotics Development, Visa & Legal Assistance, Business Setup, Real Estate & Vehicle Deals, Secure International Payments, Investments, and Training Courses.</p>
-      <p>Serving clients in USA, UK, UAE, Canada, Europe, Australia and worldwide — instant, secure, 24×7 in any language, with full transparency and security.</p>
-      <p><strong>Our Promise:</strong> Fast, transparent, and 100% reliable services — no limits, no borders.</p>
+      <p>We are your reliable one-stop global partner — providing complete, end-to-end solutions in Government Services, Private Sector Support, IT/AI/Robotics Development, Visa & Legal Assistance, Business Setup, Real Estate & Vehicle Deals, Secure International Payments, Investments, and Professional Training Courses.</p>
+      <p>Serving clients in USA, UK, UAE, Canada, Europe, Australia and worldwide — instant, secure, 24×7 support in any language with full transparency.</p>
+      <p><strong>Our Promise:</strong> Fast, transparent, and 100% reliable services — no limits, no borders, no excuses.</p>
     </div>
   </section>
 
@@ -146,7 +163,7 @@
         <div class="card"><h3>Private Sector</h3><p>Corporate jobs, funding, market expansion, consulting</p></div>
         <div class="card"><h3>IT & AI Sector</h3><p>Software training, AI guides, robotics, cloud, cybersecurity</p></div>
       </div>
-      <a href="#contact" class="btn" style="margin-top:2rem">Read More Blogs</a>
+      <a href="#contact" class="btn" style="margin-top:3rem">Explore More Insights</a>
     </div>
   </section>
 
@@ -163,7 +180,7 @@
         <div class="card"><h3>Business & Legal</h3><p>Company filing, Visa process, Real estate tips</p></div>
         <div class="card"><h3>Finance Mastery</h3><p>Secure payments, Crypto, Investment strategies</p></div>
       </div>
-      <a href="#contact" class="btn" style="margin-top:3rem">Enroll Now</a>
+      <a href="#contact" class="btn" style="margin-top:4rem">Enroll Now</a>
     </div>
   </section>
 
@@ -172,16 +189,16 @@
     <div class="content">
       <h2>Contact Us — Always Online</h2>
       <p>Any need, any time, any language. We respond in minutes.</p>
-      <div style="font-size:1.4rem;margin:2rem 0">
-        <p>📞 +91 83076 19156<br>✉ swadeshlink@gmail.com</p>
+      <div style="font-size:1.5rem;margin:3rem 0">
+        <p>📞 +91 83076 19156<br>📞 +91 70156 65721<br>✉ swadeshlink@gmail.com</p>
       </div>
-      <form style="max-width:650px;margin:0 auto">
+      <form style="max-width:750px;margin:0 auto">
         <input type="text" placeholder="Your Name" required>
         <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message / Service Needed" required rows="6"></textarea>
+        <textarea placeholder="Your Message / Service Needed (Visa, Business, IT, Investment etc.)" required rows="7"></textarea>
         <button type="submit" class="btn">Send Message</button>
       </form>
-      <p style="margin-top:2.5rem"><a href="https://wa.me/917015657213?text=Hi%20Swadesh%20Link,%20I%20need%20help..." style="color:var(--a);font-size:1.4rem">Chat on WhatsApp Now</a></p>
+      <p style="margin-top:3.5rem"><a href="https://wa.me/917015657213?text=Hi%20Swadesh%20Link,%20I%20need%20help..." style="color:var(--a);font-size:1.6rem">Chat on WhatsApp Now</a></p>
     </div>
   </section>
 
@@ -193,7 +210,7 @@
       <a href="terms.html">Terms & Conditions</a> •
       <a href="privacy.html">Privacy Policy</a>
     </div>
-    <p>© 2026 Swadesh Link. All rights reserved in world</p>
+    <p>© 2026 Swadesh Link. All rights reserved. | Panipat, Haryana, India</p>
   </footer>
 
   <div class="floating-btn whatsapp-btn"><a href="https://wa.me/917015657213?text=Hi%20Swadesh%20Link,%20I%20need%20help..." target="_blank"><i class="fab fa-whatsapp"></i></a></div>
