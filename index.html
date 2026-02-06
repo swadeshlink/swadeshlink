@@ -4,55 +4,56 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Swadesh Link | Global Service Hub</title>
-  <meta name="description" content="Trusted worldwide partner for Government, Private, IT/AI, Visa/Legal, Real Estate, Payments, Investments & Courses — 24×7, any language.">
+  <meta name="description" content="Your trusted global partner for Government, Private, IT/AI, Visa/Legal, Real Estate, Payments, Investments & Courses — 24×7, any language, worldwide.">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
     :root{--p:#2563eb;--pd:#1d4ed8;--a:#38bdf8;--d:#020617;--c:#0f172a;--t:#e2e8f0;--lt:#94a3b8}
     *{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,sans-serif}
     html,body{scroll-behavior:smooth;overflow-x:hidden;background:var(--d);color:var(--t)}
     #loader{position:fixed;inset:0;background:var(--d);z-index:9999;display:flex;align-items:center;justify-content:center;color:var(--a);font-size:2rem;transition:opacity 1s}
-    header{position:fixed;top:0;width:100%;background:rgba(2,6,23,.95);backdrop-filter:blur(12px);z-index:1000;padding:1rem 0}
+    header{position:fixed;top:0;width:100%;background:rgba(2,6,23,.95);backdrop-filter:blur(12px);z-index:1000;padding:1rem 0;box-shadow:0 2px 10px #0008}
     .navbar{max-width:1400px;margin:0 auto;padding:0 1.5rem;display:flex;justify-content:space-between;align-items:center}
     .logo{font-size:2rem;font-weight:900;color:var(--a)}
     nav ul{display:flex;gap:1.5rem;list-style:none;flex-wrap:wrap}
     nav a{color:#fff;text-decoration:none;font-weight:600;transition:.3s}
-    nav a:hover{color:var(--a)}
-    section{padding:100px 1.5rem 80px;min-height:80vh;position:relative}
+    nav a:hover{color:var(--a);transform:scale(1.05)}
+    section{padding:100px 1.5rem 80px;min-height:80vh;position:relative;background-size:cover;background-position:center}
     section::before{content:'';position:absolute;inset:0;background:rgba(2,6,23,.78)}
-    .content{position:relative;z-index:2;max-width:1300px;margin:0 auto}
-    h1{font-size:4.5rem;font-weight:900;color:#fff;margin-bottom:1rem;text-align:center}
-    h2{font-size:3rem;color:var(--a);margin:3rem 0 1.5rem;text-align:center}
-    .btn{padding:1rem 2.5rem;background:var(--p);color:#fff;border:none;border-radius:999px;font-size:1.25rem;font-weight:700;cursor:pointer;transition:all .4s;display:inline-block}
-    .btn:hover{background:var(--pd);transform:translateY(-4px);box-shadow:0 12px 30px #2563eb66}
-    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem;margin:3rem auto;max-width:1300px}
-    .card{background:var(--c);padding:2rem;border-radius:16px;border:1px solid rgba(56,189,248,.15);transition:all .4s}
-    .card:hover{transform:translateY(-12px);box-shadow:0 20px 50px rgba(56,189,248,.2)}
-    .card h3{color:var(--a);font-size:1.6rem;margin-bottom:1rem}
-    .card p{font-size:1.15rem;color:var(--lt)}
-    .policy-box{background:rgba(0,0,0,.6);padding:2rem;border-radius:16px;border:1px solid rgba(56,189,248,.2);margin:2rem auto;max-width:1100px;text-align:left;font-size:1.15rem}
-    form{max-width:600px;margin:2rem auto;display:grid;gap:1.2rem}
-    input,textarea{width:100%;padding:1rem;border:none;border-radius:10px;background:#1e293b;color:#fff;font-size:1.1rem}
-    textarea{resize:vertical}
-    footer{background:var(--d);padding:5rem 2rem 3rem;text-align:center;border-top:1px solid rgba(56,189,248,.1)}
-    .footer-links a{color:var(--a);margin:0 .8rem;text-decoration:none}
-    .floating-btn{position:fixed;bottom:1.5rem;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.8rem;box-shadow:0 8px 25px #0008;transition:.3s}
-    .floating-btn:hover{transform:scale(1.15)}
+    .content{position:relative;z-index:2;max-width:1300px;margin:0 auto;text-align:center}
+    h1{font-size:4.8rem;font-weight:900;color:#fff;margin-bottom:1.5rem;line-height:1.1}
+    h2{font-size:3.2rem;color:var(--a);margin:3rem 0 2rem}
+    .btn{padding:1.2rem 3rem;background:var(--p);color:#fff;border:none;border-radius:999px;font-size:1.3rem;font-weight:700;cursor:pointer;transition:all .4s;display:inline-block}
+    .btn:hover{background:var(--pd);transform:translateY(-5px);box-shadow:0 15px 35px #2563eb66}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:2rem;margin:3rem auto}
+    .card{background:var(--c);padding:2.2rem;border-radius:18px;border:1px solid rgba(56,189,248,.2);transition:all .4s}
+    .card:hover{transform:translateY(-15px);box-shadow:0 25px 60px rgba(56,189,248,.25);border-color:var(--a)}
+    .card h3{color:var(--a);font-size:1.8rem;margin-bottom:1.2rem}
+    .card p{font-size:1.2rem;color:var(--lt);line-height:1.6}
+    .policy-box{background:rgba(0,0,0,.65);padding:2.2rem;border-radius:16px;border:1px solid rgba(56,189,248,.25);margin:3rem auto;max-width:1100px;text-align:left;font-size:1.18rem}
+    form{max-width:650px;margin:3rem auto;display:grid;gap:1.5rem}
+    input,textarea{width:100%;padding:1.2rem;border:none;border-radius:12px;background:#1e293b;color:#fff;font-size:1.15rem}
+    textarea{resize:vertical;height:150px}
+    footer{background:var(--d);padding:6rem 2rem 4rem;text-align:center;border-top:1px solid rgba(56,189,248,.15)}
+    .footer-links a{color:var(--a);margin:0 1rem;text-decoration:none;font-weight:500}
+    .footer-links a:hover{color:#fff}
+    .floating-btn{position:fixed;bottom:1.5rem;width:65px;height:65px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;box-shadow:0 10px 30px #0008;transition:.3s}
+    .floating-btn:hover{transform:scale(1.18)}
     .whatsapp-btn{right:1.5rem;background:#25D366;color:#fff}
     .call-btn{left:1.5rem;background:#00A884;color:#fff}
-    #google_translate_element{position:fixed;top:1rem;left:1rem;z-index:999;background:var(--p);padding:.8rem 1.5rem;border-radius:999px;display:flex;align-items:center;gap:.6rem;color:#fff;cursor:pointer}
-    #google_translate_element:hover{background:var(--pd)}
-    #popup{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:9998;align-items:flex-end;justify-content:center}
-    .popup-content{background:var(--c);padding:2.5rem;border-radius:20px 20px 0 0;max-width:500px;width:100%;transform:translateY(100%);opacity:0;transition:all .6s ease-out}
+    #google_translate_element{position:fixed;top:1rem;left:1rem;z-index:999;background:var(--p);padding:.9rem 1.6rem;border-radius:999px;display:flex;align-items:center;gap:.7rem;color:#fff;cursor:pointer;box-shadow:0 4px 15px #2563eb44}
+    #google_translate_element:hover{background:var(--pd);transform:translateY(-3px)}
+    #popup{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:9998;align-items:flex-end;justify-content:center}
+    .popup-content{background:var(--c);padding:2.8rem;border-radius:24px 24px 0 0;max-width:520px;width:95%;transform:translateY(100%);opacity:0;transition:all .6s ease-out;box-shadow:0 -15px 50px #0008}
     #popup.show .popup-content{transform:translateY(0);opacity:1}
-    .close-btn{position:absolute;top:1rem;right:1.5rem;font-size:2.5rem;color:var(--a);cursor:pointer;background:none;border:none}
+    .close-btn{position:absolute;top:1.2rem;right:1.8rem;font-size:3rem;color:var(--a);cursor:pointer;background:none;border:none}
     .close-btn:hover{color:#ff4d4d}
-    @media(max-width:768px){h1{font-size:3.5rem}h2{font-size:2.5rem}.navbar{flex-direction:column}.section{padding:100px 1rem 60px}}
+    @media(max-width:768px){h1{font-size:3.8rem}h2{font-size:2.6rem}.navbar{flex-direction:column;padding:1.2rem}.section{padding:90px 1rem 60px}.cards{gap:1.5rem}}
   </style>
 </head>
 <body>
   <div id="loader">Swadesh Link — Loading...</div>
 
-  <!-- Slide-up Popup -->
+  <!-- Quick Inquiry Popup -->
   <div id="popup" onclick="event.target===this&&closePopup()">
     <div class="popup-content">
       <button class="close-btn" onclick="closePopup()">×</button>
@@ -67,6 +68,7 @@
     </div>
   </div>
 
+  <!-- Header -->
   <header>
     <div class="navbar">
       <div class="logo">Swadesh Link</div>
@@ -83,67 +85,68 @@
     </div>
   </header>
 
+  <!-- Google Translate -->
   <div id="google_translate_element"><i class="fas fa-globe"></i> Language</div>
 
-  <!-- Hero / Home -->
-  <section id="home" class="section" style="background-image:url('https://images.unsplash.com/photo-1556761175-4b46a572b786?w=1600')">
+  <!-- Hero -->
+  <section id="home" class="section" style="background-image:url('https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1600&q=80')">
     <div class="content">
       <h1>Swadesh Link</h1>
       <h1 style="color:var(--a)">Your Global Trusted Partner</h1>
-      <p>Every Sector • Every Country • Every Language<br>Instant, Secure, 24×7 Worldwide Services</p>
+      <p>One platform for every sector — Government, Private, IT/AI, Visa/Legal, Real Estate, Payments, Investments & more.<br>Instant, secure, 24×7 support in any language, worldwide.</p>
       <a href="#contact" class="btn">Get Started Now</a>
     </div>
   </section>
 
   <!-- About -->
-  <section id="about" class="section" style="background-image:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1600')">
+  <section id="about" class="section" style="background-image:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80')">
     <div class="content">
       <h2>About Swadesh Link</h2>
-      <p>We are your one-stop trusted global partner — delivering end-to-end solutions in Government Services, Private Sector Support, IT/AI/Robotics Development, Visa & Legal Assistance, Business Setup, Real Estate & Vehicle Transactions, Secure International Payments, Investments, and Professional Courses.</p>
-      <p>Serving clients across USA, UK, UAE, Canada, Europe, Australia and worldwide — 24×7, in any language, with full transparency and security.</p>
-      <p><strong>Our Mission:</strong> To make global services simple, secure, fast, and accessible for everyone — no borders, no limits.</p>
+      <p>We are your reliable one-stop global partner — providing complete solutions in Government Services, Private Sector Support, IT/AI/Robotics Development, Visa & Legal Assistance, Business Setup, Real Estate & Vehicle Deals, Secure International Payments, Investments, and Training Courses.</p>
+      <p>Serving clients in USA, UK, UAE, Canada, Europe, Australia and worldwide — instant, secure, 24×7 in any language, with full transparency and security.</p>
+      <p><strong>Our Promise:</strong> Fast, transparent, and 100% reliable services — no limits, no borders.</p>
     </div>
   </section>
 
   <!-- Services -->
-  <section id="services" class="section" style="background-image:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600')">
+  <section id="services" class="section" style="background-image:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80')">
     <div class="content">
       <h2>Our Global Services</h2>
       <div class="policy-box">
         <strong>Important Terms & Payment Policy</strong>
         <ul style="list-style:none;padding:0">
-          <li>• Private/Consulting: 50% advance, balance on success</li>
-          <li>• Government: 100% upfront (non-refundable fees)</li>
-          <li>• Non-Payment: Full legal recovery (18% interest + costs)</li>
-          <li>• Our Failure: 100% refund if we fail (Consumer Protection Act)</li>
-          <li>• No Free Info: Contact only for paid services — no free consultation or details</li>
+          <li>• Private/Consulting Services: 50% advance, balance on successful completion & client satisfaction</li>
+          <li>• Government Services: 100% full advance mandatory (non-refundable govt fees & timelines)</li>
+          <li>• Non-Payment Recovery: Full lawful legal remedies (demand notice, civil suit, arbitration, 18% interest + costs)</li>
+          <li>• Our Default: 100% refund if we fail due to our fault (Consumer Protection Act applies)</li>
+          <li>• No Free Consultation/Information: No free advice or detailed info — contact only when ready for paid services</li>
         </ul>
-        <p style="color:#ff4d4d;font-weight:bold;margin-top:1.5rem">Bad faith may attract legal action.</p>
+        <p style="color:#ff4d4d;font-weight:bold;margin-top:1.5rem">Bad faith or fraud may attract legal consequences.</p>
       </div>
       <div class="cards">
-        <div class="card"><h3>Government Sector</h3><p>Aadhaar, PAN, Passport, Attestation, Official Filings</p></div>
-        <div class="card"><h3>Private Sector</h3><p>Licenses, Compliance, Agent Networking, Consulting</p></div>
-        <div class="card"><h3>IT & AI Sector</h3><p>Website/App, AI Integration, Robotics Engineering</p></div>
-        <div class="card"><h3>Legal & Visa Sector</h3><p>Visa Applications, Legal Advocacy, Contract Drafting</p></div>
-        <div class="card"><h3>Business Setup</h3><p>Company Registration, GST/FSSAI, Global Expansion</p></div>
-        <div class="card"><h3>Real Estate & Vehicles</h3><p>Property/Vehicle Buy/Sell, Leasing, Financing</p></div>
-        <div class="card"><h3>Payments Sector</h3><p>International Transfers, UPI, Wise, Crypto</p></div>
-        <div class="card"><h3>Investments Sector</h3><p>Partnerships, Funding, Venture Capital, Portfolio</p></div>
+        <div class="card"><h3>Government Sector</h3><p>Aadhaar Services, PAN Card Issuance, Passport Processing, Document Attestation, Official Filings & Approvals</p></div>
+        <div class="card"><h3>Private Sector</h3><p>Business Licenses, Compliance Certifications, Permit Acquisitions, Agent Networking, Worldwide Private Consulting</p></div>
+        <div class="card"><h3>IT & AI Sector</h3><p>Website Development, Mobile App Creation, Software Solutions, AI Integration, Robotics Engineering</p></div>
+        <div class="card"><h3>Legal & Visa Sector</h3><p>Legal Advocacy, Visa Applications, Immigration Assistance, Business Law Consulting, Contract Drafting</p></div>
+        <div class="card"><h3>Business Setup Sector</h3><p>Company Registration, GST/FSSAI Compliance, Startup Incubation, Global Expansion Strategies, Franchise Setup</p></div>
+        <div class="card"><h3>Real Estate & Vehicles Sector</h3><p>Property Buying/Selling, Leasing Agreements, Vehicle Purchase/Sale, Credit Financing, Global Documentation</p></div>
+        <div class="card"><h3>Payments Sector</h3><p>Secure International Transfers, UPI Integration, Bank Wire Services, Wise Payments, Cryptocurrency Transactions</p></div>
+        <div class="card"><h3>Investments Sector</h3><p>Business Partnerships, Startup Funding, Venture Capital, Global Investments, Portfolio Management</p></div>
       </div>
     </div>
   </section>
 
   <!-- Blog Teaser -->
-  <section id="blog" class="section" style="background-image:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1600')">
+  <section id="blog" class="section" style="background-image:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80')">
     <div class="content">
       <h2>Latest Blog & Insights</h2>
-      <p>Stay updated with trends, guides & tips across all global sectors.</p>
+      <p>Expert tips, guides & updates across all global sectors.</p>
       <div class="cards">
         <div class="card"><h3>Government Sector</h3><p>Public jobs, schemes, tenders, policy analysis, collaborations</p></div>
         <div class="card"><h3>Private Sector</h3><p>Corporate jobs, funding, market expansion, consulting</p></div>
         <div class="card"><h3>IT & AI Sector</h3><p>Software training, AI guides, robotics, cloud, cybersecurity</p></div>
       </div>
-      <a href="blog.html" class="btn" style="margin-top:2rem">Read More Blogs</a>
+      <a href="#contact" class="btn" style="margin-top:2rem">Read More Blogs</a>
     </div>
   </section>
 
@@ -151,32 +154,34 @@
   <section id="courses" class="section" style="background:#0f172a">
     <div class="content">
       <h2>Online & Offline Courses</h2>
-      <p>Practical skills for real-world success — beginner to expert. Earn while you learn.</p>
+      <p>Practical training for real-world success — beginner to expert. Earn while you learn.</p>
       <div class="cards">
         <div class="card"><h3>CSC Center Setup</h3><p>Full registration, training, ₹50k+/month earnings guide</p></div>
         <div class="card"><h3>Government Work</h3><p>PAN/Aadhaar, Licenses, RTO, G2C Services training</p></div>
         <div class="card"><h3>Private Agent Skills</h3><p>Client handling, deals, commissions worldwide</p></div>
         <div class="card"><h3>IT & Tech</h3><p>Websites, Apps, AI Basics, Robotics Fundamentals</p></div>
+        <div class="card"><h3>Business & Legal</h3><p>Company filing, Visa process, Real estate tips</p></div>
+        <div class="card"><h3>Finance Mastery</h3><p>Secure payments, Crypto, Investment strategies</p></div>
       </div>
-      <a href="contact.html" class="btn" style="margin-top:3rem">Enroll Now</a>
+      <a href="#contact" class="btn" style="margin-top:3rem">Enroll Now</a>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="section" style="background-image:url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1600')">
+  <section id="contact" class="section" style="background-image:url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80')">
     <div class="content">
       <h2>Contact Us — Always Online</h2>
       <p>Any need, any time, any language. We respond in minutes.</p>
-      <div class="contact-info" style="font-size:1.3rem;margin:2rem 0">
+      <div style="font-size:1.4rem;margin:2rem 0">
         <p>📞 +91 83076 19156<br>📞 +91 70156 65721<br>✉ swadeshlink@gmail.com</p>
       </div>
-      <form style="max-width:600px;margin:0 auto">
+      <form style="max-width:650px;margin:0 auto">
         <input type="text" placeholder="Your Name" required>
         <input type="email" placeholder="Your Email" required>
         <textarea placeholder="Your Message / Service Needed" required rows="6"></textarea>
         <button type="submit" class="btn">Send Message</button>
       </form>
-      <p style="margin-top:2rem"><a href="https://wa.me/917015657213?text=Hi%20Swadesh%20Link,%20I%20need%20help..." style="color:var(--a);font-size:1.3rem">Chat on WhatsApp Now</a></p>
+      <p style="margin-top:2.5rem"><a href="https://wa.me/917015657213?text=Hi%20Swadesh%20Link,%20I%20need%20help..." style="color:var(--a);font-size:1.4rem">Chat on WhatsApp Now</a></p>
     </div>
   </section>
 
