@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=0.8, user-scalable=yes" />
-  <title>Swadesh Link | Professional Services 2026</title>
-  <meta name="description" content="Government Services in Ambala, Haryana | Private Services in Ambala & Across Haryana | IT & AI Services Worldwide" />
+  <title>Swadesh Link | Professional Services</title>
+  <meta name="description" content="Government Services in Ambala Haryana | Private Services in Ambala & Across Haryana | IT & AI Services Worldwide" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <style>
     :root {
@@ -42,9 +42,15 @@
       display:flex; justify-content:space-between; align-items:center;
     }
 
+    .logo {
+      display:flex; align-items:center; gap:12px;
+    }
     .logo img {
       height: 54px;
       width: auto;
+    }
+    .logo-text {
+      font-size:1.65rem; font-weight:800; color:white; letter-spacing:-0.5px;
     }
 
     nav { display:flex; gap:2.2rem; }
@@ -63,10 +69,10 @@
 
     .content { position:relative; z-index:2; max-width:1280px; width:100%; }
 
-    h1 { font-size:clamp(3.2rem, 9vw, 6.2rem); font-weight:900; margin-bottom:0.8rem; line-height:1.05; color:white; }
-    h2 { font-size:clamp(2.4rem, 6.5vw, 4.2rem); font-weight:800; margin:2.8rem 0 1.6rem; }
+    h1 { font-size:clamp(3.4rem, 9.5vw, 6.5rem); font-weight:900; margin-bottom:0.6rem; line-height:1.05; color:white; }
+    h2 { font-size:clamp(2.5rem, 7vw, 4.4rem); font-weight:800; margin:2.8rem 0 1.6rem; }
 
-    p { font-size:clamp(1.18rem, 3.6vw, 1.45rem); max-width:920px; margin:0 auto 2.8rem; opacity:0.94; }
+    p { font-size:clamp(1.2rem, 3.8vw, 1.48rem); max-width:920px; margin:0 auto 2.8rem; opacity:0.94; }
 
     .btn {
       padding:1.15rem 3.2rem; background:var(--primary); color:white;
@@ -87,13 +93,26 @@
     .card {
       background:var(--card); padding:2.8rem 2.2rem; border-radius:1.6rem;
       box-shadow:0 15px 40px rgba(0,0,0,0.6); transition:all 0.4s ease;
-      border:1px solid rgba(56,189,248,0.18);
+      border:1px solid rgba(56,189,248,0.18); text-align:left;
     }
     .card:hover {
       transform:translateY(-18px); box-shadow:0 28px 70px rgba(56,189,248,0.35);
     }
     .card i {
-      font-size:3.2rem; color:var(--accent); margin-bottom:1.2rem;
+      font-size:3.2rem; color:var(--accent); margin-bottom:1.4rem;
+    }
+
+    .contact-form {
+      max-width:680px; margin:3rem auto 0; background:var(--card); padding:2.5rem;
+      border-radius:1.6rem; box-shadow:0 15px 40px rgba(0,0,0,0.6);
+    }
+    .contact-form input, .contact-form textarea {
+      width:100%; padding:1rem 1.4rem; margin-bottom:1.4rem; border:none;
+      border-radius:12px; background:#1e2937; color:white; font-size:1.1rem;
+    }
+    .contact-form button {
+      width:100%; padding:1.1rem; background:var(--primary); color:white;
+      border:none; border-radius:50px; font-size:1.25rem; font-weight:700; cursor:pointer;
     }
 
     footer {
@@ -101,13 +120,21 @@
       color:var(--muted); border-top:1px solid rgba(56,189,248,0.12);
     }
 
-    .footer-links { display:flex; flex-wrap:wrap; justify-content:center; gap:1.4rem; margin-bottom:2.5rem; }
+    .footer-links { display:flex; flex-wrap:wrap; justify-content:center; gap:1.4rem; margin-bottom:2rem; }
     .footer-btn {
       padding:0.95rem 2.2rem; background:var(--primary); color:white;
       border-radius:50px; font-size:1.05rem; font-weight:600; text-decoration:none;
       transition:all 0.3s;
     }
     .footer-btn:hover { background:#1d4ed8; transform:translateY(-4px); }
+
+    .social-icons {
+      margin:2rem 0;
+    }
+    .social-icons a {
+      color:var(--muted); font-size:1.8rem; margin:0 12px; transition:all 0.3s;
+    }
+    .social-icons a:hover { color:var(--accent); transform:translateY(-4px); }
 
     .floating-btn {
       position:fixed; bottom:1.8rem; width:4.4rem; height:4.4rem;
@@ -129,31 +156,34 @@
 </head>
 <body>
 
-  <div id="loader">Swadesh Link — 2026</div>
+  <div id="loader">Swadesh Link</div>
 
   <!-- HEADER -->
   <header>
     <div class="navbar">
       <div class="logo">
         <img src="https://i.imgur.com/your-logo-url.png" alt="Swadesh Link" style="height:54px; width:auto;">
+        <span class="logo-text">Swadesh Link</span>
       </div>
       <nav>
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#services">Services</a>
+        <a href="#blog">Blog</a>
+        <a href="#roadmap">Roadmap</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- HOME - Improved Hero -->
+  <!-- HOME -->
   <section id="home" class="section" style="background-image: url('https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=2000&q=80');">
     <div class="content">
       <h1>Swadesh Link</h1>
-      <h1 style="margin-top:-1rem; font-size:clamp(2.8rem, 7.5vw, 5.4rem);">Professional Excellence 2026</h1>
-      <p style="max-width:780px; font-size:1.35rem;">
+      <h1 style="margin-top:-1.2rem; font-size:clamp(2.9rem, 8vw, 5.6rem);">Professional Services</h1>
+      <p style="max-width:800px; font-size:1.4rem;">
         <strong>Government Services</strong> — Ambala, Haryana<br>
-        <strong>Private Services</strong> — Ambala & Across Haryana<br>
+        <strong>Private & Facilitation Services</strong> — Ambala & Across Haryana<br>
         <strong>IT & AI Solutions</strong> — Worldwide
       </p>
       <a href="#contact" class="btn">Get Started Today</a>
@@ -164,15 +194,15 @@
   <section id="about" class="section" style="background-image:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=2000&q=80')">
     <div class="content">
       <h2>About Swadesh Link</h2>
-      <p><strong>Your Trusted Partner for Professional Services in 2026.</strong></p>
+      <p><strong>Your Trusted Partner for Professional Excellence.</strong></p>
       <p>
-        We provide fast, reliable and transparent services with complete professionalism. 
-        Government services are handled exclusively in <strong>Ambala, Haryana</strong>. 
-        All private services are now available in <strong>Ambala</strong> and across the entire state of <strong>Haryana</strong>.
+        Swadesh Link delivers fast, reliable and transparent services with complete professionalism. 
+        We specialize in government services exclusively in <strong>Ambala, Haryana</strong>. 
+        All private and facilitation services are available in <strong>Ambala</strong> and across the entire state of <strong>Haryana</strong>.
       </p>
       <p>
-        From everyday convenience services to complex legal, property, and marketing needs — 
-        we deliver end-to-end solutions with honesty and efficiency.
+        From legal consultation to property & vehicle facilitation, marketing, and everyday convenience services — 
+        we handle everything with honesty, efficiency, and care.
       </p>
     </div>
   </section>
@@ -192,24 +222,67 @@
 
         <div class="card">
           <i class="fas fa-handshake"></i>
-          <h3>Private Services</h3>
-          <p><strong>Now in Ambala + Across Haryana</strong><br>
-          • Laundry Service<br>
-          • Agent / Facilitation Service (any work)<br>
-          • Advocate Consultation & Legal Case Handling<br>
+          <h3>Private & Facilitation Services</h3>
+          <p><strong>In Ambala & Across Haryana</strong><br>
+          • Professional Laundry Service<br>
+          • Agent & Facilitation Service (any work)<br>
+          • Full Advocate Services – Legal Consultation, Case Handling, Document Work & Advice<br>
           • Complete Marketing (Digital + Offline)<br>
-          • Property Sale, Purchase & Rent<br>
-          • Vehicle Sale, Purchase & Rent<br>
-          • Electronics & Other Items — Buy, Sell, Rent</p>
+          • Property Buy, Sell & Rent Facilitation<br>
+          • Vehicle Buy, Sell & Rent Facilitation<br>
+          • Electronics & Other Items – Buy, Sell & Rent Facilitation</p>
         </div>
 
         <div class="card">
           <i class="fas fa-laptop-code"></i>
           <h3>IT & AI Services</h3>
           <p><strong>Worldwide for Indian & Foreign Clients</strong><br>
-          Website & Mobile App Development, Digital Marketing, SEO, Social Media Management, Graphic Design, Cybersecurity, AI Solutions and complete IT services.</p>
+          Website & Mobile App Development, Digital Marketing, SEO, Social Media Management, Graphic Design, Cybersecurity, AI Solutions and all IT services.</p>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section id="blog" class="section" style="background-image: url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=2000&q=80'); background-position:top;">
+    <div class="content">
+      <h2>Blog & Insights</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Latest Updates on Government Schemes 2026</h3>
+          <p>Stay informed about new welfare schemes and how to apply easily in Ambala.</p>
+        </div>
+        <div class="card">
+          <h3>How to Safely Buy/Sell Property in Haryana</h3>
+          <p>Complete guide with our facilitation support for hassle-free transactions.</p>
+        </div>
+        <div class="card">
+          <h3>Why Choose Professional Legal Consultation</h3>
+          <p>Benefits of advocate services and how we help resolve cases faster.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROADMAP -->
+  <section id="roadmap" class="section" style="background-image: url('https://images.unsplash.com/photo-1504384764586-6b4f2c0c3b9c?auto=format&fit=crop&w=2000&q=80');">
+    <div class="content">
+      <h2>Our 2026 Roadmap</h2>
+      <p style="max-width:760px;">Expanding our services, strengthening technology integration, and delivering even faster support across Haryana and globally.</p>
+      <div class="cards">
+        <div class="card">
+          <h3>Q1 2026</h3>
+          <p>Enhanced online portal for government services in Ambala.</p>
+        </div>
+        <div class="card">
+          <h3>Q2 2026</h3>
+          <p>Launch of dedicated property & vehicle marketplace with full facilitation.</p>
+        </div>
+        <div class="card">
+          <h3>Q3-Q4 2026</h3>
+          <p>AI-powered service tracking and expansion of IT & AI solutions worldwide.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -219,14 +292,26 @@
     <div class="content">
       <h2>Let's Connect</h2>
       <p style="max-width:720px;">
-        Whether it's government work in Ambala, private services in Haryana, or IT & AI projects worldwide — 
-        we are ready to serve you with complete dedication.
+        Government work in Ambala, private facilitation services in Haryana, or IT & AI projects worldwide — 
+        we are ready to assist you.
       </p>
-      <p style="font-size:29px; margin:3rem 0 2.5rem; line-height:1.4;">
+
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <form>
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <input type="tel" placeholder="Phone Number" required>
+          <textarea rows="5" placeholder="Your Message / Query" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+
+      <p style="font-size:28px; margin:3rem 0 1rem; line-height:1.4;">
         📞 <strong>+91 83076 19156</strong><br>
         ✉ <strong>swadeshlink@gmail.com</strong>
       </p>
-      <a href="https://wa.me/917015657213?text=Hello%20Swadesh%20Link,%20I%20want%20to%20discuss%20services" target="_blank" class="btn">
+      <a href="https://wa.me/917015657213?text=Hello%20Swadesh%20Link,%20I%20have%20a%20query" target="_blank" class="btn">
         Message on WhatsApp
       </a>
     </div>
@@ -241,8 +326,16 @@
       <a href="terms.html" class="footer-btn">Terms & Conditions</a>
       <a href="privacy.html" class="footer-btn">Privacy Policy</a>
     </div>
+
+    <div class="social-icons">
+      <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+
     <p><strong>© 2026 Swadesh Link</strong> | All Rights Reserved</p>
-    <p>Government Services • Ambala, Haryana | Private Services • Ambala & Haryana | IT & AI • Worldwide</p>
+    <p>Government Services • Ambala, Haryana | Private & Facilitation Services • Ambala & Haryana | IT & AI • Worldwide</p>
   </footer>
 
   <!-- FLOATING BUTTONS -->
