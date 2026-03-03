@@ -2,101 +2,77 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Swadesh Link · Global AI Hub 2026 | Ambala Cantt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swadesh Link · Ambala AI Hub 2026</title>
     
-    <meta name="theme-color" content="#020617">
-    <link rel="manifest" href="data:application/json;base64,ewogICJuYW1lIjogIlN3YWRlc2ggTGluayIsCiAgInNob3J0X25hbWUiOiAiU3dhZGVzaEFJIiwKICAic3RhcnRfdXJsIjogIi8iLAogICJkaXNwbGF5IjogInN0YW5kYWxvbmUiLAogICJiYWNrZ3JvdW5kX2NvbG9yIjogIiMwMjA2MTciLAogICJ0aGVtZV9jb2xvciI6ICIzOGJkZjgiCn0=">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;600;800;900&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;800&display=swap" rel="stylesheet">
+    
     <style>
-        :root { --primary:#38bdf8; --secondary:#6366f1; --accent:#2dd4bf; --bg:#020617; --glass:rgba(15,23,42,0.8); --border:rgba(255,255,255,0.1); --text:#ffffff; }
-        * { margin:0; padding:0; box-sizing:border-box; font-family:'Plus Jakarta Sans', sans-serif; -webkit-user-select:none; user-select:none; }
-        body { background:var(--bg); color:var(--text); overflow-x:hidden; scroll-behavior:smooth; }
-        #neural-bg { position:fixed; top:0; left:0; z-index:-1; width:100%; height:100%; opacity:0.4; pointer-events:none; }
-        header { position:fixed; top:0; width:100%; z-index:1000; background:var(--glass); backdrop-filter:blur(30px); padding:1rem 8%; display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border); }
-        .logo { font-size:1.6rem; font-weight:900; text-decoration:none; color:#fff; }
-        .logo span { color:var(--primary); }
-        .hero { min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:120px 5% 60px; background:radial-gradient(circle at center, rgba(56,189,248,0.15) 0%, transparent 70%); }
-        .hero h1 { font-size:clamp(2.5rem, 8vw, 6rem); font-weight:900; line-height:0.9; margin-bottom:20px; letter-spacing:-4px; }
-        .shimmer { background:linear-gradient(90deg, #fff, var(--primary), var(--accent), #fff); background-size:200% auto; -webkit-background-clip:text; -webkit-text-fill-color:transparent; animation:shimmer 4s linear infinite; }
-        @keyframes shimmer { to { background-position:200% center; } }
-        .cube-stats { perspective:1000px; margin:40px 0; display:flex; justify-content:center; }
-        .cube { width:140px; height:140px; position:relative; transform-style:preserve-3d; animation:rotate 20s infinite linear; }
-        .cube-face { position:absolute; width:140px; height:140px; background:var(--glass); border:2px solid var(--primary); display:flex; flex-direction:column; justify-content:center; align-items:center; font-weight:800; color:var(--primary); }
-        .f1 { transform:rotateY(0deg) translateZ(70px); } .f2 { transform:rotateY(90deg) translateZ(70px); } .f3 { transform:rotateY(180deg) translateZ(70px); } .f4 { transform:rotateY(-90deg) translateZ(70px); }
-        @keyframes rotate { from { transform:rotateX(0) rotateY(0); } to { transform:rotateX(360deg) rotateY(360deg); } }
-        .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:30px; padding:80px 8%; }
-        .card { background:var(--glass); padding:40px; border-radius:40px; border:1px solid var(--border); transition:0.4s; }
-        .card:hover { transform:translateY(-15px); border-color:var(--primary); box-shadow:0 20px 50px rgba(56,189,248,0.2); }
-        .btn-ai { padding:18px 45px; background:linear-gradient(135deg, var(--secondary), var(--primary)); border:none; border-radius:100px; color:#fff; font-weight:900; cursor:pointer; box-shadow:0 10px 40px rgba(99,102,241,0.4); display:flex; align-items:center; gap:10px; }
-        #ai-hub { position:fixed; bottom:30px; right:30px; z-index:5000; cursor:pointer; }
-        .sphere { width:70px; height:70px; background:var(--accent); border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 0(40px) var(--accent); animation:float 4s infinite ease-in-out; }
-        @keyframes float { 0%, 100% { transform:translateY(0); } 50% { transform:translateY(-20px); } }
-        footer { text-align:center; padding:60px; border-top:1px solid var(--border); opacity:0.6; }
+        :root { --primary: #38bdf8; --bg: #020617; --glass: rgba(15, 23, 42, 0.8); }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background: var(--bg); color: #fff; overflow-x: hidden; }
+
+        header { position: fixed; width: 100%; padding: 20px 8%; background: var(--glass); backdrop-filter: blur(20px); z-index: 1000; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .logo { font-size: 24px; font-weight: 800; text-decoration: none; color: #fff; }
+        .logo span { color: var(--primary); }
+
+        /* Hero & 3D Cube */
+        .hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding-top: 100px; }
+        .cube-stats { perspective: 1000px; margin: 40px 0; }
+        .cube { width: 120px; height: 120px; position: relative; transform-style: preserve-3d; animation: rotate 15s infinite linear; }
+        .cube-face { position: absolute; width: 120px; height: 120px; background: var(--glass); border: 2px solid var(--primary); display: flex; align-items: center; justify-content: center; font-weight: 800; color: var(--primary); }
+        .f1 { transform: rotateY(0deg) translateZ(60px); } .f2 { transform: rotateY(90deg) translateZ(60px); }
+        @keyframes rotate { from { transform: rotateX(0) rotateY(0); } to { transform: rotateX(360deg) rotateY(360deg); } }
+
+        /* Ambala District Node Map */
+        .map-box { width: 90%; max-width: 1000px; height: 400px; margin: 50px auto; border-radius: 30px; overflow: hidden; border: 2px solid var(--primary); box-shadow: 0 0 30px rgba(56, 189, 248, 0.3); }
+
+        .btn-ai { padding: 15px 40px; background: var(--primary); color: #000; border-radius: 50px; text-decoration: none; font-weight: 800; cursor: pointer; border: none; }
+        footer { padding: 40px; text-align: center; opacity: 0.6; font-size: 12px; border-top: 1px solid rgba(255,255,255,0.1); }
     </style>
 </head>
 <body oncontextmenu="return false;">
-    <canvas id="neural-bg"></canvas>
+
     <header>
         <a href="#" class="logo">SWADESH<span>LINK</span></a>
-        <div style="display:flex; gap:10px;">
-            <button onclick="switchLang('hi')" style="background:none; border:1px solid var(--primary); color:var(--primary); padding:5px 15px; border-radius:20px; cursor:pointer; font-size:11px;">HINDI AI</button>
-            <a href="tel:+918307619156" class="btn-ai" style="padding:8px 20px; font-size:12px;">HQ CALL</a>
-        </div>
+        <a href="tel:+918307619156" class="btn-ai" style="padding: 10px 20px; font-size: 12px;">CALL HQ</a>
     </header>
 
-    <main>
-        <section class="hero" id="home">
-            <h1 class="shimmer" id="hero-title">INFINITE<br>GLOBAL AI</h1>
-            <p style="opacity:0.6; letter-spacing:5px; font-weight:800; margin-bottom:30px;">AMBALA DISTRICT HQ · MISSION 2026</p>
-            <div class="cube-stats">
-                <div class="cube">
-                    <div class="cube-face f1">50+<br><small>Nations</small></div>
-                    <div class="cube-face f2">100%<br><small>Verified</small></div>
-                    <div class="cube-face f3">0.1ms<br><small>Latency</small></div>
-                    <div class="cube-face f4">AI<br><small>Ready</small></div>
-                </div>
+    <section class="hero">
+        <h1 style="font-size: 3rem;">AMBALA DISTRICT<br><span style="color:var(--primary);">GLOBAL AI HUB</span></h1>
+        <div class="cube-stats">
+            <div class="cube">
+                <div class="cube-face f1">50+ Nations</div>
+                <div class="cube-face f2">100% Safe</div>
             </div>
-            <button onclick="startNeuralScan()" class="btn-ai" id="bio-btn"><i class="fas fa-fingerprint"></i> INITIATE NEURAL SCAN</button>
-        </section>
+        </div>
+        <button onclick="startScan()" class="btn-ai" id="scan-btn">INITIATE AI SCAN</button>
+    </section>
 
-        <section id="services" class="grid">
-            <div class="card"><i class="fas fa-passport" style="font-size:3rem; color:var(--primary);"></i><h2>Visa Architecture</h2><p>UAE Golden, USA Green Card & EU Mobility. 48h priority processing from Ambala Cantt.</p></div>
-            <div class="card"><i class="fas fa-microchip" style="font-size:3rem; color:var(--secondary);"></i><h2>AI Robotics</h2><p>Industry 5.0 agents and autonomous computer vision deployed from Ambala HQ.</p></div>
-            <div class="card"><i class="fas fa-shield-check" style="font-size:3rem; color:var(--accent);"></i><h2>Quantum Legal</h2><p>Blockchain title deeds, Digital Notary, and AES-256 asset protection.</p></div>
-        </section>
-
-        <section id="map" style="padding:80px 8%; text-align:center;">
-            <h2 style="margin-bottom:30px;">Live <span style="color:var(--primary);">Ambala District</span> Node</h2>
-            <div style="width:100%; max-width:1000px; height:400px; margin:0 auto; border-radius:40px; overflow:hidden; border:1px solid var(--primary); box-shadow:0 0 50px rgba(56,189,248,0.2);">
-                <iframe src="http://googleusercontent.com/maps.google.com/4" width="100%" height="100%" style="border:0; filter:invert(90%) hue-rotate(180deg);" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-        </section>
-    </main>
-
-    <div id="ai-hub" onclick="askAI()"><div class="sphere"><i class="fas fa-robot" style="color:#000; font-size:2rem;"></i></div></div>
+    <section class="map-box">
+        <iframe src="http://googleusercontent.com/maps.google.com/5" width="100%" height="100%" style="border:0; filter: invert(90%) hue-rotate(180deg);" allowfullscreen="" loading="lazy"></iframe>
+    </section>
 
     <footer>
-        <p>© 2026 Swadesh Link Hub · Ambala District · Quantum AI Protection</p>
-        <div style="margin-top:20px; font-size:1.5rem; display:flex; gap:30px; justify-content:center;">
-            <a href="https://wa.me/918307619156" style="color:#25d366;"><i class="fab fa-whatsapp"></i></a>
-            <a href="#" style="color:#fff;"><i class="fab fa-instagram"></i></a>
-        </div>
+        <p>© 2026 Swadesh Link · Ambala Cantt HQ · Quantum Integrity</p>
     </footer>
 
     <script>
-        document.onkeydown=(e)=>{if(e.keyCode==123||(e.ctrlKey&&e.shiftKey&&e.keyCode==73)){aiSpeak("Intrusion detected. Trace active.");return false;}};
-        function aiSpeak(t){const s=window.speechSynthesis;const u=new SpeechSynthesisUtterance(t);u.pitch=0.8;u.rate=1;s.speak(u);}
-        function switchLang(l){const t=document.getElementById('hero-title');if(l==='hi'){t.innerHTML="सीमाओं के पार।<br><span style='color:var(--primary);'>बुद्धिमत्ता एकीकृत।</span>";aiSpeak("अम्बाला कैंट नोड में आपका स्वागत है।");}else{location.reload();}}
-        function startNeuralScan(){aiSpeak("Initiating neural scan via blockchain.");const b=document.getElementById('bio-btn');let p=0;let i=setInterval(()=>{p+=5;b.innerHTML=VERIFYING ${p}%;if(p>=100){clearInterval(i);b.innerHTML='IDENTITY VERIFIED';b.style.background='#00ff88';aiSpeak("Access granted.");}},100);}
-        const c=document.getElementById('neural-bg');const ctx=c.getContext('2d');c.width=window.innerWidth;c.height=window.innerHeight;let particles=[];
-        class P{constructor(){this.x=Math.random()c.width;this.y=Math.random()*c.height;this.vx=Math.random()*2-1;this.vy=Math.random()*2-1;}u(){this.x+=this.vx;this.y+=this.vy;if(this.x<0||this.x>c.width)this.vx=-1;if(this.y<0||this.y>c.height)this.vy*=-1;}d(){ctx.fillStyle='#38bdf8';ctx.beginPath();ctx.arc(this.x,this.y,1,0,Math.PI*2);ctx.fill();}}
-        for(let i=0;i<80;i++)particles.push(new P());
-        function anim(){ctx.clearRect(0,0,c.width,c.height);particles.forEach(p=>{p.u();p.d();});requestAnimationFrame(anim);}anim();
-        function askAI(){const q=prompt("COMMAND?");if(q.includes('visa')){aiSpeak("Opening terminals.");window.location.hash='services';}else{aiSpeak("Processing.");}}
-        window.onload=()=>setTimeout(()=>aiSpeak("Swadesh Link 2026 Hub Online. Security Node Ambala active."),1000);
+        // AI Voice Synthesis
+        window.onload = () => {
+            const speech = new SpeechSynthesisUtterance("Welcome to Swadesh Link 2026. Ambala Node is Active.");
+            window.speechSynthesis.speak(speech);
+        };
+
+        function startScan() {
+            const btn = document.getElementById('scan-btn');
+            btn.innerHTML = "SCANNING...";
+            setTimeout(() => {
+                btn.innerHTML = "IDENTITY VERIFIED";
+                btn.style.background = "#00ff88";
+            }, 2000);
+        }
     </script>
 </body>
 </html>
