@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#020617" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#f0f9ff" media="(prefers-color-scheme: light)">
     <title>Swadesh Link · Ambala District's #1 AI-Powered Service Hub 2026 | Government, IT, Real Estate, Home Services</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔗</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔗</text></svg>">
     
     <!-- SEO Meta Tags -->
     <meta name="description" content="Swadesh Link - Ambala District's premier AI-powered service platform. Government services, IT solutions, real estate, home services, marketing. 50+ services. 24/7 AI support. Call +91 8307619156">
-    <meta name="keywords" content="Ambala services, government services Ambala, IT services Haryana, real estate Ambala, home services, marketing agency Ambala, AI services India">
+    <meta name="keywords" content="Ambala services, government services Ambala, IT services Haryana, real estate Ambala, home services, marketing agency Ambala, AI services India 2026">
     <meta name="author" content="Swadesh Link">
     <meta name="robots" content="index, follow">
     <meta name="googlebot" content="index, follow">
-    <meta name="theme-color" content="#020617">
     <meta name="msapplication-TileColor" content="#020617">
     
     <!-- Open Graph -->
@@ -32,13 +37,16 @@
     <link rel="canonical" href="https://swadeshlink.com/">
     
     <!-- PWA Manifest -->
-    <link rel="manifest" href="data:application/json;base64,eyJuYW1lIjoiU3dhZGVzaCBMaW5rIiwic2hvcnRfbmFtZSI6IlN3YWRlc2hMaW5rIiwic3RhcnRfdXJsIjoiLyIsImRpc3BsYXkiOiJzdGFuZGFsb25lIiwiYmFja2dyb3VuZF9jb2xvciI6IiMwMjA2MTciLCJ0aGVtZV9jb2xvciI6IiMzOGJkZjgiLCJpY29ucyI6W3sic3JjIjoiaWNvbi0xOTJ4MTkyLnBuZyIsInNpemVzIjoiMTkyeDE5MiIsInR5cGUiOiJpbWFnZS9wbmcifV19">
+    <link rel="manifest" href="data:application/json;base64,eyJuYW1lIjoiU3dhZGVzaCBMaW5rIiwic2hvcnRfbmFtZSI6IlN3YWRlc2hMaW5rIiwic3RhcnRfdXJsIjoiLyIsImRpc3BsYXkiOiJzdGFuZGFsb25lIiwiYmFja2dyb3VuZF9jb2xvciI6IiMwMjA2MTciLCJ0aGVtZV9jb2xvciI6IiMzOGJkZjgiLCJpY29ucyI6W3sic3JjIjoiaWNvbi0xOTJ4MTkyLnBuZyIsInNpemVzIjoiMTkyeDE5MiIsInR5cGUiOiJpbWFnZS9wbmcifV0sInNjb3BlIjogIi4iLCAic3RhcnRfdXJsIjogIi8ifQ==">
     
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" as="style">
     
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -93,31 +101,40 @@
     </script>
 
     <style>
+        /* ===== 2026 MODERN CSS FEATURES & VARIABLES ===== */
         :root {
-            --primary: #00f2ff;
-            --secondary: #7000ff;
-            --accent: #2dd4bf;
-            --warning: #ff4d4d;
-            --success: #00ff88;
-            --gold: #ffd700;
-            --bg: #020617;
-            --glass: rgba(15, 23, 42, 0.85);
-            --glass-light: rgba(255, 255, 255, 0.03);
-            --border: rgba(0, 242, 255, 0.15);
-            --text: #f8fafc;
-            --text-dim: #94a3b8;
-            --gradient-1: linear-gradient(135deg, #00f2ff 0%, #7000ff 100%);
-            --gradient-2: linear-gradient(135deg, #7000ff 0%, #2dd4bf 100%);
-            --shadow-glow: 0 0 40px rgba(0, 242, 255, 0.3);
+            /* OKLCH Color System for better perceptual uniformity */
+            --primary: oklch(0.75 0.15 195);
+            --secondary: oklch(0.55 0.2 280);
+            --accent: oklch(0.7 0.15 170);
+            --warning: oklch(0.65 0.25 25);
+            --success: oklch(0.75 0.2 145);
+            --gold: oklch(0.85 0.15 85);
+            
+            /* Dynamic backgrounds using light-dark() */
+            --bg: light-dark(#f0f9ff, #020617);
+            --glass: light-dark(rgba(255, 255, 255, 0.9), rgba(15, 23, 42, 0.85));
+            --glass-light: light-dark(rgba(0, 0, 0, 0.03), rgba(255, 255, 255, 0.03));
+            --border: light-dark(rgba(0, 0, 0, 0.1), rgba(0, 242, 255, 0.15));
+            --text: light-dark(#0f172a, #f8fafc);
+            --text-dim: light-dark(#475569, #94a3b8);
+            
+            /* Gradients using color-mix */
+            --gradient-1: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            --gradient-2: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%);
+            --shadow-glow: 0 0 40px oklch(from var(--primary) l c h / 0.3);
+            
+            /* Animation timing functions */
+            --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .light-mode {
-            --bg: #f0f9ff;
-            --glass: rgba(255, 255, 255, 0.9);
-            --glass-light: rgba(0, 0, 0, 0.03);
-            --border: rgba(0, 0, 0, 0.1);
-            --text: #0f172a;
-            --text-dim: #475569;
+        /* Respect user motion preferences */
+        @media (prefers-reduced-motion: reduce) {
+            :root {
+                --ease-spring: linear;
+                --ease-smooth: linear;
+            }
         }
 
         * { 
@@ -127,14 +144,22 @@
             font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
-        html { scroll-behavior: smooth; }
+        html { 
+            scroll-behavior: smooth;
+            /* Prevent layout shift */
+            scrollbar-gutter: stable;
+        }
 
         body { 
             background: var(--bg); 
             color: var(--text); 
             overflow-x: hidden;
             line-height: 1.6;
-            transition: all 0.5s ease;
+            transition: background 0.5s var(--ease-smooth), color 0.5s var(--ease-smooth);
+            /* Improve text rendering */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-wrap: pretty;
         }
 
         /* ===== NEURAL NETWORK BACKGROUND ===== */
@@ -184,6 +209,8 @@
             border: 1px solid var(--primary);
             backdrop-filter: blur(10px);
             max-width: 200px;
+            /* Anchor positioning for tooltip */
+            anchor-name: --security-hud;
         }
 
         .security-hud div { 
@@ -208,7 +235,9 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            transition: opacity 0.8s ease;
+            transition: opacity 0.8s var(--ease-smooth);
+            /* Backdrop blur for modern browsers */
+            backdrop-filter: blur(20px);
         }
 
         .ai-welcome.hidden {
@@ -228,12 +257,19 @@
             color: #000;
             animation: ai-pulse 2s infinite;
             margin-bottom: 30px;
-            box-shadow: 0 0 60px rgba(0, 242, 255, 0.5);
+            box-shadow: 0 0 60px oklch(from var(--primary) l c h / 0.5);
+            /* Kinetic typography effect */
+            font-variation-settings: 'wght' 800;
+            transition: font-variation-settings 0.3s;
+        }
+
+        .ai-avatar:hover {
+            font-variation-settings: 'wght' 900;
         }
 
         @keyframes ai-pulse {
-            0%, 100% { transform: scale(1); box-shadow: 0 0 60px rgba(0, 242, 255, 0.5); }
-            50% { transform: scale(1.05); box-shadow: 0 0 100px rgba(0, 242, 255, 0.8); }
+            0%, 100% { transform: scale(1); box-shadow: 0 0 60px oklch(from var(--primary) l c h / 0.5); }
+            50% { transform: scale(1.05); box-shadow: 0 0 100px oklch(from var(--primary) l c h / 0.8); }
         }
 
         .ai-welcome-text {
@@ -241,6 +277,8 @@
             font-weight: 800;
             text-align: center;
             margin-bottom: 15px;
+            /* Balanced text wrapping for headings */
+            text-wrap: balance;
         }
 
         .ai-welcome-sub {
@@ -249,6 +287,7 @@
             text-align: center;
             max-width: 500px;
             margin-bottom: 40px;
+            text-wrap: pretty;
         }
 
         .ai-skip {
@@ -259,12 +298,13 @@
             border-radius: 50px;
             cursor: pointer;
             font-weight: 700;
-            transition: 0.3s;
+            transition: 0.3s var(--ease-spring);
         }
 
         .ai-skip:hover {
             background: var(--primary);
             color: #000;
+            transform: translateY(-2px);
         }
 
         /* ===== HEADER ===== */
@@ -280,12 +320,14 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            transition: all 0.3s ease;
+            transition: all 0.3s var(--ease-smooth);
+            /* Container query for responsive header */
+            container-type: inline-size;
         }
 
         header.scrolled {
             padding: 8px 5%;
-            background: rgba(2, 6, 23, 0.98);
+            background: light-dark(rgba(255, 255, 255, 0.98), rgba(2, 6, 23, 0.98));
             box-shadow: 0 10px 40px rgba(0,0,0,0.3);
         }
 
@@ -300,6 +342,12 @@
             display: flex;
             align-items: center;
             gap: 10px;
+            /* Micro-interaction */
+            transition: transform 0.3s var(--ease-spring);
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
         }
 
         .logo::before {
@@ -330,7 +378,7 @@
             position: relative;
             padding: 5px 0;
             opacity: 0.85;
-            transition: 0.3s;
+            transition: all 0.3s var(--ease-smooth);
         }
 
         .nav-desktop a::after {
@@ -341,7 +389,7 @@
             width: 0;
             height: 2px;
             background: var(--gradient-1);
-            transition: width 0.3s ease;
+            transition: width 0.3s var(--ease-spring);
             box-shadow: 0 0 10px var(--primary);
         }
 
@@ -371,7 +419,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: 0.3s;
+            transition: all 0.3s var(--ease-spring);
             font-size: 1rem;
         }
 
@@ -394,14 +442,14 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            box-shadow: 0 10px 30px rgba(0, 242, 255, 0.3);
-            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px oklch(from var(--primary) l c h / 0.3);
+            transition: all 0.3s var(--ease-spring);
             text-decoration: none;
         }
 
         .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(0, 242, 255, 0.5);
+            box-shadow: 0 15px 40px oklch(from var(--primary) l c h / 0.5);
         }
 
         .mobile-menu-btn {
@@ -411,6 +459,50 @@
             color: var(--text);
             font-size: 1.5rem;
             cursor: pointer;
+        }
+
+        /* ===== MOBILE MENU ===== */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 70px;
+            left: 0;
+            width: 100%;
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            z-index: 999;
+            padding: 30px;
+            border-bottom: 1px solid var(--border);
+            transition: all 0.3s var(--ease-smooth);
+        }
+
+        .mobile-menu.active {
+            display: block;
+            animation: slideDown 0.3s var(--ease-spring);
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 15px;
+            color: var(--text);
+            text-decoration: none;
+            border-bottom: 1px solid var(--border);
+            font-weight: 600;
+            transition: all 0.3s var(--ease-smooth);
+        }
+
+        .mobile-menu a:last-child {
+            border-bottom: none;
+        }
+
+        .mobile-menu a:hover {
+            color: var(--primary);
+            padding-left: 25px;
         }
 
         /* ===== HERO SECTION ===== */
@@ -430,7 +522,7 @@
             display: inline-flex;
             align-items: center;
             gap: 12px;
-            background: rgba(0, 242, 255, 0.1);
+            background: oklch(from var(--primary) l c h / 0.1);
             border: 1px solid var(--primary);
             padding: 12px 28px;
             border-radius: 50px;
@@ -468,6 +560,7 @@
             line-height: 0.95;
             letter-spacing: -4px;
             margin-bottom: 25px;
+            text-wrap: balance;
         }
 
         .gradient-text {
@@ -489,6 +582,7 @@
             max-width: 700px;
             margin-bottom: 40px;
             line-height: 1.7;
+            text-wrap: pretty;
         }
 
         .hero-stats {
@@ -507,7 +601,9 @@
             font-size: 2.5rem;
             color: var(--primary);
             font-weight: 800;
-            text-shadow: 0 0 20px rgba(0, 242, 255, 0.5);
+            text-shadow: 0 0 20px oklch(from var(--primary) l c h / 0.5);
+            /* Number counter animation */
+            font-variant-numeric: tabular-nums;
         }
 
         .hero-stat p {
@@ -534,7 +630,7 @@
             border-radius: 50px;
             font-weight: 700;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all 0.3s var(--ease-spring);
             text-decoration: none;
             display: flex;
             align-items: center;
@@ -583,7 +679,7 @@
             font-weight: 800;
             font-size: 1.8rem;
             color: var(--primary);
-            box-shadow: 0 0 40px rgba(0, 242, 255, 0.2);
+            box-shadow: 0 0 40px oklch(from var(--primary) l c h / 0.2);
             backface-visibility: visible;
             backdrop-filter: blur(10px);
         }
@@ -653,6 +749,7 @@
             font-weight: 800;
             margin-bottom: 20px;
             line-height: 1.2;
+            text-wrap: balance;
         }
 
         .section-header p {
@@ -661,12 +758,13 @@
             max-width: 700px;
             margin: 0 auto;
             line-height: 1.7;
+            text-wrap: pretty;
         }
 
         .section-tag {
             display: inline-block;
             padding: 8px 20px;
-            background: rgba(0, 242, 255, 0.1);
+            background: oklch(from var(--primary) l c h / 0.1);
             border: 1px solid var(--primary);
             border-radius: 50px;
             font-size: 12px;
@@ -693,7 +791,7 @@
             padding: 40px;
             position: relative;
             overflow: hidden;
-            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: all 0.5s var(--ease-spring);
             cursor: pointer;
             height: 100%;
             display: flex;
@@ -710,7 +808,7 @@
             background: var(--gradient-1);
             transform: scaleX(0);
             transform-origin: left;
-            transition: transform 0.5s ease;
+            transition: transform 0.5s var(--ease-smooth);
         }
 
         .service-card:hover {
@@ -734,13 +832,13 @@
             font-size: 2rem;
             color: #000;
             margin-bottom: 25px;
-            transition: 0.3s;
+            transition: 0.3s var(--ease-spring);
             flex-shrink: 0;
         }
 
         .service-card:hover .service-icon {
             transform: scale(1.1) rotate(5deg);
-            box-shadow: 0 15px 40px rgba(0, 242, 255, 0.4);
+            box-shadow: 0 15px 40px oklch(from var(--primary) l c h / 0.4);
         }
 
         .service-card h3 {
@@ -787,7 +885,7 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            transition: 0.3s;
+            transition: 0.3s var(--ease-smooth);
             margin-top: auto;
         }
 
@@ -802,7 +900,7 @@
             top: 25px;
             right: 25px;
             padding: 6px 14px;
-            background: rgba(0, 242, 255, 0.1);
+            background: oklch(from var(--primary) l c h / 0.1);
             border: 1px solid var(--primary);
             border-radius: 20px;
             font-size: 10px;
@@ -812,9 +910,9 @@
             color: var(--primary);
         }
 
-        .service-tag.govt { background: rgba(255, 215, 0, 0.1); border-color: var(--gold); color: var(--gold); }
-        .service-tag.it { background: rgba(112, 0, 255, 0.1); border-color: var(--secondary); color: var(--secondary); }
-        .service-tag.home { background: rgba(45, 212, 191, 0.1); border-color: var(--accent); color: var(--accent); }
+        .service-tag.govt { background: oklch(from var(--gold) l c h / 0.1); border-color: var(--gold); color: var(--gold); }
+        .service-tag.it { background: oklch(from var(--secondary) l c h / 0.1); border-color: var(--secondary); color: var(--secondary); }
+        .service-tag.home { background: oklch(from var(--accent) l c h / 0.1); border-color: var(--accent); color: var(--accent); }
 
         /* ===== AI CONSTRUCTOR CHAT ===== */
         .ai-constructor {
@@ -832,6 +930,10 @@
             overflow: hidden;
             box-shadow: 0 25px 80px rgba(0,0,0,0.4);
             backdrop-filter: blur(20px);
+            /* Anchor positioning */
+            position-anchor: --ai-trigger;
+            position-area: top span-left;
+            margin-bottom: 20px;
         }
 
         .ai-constructor.active {
@@ -874,6 +976,11 @@
             color: #000;
             font-size: 1.2rem;
             cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .ai-close:hover {
+            transform: rotate(90deg);
         }
 
         .ai-messages {
@@ -881,6 +988,7 @@
             padding: 20px;
             overflow-y: auto;
             max-height: 350px;
+            scroll-behavior: smooth;
         }
 
         .ai-message {
@@ -890,6 +998,12 @@
             border-radius: 15px;
             font-size: 14px;
             line-height: 1.6;
+            animation: message-in 0.3s var(--ease-spring);
+        }
+
+        @keyframes message-in {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .ai-message.user {
@@ -914,6 +1028,11 @@
             color: var(--text);
             outline: none;
             font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        .ai-input:focus {
+            border-color: var(--primary);
         }
 
         .ai-send {
@@ -927,7 +1046,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: 0.3s;
+            transition: 0.3s var(--ease-spring);
         }
 
         .ai-send:hover {
@@ -949,9 +1068,10 @@
             justify-content: center;
             cursor: pointer;
             z-index: 4999;
-            box-shadow: 0 10px 40px rgba(0, 242, 255, 0.4);
+            box-shadow: 0 10px 40px oklch(from var(--primary) l c h / 0.4);
             animation: ai-float 4s infinite ease-in-out;
             border: none;
+            anchor-name: --ai-trigger;
         }
 
         @keyframes ai-float {
@@ -978,6 +1098,10 @@
             z-index: 4998;
             animation: tooltip-float 3s ease-in-out infinite;
             backdrop-filter: blur(10px);
+            /* Anchor positioning */
+            position-anchor: --ai-trigger;
+            position-area: top;
+            margin-bottom: 15px;
         }
 
         @keyframes tooltip-float {
@@ -1010,7 +1134,7 @@
             cursor: pointer;
             font-weight: 600;
             font-size: 13px;
-            transition: 0.3s;
+            transition: all 0.3s var(--ease-spring);
             color: var(--text);
         }
 
@@ -1050,16 +1174,30 @@
             color: var(--text);
             font-size: 15px;
             outline: none;
-            transition: 0.3s;
+            transition: all 0.3s var(--ease-smooth);
         }
 
         .form-control:focus {
             border-color: var(--primary);
-            box-shadow: 0 0 25px rgba(0, 242, 255, 0.2);
+            box-shadow: 0 0 25px oklch(from var(--primary) l c h / 0.2);
+        }
+
+        /* Custom Select Styling 2026 */
+        select.form-control {
+            appearance: base-select;
+            cursor: pointer;
+        }
+
+        select.form-control::picker(select) {
+            appearance: base-select;
+            background: var(--glass);
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            padding: 10px;
         }
 
         .estimator-result {
-            background: linear-gradient(135deg, rgba(0, 242, 255, 0.1), rgba(112, 0, 255, 0.1));
+            background: linear-gradient(135deg, oklch(from var(--primary) l c h / 0.1), oklch(from var(--secondary) l c h / 0.1));
             border: 1px solid var(--border);
             border-radius: 30px;
             padding: 40px;
@@ -1074,8 +1212,9 @@
             font-size: 3.5rem;
             color: var(--primary);
             margin-bottom: 10px;
-            text-shadow: 0 0 30px rgba(0, 242, 255, 0.5);
+            text-shadow: 0 0 30px oklch(from var(--primary) l c h / 0.5);
             font-weight: 800;
+            font-variant-numeric: tabular-nums;
         }
 
         .result-box p {
@@ -1090,7 +1229,7 @@
             width: 100%;
             margin-top: 20px;
             padding: 20px;
-            background: rgba(255, 215, 0, 0.1);
+            background: oklch(from var(--gold) l c h / 0.1);
             border: 1px solid var(--gold);
             border-radius: 15px;
             color: var(--gold);
@@ -1122,6 +1261,7 @@
             color: var(--text);
             font-size: 16px;
             outline: none;
+            transition: border-color 0.3s;
         }
 
         .tracker-input:focus {
@@ -1167,7 +1307,7 @@
             font-size: 1.2rem;
             z-index: 2;
             flex-shrink: 0;
-            transition: 0.3s;
+            transition: all 0.3s var(--ease-spring);
         }
 
         .step-icon.active {
@@ -1175,12 +1315,12 @@
             border-color: var(--success);
             color: #000;
             animation: pulse-success 2s infinite;
-            box-shadow: 0 0 30px rgba(0, 255, 136, 0.4);
+            box-shadow: 0 0 30px oklch(from var(--success) l c h / 0.4);
         }
 
         @keyframes pulse-success {
-            0%, 100% { box-shadow: 0 0 0 0 rgba(0, 255, 136, 0.4); }
-            50% { box-shadow: 0 0 0 20px rgba(0, 255, 136, 0); }
+            0%, 100% { box-shadow: 0 0 0 0 oklch(from var(--success) l c h / 0.4); }
+            50% { box-shadow: 0 0 0 20px oklch(from var(--success) l c h / 0); }
         }
 
         .step-content h4 {
@@ -1208,6 +1348,8 @@
             margin: 0 auto;
             overflow-x: auto;
             padding-bottom: 20px;
+            /* Scroll-driven animations */
+            scroll-timeline: --ledger-scroll x;
         }
 
         .ledger-grid {
@@ -1218,12 +1360,12 @@
 
         .block-card {
             flex: 1;
-            background: linear-gradient(135deg, rgba(0, 242, 255, 0.05), rgba(112, 0, 255, 0.05));
+            background: linear-gradient(135deg, oklch(from var(--primary) l c h / 0.05), oklch(from var(--secondary) l c h / 0.05));
             border: 1px solid var(--border);
             border-radius: 25px;
             padding: 30px;
             position: relative;
-            transition: 0.4s;
+            transition: all 0.4s var(--ease-spring);
             min-width: 220px;
         }
 
@@ -1263,10 +1405,10 @@
             letter-spacing: 1px;
         }
 
-        .status-verified { background: rgba(0, 255, 136, 0.15); color: var(--success); }
-        .status-pending { background: rgba(0, 242, 255, 0.15); color: var(--primary); }
-        .status-sealed { background: rgba(255, 77, 77, 0.15); color: var(--warning); }
-        .status-processing { background: rgba(255, 215, 0, 0.15); color: var(--gold); }
+        .status-verified { background: oklch(from var(--success) l c h / 0.15); color: var(--success); }
+        .status-pending { background: oklch(from var(--primary) l c h / 0.15); color: var(--primary); }
+        .status-sealed { background: oklch(from var(--warning) l c h / 0.15); color: var(--warning); }
+        .status-processing { background: oklch(from var(--gold) l c h / 0.15); color: var(--gold); }
 
         .block-time {
             margin-top: 20px;
@@ -1338,6 +1480,7 @@
             font-size: 3rem;
             margin-bottom: 25px;
             line-height: 1.2;
+            text-wrap: balance;
         }
 
         .about-content p {
@@ -1345,6 +1488,7 @@
             font-size: 1.1rem;
             line-height: 1.9;
             margin-bottom: 25px;
+            text-wrap: pretty;
         }
 
         .about-stats {
@@ -1358,6 +1502,7 @@
             font-size: 2.5rem;
             color: var(--primary);
             font-weight: 800;
+            font-variant-numeric: tabular-nums;
         }
 
         .about-stat p {
@@ -1414,7 +1559,7 @@
             border: 1px solid var(--border);
             border-radius: 30px;
             padding: 40px;
-            transition: 0.3s;
+            transition: all 0.3s var(--ease-spring);
         }
 
         @media (max-width: 768px) {
@@ -1480,7 +1625,7 @@
             border: 1px solid var(--border);
             border-radius: 30px;
             overflow: hidden;
-            transition: 0.4s;
+            transition: all 0.4s var(--ease-spring);
         }
 
         .blog-card:hover {
@@ -1506,7 +1651,7 @@
         .blog-tag {
             display: inline-block;
             padding: 6px 14px;
-            background: rgba(0, 242, 255, 0.1);
+            background: oklch(from var(--primary) l c h / 0.1);
             border-radius: 20px;
             font-size: 11px;
             font-weight: 700;
@@ -1520,6 +1665,7 @@
             font-size: 1.4rem;
             margin-bottom: 15px;
             line-height: 1.4;
+            text-wrap: balance;
         }
 
         .blog-card p {
@@ -1555,6 +1701,7 @@
             font-size: 3.5rem;
             margin-bottom: 15px;
             line-height: 1.2;
+            text-wrap: balance;
         }
 
         .contact-info > p {
@@ -1573,7 +1720,7 @@
             background: var(--glass);
             border-radius: 25px;
             border: 1px solid var(--border);
-            transition: 0.3s;
+            transition: all 0.3s var(--ease-spring);
         }
 
         .contact-item:hover {
@@ -1592,6 +1739,11 @@
             font-size: 1.4rem;
             color: #000;
             flex-shrink: 0;
+            transition: transform 0.3s var(--ease-spring);
+        }
+
+        .contact-item:hover .contact-icon {
+            transform: scale(1.1) rotate(5deg);
         }
 
         .contact-details h4 {
@@ -1604,7 +1756,7 @@
             text-decoration: none;
             font-size: 15px;
             line-height: 1.7;
-            transition: 0.3s;
+            transition: color 0.3s;
         }
 
         .contact-details a:hover {
@@ -1628,7 +1780,7 @@
             justify-content: center;
             color: var(--text);
             font-size: 1.4rem;
-            transition: 0.3s;
+            transition: all 0.3s var(--ease-spring);
             cursor: pointer;
             text-decoration: none;
         }
@@ -1637,7 +1789,7 @@
             background: var(--primary);
             color: #000;
             transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 242, 255, 0.3);
+            box-shadow: 0 15px 30px oklch(from var(--primary) l c h / 0.3);
         }
 
         .contact-form {
@@ -1673,14 +1825,14 @@
             color: var(--text);
             font-size: 15px;
             outline: none;
-            transition: 0.3s;
+            transition: all 0.3s var(--ease-smooth);
         }
 
         .form-group input:focus,
         .form-group select:focus,
         .form-group textarea:focus {
             border-color: var(--primary);
-            box-shadow: 0 0 25px rgba(0, 242, 255, 0.15);
+            box-shadow: 0 0 25px oklch(from var(--primary) l c h / 0.15);
         }
 
         .btn-submit {
@@ -1697,24 +1849,24 @@
             align-items: center;
             justify-content: center;
             gap: 12px;
-            transition: 0.3s;
+            transition: all 0.3s var(--ease-spring);
             text-transform: uppercase;
             letter-spacing: 1px;
         }
 
         .btn-submit:hover {
             transform: translateY(-3px);
-            box-shadow: 0 20px 40px rgba(0, 242, 255, 0.4);
+            box-shadow: 0 20px 40px oklch(from var(--primary) l c h / 0.4);
         }
 
         .btn-submit.urgent {
-            background: linear-gradient(135deg, var(--warning), #ff0055);
+            background: linear-gradient(135deg, var(--warning), oklch(from var(--warning) l c h / 0.8));
             animation: urgent-pulse 1.5s infinite;
         }
 
         @keyframes urgent-pulse {
-            0%, 100% { box-shadow: 0 0 0 0 rgba(255, 77, 77, 0.4); }
-            50% { box-shadow: 0 0 0 20px rgba(255, 77, 77, 0); }
+            0%, 100% { box-shadow: 0 0 0 0 oklch(from var(--warning) l c h / 0.4); }
+            50% { box-shadow: 0 0 0 20px oklch(from var(--warning) l c h / 0); }
         }
 
         /* ===== MAP SECTION ===== */
@@ -1731,7 +1883,7 @@
             border-radius: 40px;
             overflow: hidden;
             border: 2px solid var(--primary);
-            box-shadow: 0 0 60px rgba(0, 242, 255, 0.2);
+            box-shadow: 0 0 60px oklch(from var(--primary) l c h / 0.2);
         }
 
         .map-info {
@@ -1782,8 +1934,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 10px 40px rgba(0, 242, 255, 0.4);
-            transition: 0.3s;
+            box-shadow: 0 10px 40px oklch(from var(--primary) l c h / 0.4);
+            transition: all 0.3s var(--ease-spring);
             position: relative;
         }
 
@@ -1843,7 +1995,7 @@
             text-decoration: none;
             box-shadow: 0 15px 40px rgba(37, 211, 102, 0.4);
             z-index: 4990;
-            transition: 0.3s;
+            transition: all 0.3s var(--ease-spring);
             animation: wa-bounce 2s infinite;
         }
 
@@ -1905,7 +2057,7 @@
             align-items: center;
             gap: 12px;
             font-size: 14px;
-            transition: 0.3s;
+            transition: color 0.3s;
         }
 
         .footer-contact a:hover {
@@ -1930,7 +2082,7 @@
             color: var(--text-dim);
             text-decoration: none;
             font-size: 14px;
-            transition: 0.3s;
+            transition: all 0.3s;
             display: flex;
             align-items: center;
             gap: 8px;
@@ -1965,7 +2117,7 @@
             color: var(--primary);
         }
 
-        /* ===== MODAL PAGES (TERMS, PRIVACY, ETC) ===== */
+        /* ===== MODAL PAGES ===== */
         .modal-overlay {
             position: fixed;
             top: 0;
@@ -2012,12 +2164,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: 0.3s;
+            transition: all 0.3s var(--ease-spring);
         }
 
         .modal-close:hover {
             background: var(--warning);
             color: #fff;
+            transform: rotate(90deg);
         }
 
         .modal-content h2 {
@@ -2043,9 +2196,8 @@
             margin-left: 25px;
             margin-bottom: 20px;
         }
-
-        .highlight-box {
-            background: rgba(0, 242, 255, 0.1);
+            .highlight-box {
+            background: oklch(from var(--primary) l c h / 0.1);
             border-left: 4px solid var(--primary);
             padding: 25px;
             border-radius: 15px;
@@ -2053,7 +2205,7 @@
         }
 
         .highlight-box.warning {
-            background: rgba(255, 77, 77, 0.1);
+            background: oklch(from var(--warning) l c h / 0.1);
             border-left-color: var(--warning);
         }
 
@@ -2070,7 +2222,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            transition: opacity 0.6s;
+            transition: opacity 0.6s var(--ease-smooth);
         }
 
         .loader.hidden {
@@ -2110,15 +2262,34 @@
         @media (max-width: 768px) {
             .nav-desktop { display: none; }
             .mobile-menu-btn { display: block; }
-            .hero h1 { font-size: 2.5rem; }
+            .hero h1 { font-size: 2.5rem; letter-spacing: -2px; }
             .cube-container { transform: scale(0.7); }
             .services-grid { grid-template-columns: 1fr; }
             .estimator-form { grid-template-columns: 1fr; }
             .contact-wrapper { grid-template-columns: 1fr; }
             .footer-grid { grid-template-columns: 1fr; }
-            .ai-constructor { width: 90%; right: 5%; left: 5%; }
+            .ai-constructor { 
+                width: 90%; 
+                right: 5%; 
+                left: 5%; 
+                bottom: 80px;
+                position: fixed;
+            }
+            .ai-trigger-btn { bottom: 20px; right: 20px; width: 60px; height: 60px; }
+            .ai-tooltip { display: none; }
             .security-hud { display: none; }
             .ai-welcome-text { font-size: 1.5rem; }
+            .voice-hub { bottom: 20px; left: 20px; }
+            .mic-button { width: 60px; height: 60px; }
+            .wa-float { width: 60px; height: 60px; font-size: 1.8rem; }
+            .quantum-ticker { display: none; }
+            .about-stats { grid-template-columns: 1fr; gap: 20px; }
+        }
+
+        /* Container query for header */
+        @container (max-width: 900px) {
+            .nav-desktop { gap: 20px; }
+            .nav-desktop a { font-size: 11px; }
         }
 
         /* ===== SCROLLBAR ===== */
@@ -2139,6 +2310,12 @@
             background: var(--secondary);
         }
 
+        /* Firefox scrollbar */
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary) var(--bg);
+        }
+
         /* ===== SELECTION ===== */
         ::selection {
             background: var(--primary);
@@ -2149,12 +2326,134 @@
         .fade-in {
             opacity: 0;
             transform: translateY(30px);
-            transition: all 0.8s ease;
+            transition: all 0.8s var(--ease-smooth);
         }
 
         .fade-in.visible {
             opacity: 1;
             transform: translateY(0);
+        }
+
+        /* View Transitions API support */
+        @view-transition {
+            navigation: auto;
+        }
+
+        /* ===== UTILITY CLASSES ===== */
+        .text-center { text-align: center; }
+        .hidden { display: none !important; }
+        .flex { display: flex; }
+        .grid { display: grid; }
+        
+        /* ===== ACCESSIBILITY ===== */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        /* Focus visible for keyboard navigation */
+        :focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+
+        /* ===== PRINT STYLES ===== */
+        @media print {
+            .no-print { display: none !important; }
+            body { background: white; color: black; }
+            header, footer, .ai-trigger-btn, .wa-float, .voice-hub { display: none !important; }
+        }
+
+        /* ===== 2026 MODERN FEATURES ===== */
+        
+        /* Popover API support */
+        [popover] {
+            background: var(--glass);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 25px 80px rgba(0,0,0,0.4);
+        }
+
+        /* Anchor positioning fallback */
+        @supports not (anchor-name: --foo) {
+            .ai-constructor {
+                position: fixed;
+                bottom: 120px;
+                right: 30px;
+            }
+            .ai-tooltip {
+                position: fixed;
+                bottom: 110px;
+                right: 30px;
+            }
+        }
+
+        /* Container query for service cards */
+        .services-grid {
+            container-type: inline-size;
+        }
+
+        @container (max-width: 400px) {
+            .service-card { padding: 25px; }
+            .service-icon { width: 60px; height: 60px; font-size: 1.5rem; }
+        }
+
+        /* Scroll-driven animations */
+        @scroll-timeline hero-scroll {
+            source: auto;
+            orientation: vertical;
+            scroll-offsets: 0%, 100%;
+        }
+
+        /* Kinetic typography for headings */
+        .kinetic-text {
+            font-variation-settings: 'wght' 400;
+            transition: font-variation-settings 0.3s;
+        }
+
+        .kinetic-text:hover {
+            font-variation-settings: 'wght' 800;
+        }
+
+        /* Micro-interactions */
+        .micro-bounce {
+            transition: transform 0.2s var(--ease-spring);
+        }
+
+        .micro-bounce:active {
+            transform: scale(0.95);
+        }
+
+        /* Glass morphism enhancement */
+        .glass-enhanced {
+            background: oklch(from var(--glass) l c h / 0.8);
+            backdrop-filter: blur(20px) saturate(180%);
+            border: 1px solid oklch(from var(--border) l c h / 0.5);
+        }
+
+        /* Dynamic color scheme */
+        @media (prefers-color-scheme: light) {
+            :root {
+                color-scheme: light;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                color-scheme: dark;
+            }
+        }
+
+        /* Content visibility for performance */
+        .content-visibility {
+            content-visibility: auto;
+            contain-intrinsic-size: 0 500px;
         }
     </style>
 </head>
@@ -2167,23 +2466,25 @@
     </div>
 
     <!-- AI WELCOME OVERLAY -->
-    <div class="ai-welcome" id="ai-welcome">
-        <div class="ai-avatar">
+    <div class="ai-welcome" id="ai-welcome" role="dialog" aria-modal="true" aria-labelledby="welcome-title">
+        <div class="ai-avatar" aria-hidden="true">
             <i class="fas fa-robot"></i>
         </div>
-        <h2 class="ai-welcome-text">Welcome to Swadesh Link</h2>
+        <h2 class="ai-welcome-text" id="welcome-title">Welcome to Swadesh Link</h2>
         <p class="ai-welcome-sub">Namaste! I'm your AI Assistant. I'm here to help you with Government services, IT solutions, Real Estate, Home services, and everything else. How may I assist you today?</p>
-        <button class="ai-skip" onclick="skipWelcome()">Let's Get Started <i class="fas fa-arrow-right"></i></button>
+        <button class="ai-skip micro-bounce" onclick="skipWelcome()" aria-label="Get started with Swadesh Link">
+            Let's Get Started <i class="fas fa-arrow-right" aria-hidden="true"></i>
+        </button>
     </div>
 
     <!-- SCAN LINE -->
-    <div class="scan-line"></div>
+    <div class="scan-line" aria-hidden="true"></div>
 
     <!-- NEURAL BACKGROUND -->
-    <canvas id="neural-canvas"></canvas>
+    <canvas id="neural-canvas" aria-hidden="true"></canvas>
 
     <!-- SECURITY HUD -->
-    <div class="security-hud">
+    <div class="security-hud" aria-label="System Status">
         <div>◈ SYSTEM: <span class="status-ok" id="system-status">SECURE</span></div>
         <div>◈ NODE: <span style="color: var(--accent);">AMBALA CANTT</span></div>
         <div>◈ THREAT: <span class="status-ok">ZERO</span></div>
@@ -2194,52 +2495,56 @@
 
     <!-- HEADER -->
     <header id="main-header">
-        <a href="#" class="logo">SWADESH<span>LINK</span></a>
+        <a href="#" class="logo kinetic-text">SWADESH<span>LINK</span></a>
         
-        <nav class="nav-desktop">
+        <nav class="nav-desktop" aria-label="Main Navigation">
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#services">Services</a>
+            <a href="#estimator">Pricing</a>
+            <a href="#tracker">Track</a>
             <a href="#roadmap">Roadmap</a>
             <a href="#blog">Blog</a>
             <a href="#contact">Contact</a>
         </nav>
 
         <div class="header-controls">
-            <button class="btn-icon" onclick="toggleTheme()" title="Toggle Dark/Light Mode">
+            <button class="btn-icon micro-bounce" onclick="toggleTheme()" title="Toggle Dark/Light Mode" aria-label="Toggle theme">
                 <i class="fas fa-adjust"></i>
             </button>
-            <button class="btn-icon" onclick="toggleLanguage()" title="Switch to Hindi">
+            <button class="btn-icon micro-bounce" onclick="toggleLanguage()" title="Switch to Hindi" aria-label="Switch language">
                 <i class="fas fa-globe"></i>
             </button>
-            <a href="tel:+918307619156" class="btn-primary">
+            <a href="tel:+918307619156" class="btn-primary micro-bounce" aria-label="Call us">
                 <i class="fas fa-headset"></i> Call Now
             </a>
-            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+            <button class="mobile-menu-btn micro-bounce" onclick="toggleMobileMenu()" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
     </header>
 
     <!-- MOBILE MENU -->
-    <div class="mobile-menu" id="mobile-menu" style="display: none; position: fixed; top: 70px; left: 0; width: 100%; background: var(--glass); z-index: 999; padding: 30px; border-bottom: 1px solid var(--border);">
-        <a href="#home" style="display: block; padding: 15px; color: var(--text); text-decoration: none; border-bottom: 1px solid var(--border);">Home</a>
-        <a href="#about" style="display: block; padding: 15px; color: var(--text); text-decoration: none; border-bottom: 1px solid var(--border);">About</a>
-        <a href="#services" style="display: block; padding: 15px; color: var(--text); text-decoration: none; border-bottom: 1px solid var(--border);">Services</a>
-        <a href="#roadmap" style="display: block; padding: 15px; color: var(--text); text-decoration: none; border-bottom: 1px solid var(--border);">Roadmap</a>
-        <a href="#blog" style="display: block; padding: 15px; color: var(--text); text-decoration: none; border-bottom: 1px solid var(--border);">Blog</a>
-        <a href="#contact" style="display: block; padding: 15px; color: var(--text); text-decoration: none;">Contact</a>
+    <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile Navigation">
+        <a href="#home" onclick="toggleMobileMenu()">Home</a>
+        <a href="#about" onclick="toggleMobileMenu()">About</a>
+        <a href="#services" onclick="toggleMobileMenu()">Services</a>
+        <a href="#estimator" onclick="toggleMobileMenu()">Pricing</a>
+        <a href="#tracker" onclick="toggleMobileMenu()">Track Order</a>
+        <a href="#roadmap" onclick="toggleMobileMenu()">Roadmap</a>
+        <a href="#blog" onclick="toggleMobileMenu()">Blog</a>
+        <a href="#contact" onclick="toggleMobileMenu()">Contact</a>
     </div>
 
     <!-- HERO SECTION -->
-    <section class="hero" id="home">
+    <section class="hero" id="home" aria-labelledby="hero-title">
         <div class="hero-badge">
-            <span class="live-dot"></span>
+            <span class="live-dot" aria-hidden="true"></span>
             <span id="pulse-text">QUANTUM AI ACTIVE • 189 NODES ONLINE</span>
         </div>
         
-        <h1>
-            <span class="gradient-text" id="hero-title">Ambala District's<br>#1 AI Service Hub</span>
+        <h1 id="hero-title">
+            <span class="gradient-text kinetic-text" id="hero-title-text">Ambala District's<br>#1 AI Service Hub</span>
         </h1>
         
         <p class="hero-subtitle" id="hero-subtitle">
@@ -2249,7 +2554,7 @@
 
         <div class="hero-stats">
             <div class="hero-stat">
-                <h3>50+</h3>
+                <h3 id="stat-services">50+</h3>
                 <p>Services</p>
             </div>
             <div class="hero-stat">
@@ -2261,25 +2566,25 @@
                 <p>Secure</p>
             </div>
             <div class="hero-stat">
-                <h3>0ms</h3>
-                <p>Response</p>
+                <h3 id="stat-clients">0</h3>
+                <p>Happy Clients</p>
             </div>
         </div>
 
         <div class="hero-buttons">
-            <button class="btn-primary" onclick="initiateBiometric()">
+            <button class="btn-primary micro-bounce" onclick="initiateBiometric()" aria-label="Open AI Assistant">
                 <i class="fas fa-fingerprint"></i> AI Assistant
             </button>
-            <a href="#services" class="btn-glow">
+            <a href="#services" class="btn-glow micro-bounce" aria-label="Explore services">
                 <i class="fas fa-th-large"></i> Explore Services
             </a>
-            <a href="https://wa.me/917015657213" class="btn-glow" style="border-color: #25D366; color: #25D366;">
+            <a href="https://wa.me/917015657213" class="btn-glow micro-bounce" style="border-color: #25D366; color: #25D366;" aria-label="Contact on WhatsApp">
                 <i class="fab fa-whatsapp"></i> WhatsApp
             </a>
         </div>
 
         <!-- 3D Cube -->
-        <div class="cube-container">
+        <div class="cube-container" aria-hidden="true">
             <div class="holo-cube">
                 <div class="cube-face cf-front">
                     50+<span>Services</span>
@@ -2304,7 +2609,7 @@
     </section>
 
     <!-- QUANTUM TICKER -->
-    <div class="quantum-ticker">
+    <div class="quantum-ticker" aria-hidden="true">
         <div class="ticker-content">
             <span class="ticker-item"><i class="fas fa-landmark"></i> ALL GOVERNMENT SERVICES</span>
             <span class="ticker-item"><i class="fas fa-passport"></i> PASSPORT • AADHAAR • PAN • VOTER ID</span>
@@ -2330,15 +2635,15 @@
     </div>
 
     <!-- ABOUT SECTION -->
-    <section id="about" style="background: rgba(0, 242, 255, 0.02);">
+    <section id="about" style="background: oklch(from var(--primary) l c h / 0.02);" class="content-visibility" aria-labelledby="about-title">
         <div class="section-header">
             <span class="section-tag">About Us</span>
-            <h2>Transforming Ambala District<br><span style="color: var(--primary);">Through AI & Technology</span></h2>
+            <h2 id="about-title">Transforming Ambala District<br><span style="color: var(--primary);">Through AI & Technology</span></h2>
             <p>From a small office in Ambala Cantt to becoming the district's most trusted service platform. We're building the future of local services.</p>
         </div>
 
         <div class="about-grid">
-            <div class="about-visual">
+            <div class="about-visual" aria-hidden="true">
                 <div style="text-align: center; z-index: 1;">
                     <i class="fas fa-map-marker-alt" style="font-size: 5rem; color: var(--primary); margin-bottom: 20px;"></i>
                     <h3 style="font-size: 2rem;">Ambala District</h3>
@@ -2353,7 +2658,7 @@
                 
                 <div class="about-stats">
                     <div class="about-stat">
-                        <h4>50+</h4>
+                        <h4 id="about-services">50+</h4>
                         <p>Services</p>
                     </div>
                     <div class="about-stat">
@@ -2361,7 +2666,7 @@
                         <p>Tehsils Covered</p>
                     </div>
                     <div class="about-stat">
-                        <h4>1000+</h4>
+                        <h4 id="about-clients">1000+</h4>
                         <p>Happy Clients</p>
                     </div>
                 </div>
@@ -2370,229 +2675,229 @@
     </section>
 
     <!-- SERVICES SECTION -->
-    <section id="services">
+    <section id="services" class="content-visibility" aria-labelledby="services-title">
         <div class="section-header">
             <span class="section-tag">Our Services</span>
-            <h2>Every Service You Need<br><span style="color: var(--primary);">One Platform</span></h2>
+            <h2 id="services-title">Every Service You Need<br><span style="color: var(--primary);">One Platform</span></h2>
             <p>From government offices to your home, from IT solutions to real estate - we handle everything with AI-powered efficiency.</p>
         </div>
 
         <div class="services-grid">
             <!-- Government Services -->
-            <div class="service-card" onclick="openServiceDetail('government')">
+            <article class="service-card glass-enhanced" onclick="openServiceDetail('government')" role="article" tabindex="0" aria-labelledby="govt-title">
                 <span class="service-tag govt">Government</span>
                 <div class="service-icon">
-                    <i class="fas fa-landmark"></i>
+                    <i class="fas fa-landmark" aria-hidden="true"></i>
                 </div>
-                <h3>Government Services</h3>
+                <h3 id="govt-title">Government Services</h3>
                 <p>All government documentation and procedures handled professionally. No more office queues.</p>
                 <ul class="service-features">
-                    <li><i class="fas fa-check"></i> Passport New/Renewal</li>
-                    <li><i class="fas fa-check"></i> Aadhaar Card Services</li>
-                    <li><i class="fas fa-check"></i> PAN Card New/Update</li>
-                    <li><i class="fas fa-check"></i> Voter ID Services</li>
-                    <li><i class="fas fa-check"></i> Ration Card</li>
-                    <li><i class="fas fa-check"></i> Birth/Death Certificates</li>
-                    <li><i class="fas fa-check"></i> Domicile/Residence Certificate</li>
-                    <li><i class="fas fa-check"></i> Income/Caste Certificates</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Passport New/Renewal</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Aadhaar Card Services</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> PAN Card New/Update</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Voter ID Services</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Ration Card</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Birth/Death Certificates</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Domicile/Residence Certificate</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Income/Caste Certificates</li>
                 </ul>
-                <a href="#estimator" class="service-link">
-                    Get Estimate <i class="fas fa-arrow-right"></i>
+                <a href="#estimator" class="service-link micro-bounce">
+                    Get Estimate <i class="fas fa-arrow-right" aria-hidden="true"></i>
                 </a>
-            </div>
+            </article>
 
             <!-- Legal & Court Services -->
-            <div class="service-card" onclick="openServiceDetail('legal')">
+            <article class="service-card glass-enhanced" onclick="openServiceDetail('legal')" role="article" tabindex="0" aria-labelledby="legal-title">
                 <span class="service-tag govt">Legal</span>
                 <div class="service-icon" style="background: var(--gradient-2);">
-                    <i class="fas fa-gavel"></i>
+                    <i class="fas fa-gavel" aria-hidden="true"></i>
                 </div>
-                <h3>Court & Legal Services</h3>
+                <h3 id="legal-title">Court & Legal Services</h3>
                 <p>Expert legal assistance for all court matters. SDM office, Nagar Nigam, and advocate consultancy.</p>
                 <ul class="service-features">
-                    <li><i class="fas fa-check"></i> Court Case Filing</li>
-                    <li><i class="fas fa-check"></i> Legal Documentation</li>
-                    <li><i class="fas fa-check"></i> Affidavit & Notary</li>
-                    <li><i class="fas fa-check"></i> Power of Attorney</li>
-                    <li><i class="fas fa-check"></i> Property Registration</li>
-                    <li><i class="fas fa-check"></i> Mutation of Land</li>
-                    <li><i class="fas fa-check"></i> SDM Office Work</li>
-                    <li><i class="fas fa-check"></i> Nagar Nigam Services</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Court Case Filing</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Legal Documentation</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Affidavit & Notary</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Power of Attorney</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Property Registration</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Mutation of Land</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> SDM Office Work</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Nagar Nigam Services</li>
                 </ul>
-                <a href="#estimator" class="service-link">
-                    Consult Now <i class="fas fa-arrow-right"></i>
+                <a href="#estimator" class="service-link micro-bounce">
+                    Consult Now <i class="fas fa-arrow-right" aria-hidden="true"></i>
                 </a>
-            </div>
+            </article>
 
             <!-- IT & AI Services -->
-            <div class="service-card" onclick="openServiceDetail('it')">
+            <article class="service-card glass-enhanced" onclick="openServiceDetail('it')" role="article" tabindex="0" aria-labelledby="it-title">
                 <span class="service-tag it">IT & AI</span>
                 <div class="service-icon" style="background: linear-gradient(135deg, #7000ff, #2dd4bf);">
-                    <i class="fas fa-laptop-code"></i>
+                    <i class="fas fa-laptop-code" aria-hidden="true"></i>
                 </div>
-                <h3>IT & AI Solutions</h3>
+                <h3 id="it-title">IT & AI Solutions</h3>
                 <p>World-class technology solutions. Website development, AI systems, robotics, and digital transformation.</p>
                 <ul class="service-features">
-                    <li><i class="fas fa-check"></i> Website Development</li>
-                    <li><i class="fas fa-check"></i> Mobile App Development</li>
-                    <li><i class="fas fa-check"></i> AI Chatbot Integration</li>
-                    <li><i class="fas fa-check"></i> Robotics Solutions</li>
-                    <li><i class="fas fa-check"></i> Computer Vision Systems</li>
-                    <li><i class="fas fa-check"></i> Cloud Solutions</li>
-                    <li><i class="fas fa-check"></i> Cybersecurity</li>
-                    <li><i class="fas fa-check"></i> Digital Transformation</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Website Development</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Mobile App Development</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> AI Chatbot Integration</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Robotics Solutions</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Computer Vision Systems</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Cloud Solutions</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Cybersecurity</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Digital Transformation</li>
                 </ul>
-                <a href="#estimator" class="service-link">
-                    Start Project <i class="fas fa-arrow-right"></i>
+                <a href="#estimator" class="service-link micro-bounce">
+                    Start Project <i class="fas fa-arrow-right" aria-hidden="true"></i>
                 </a>
-            </div>
+            </article>
 
             <!-- Real Estate -->
-            <div class="service-card" onclick="openServiceDetail('realestate')">
+            <article class="service-card glass-enhanced" onclick="openServiceDetail('realestate')" role="article" tabindex="0" aria-labelledby="realestate-title">
                 <span class="service-tag">Real Estate</span>
                 <div class="service-icon" style="background: linear-gradient(135deg, #ffd700, #ff8c00);">
-                    <i class="fas fa-home"></i>
+                    <i class="fas fa-home" aria-hidden="true"></i>
                 </div>
-                <h3>Real Estate Services</h3>
+                <h3 id="realestate-title">Real Estate Services</h3>
                 <p>Buy, sell, rent properties across Ambala District. OLX-style listings with verified properties.</p>
                 <ul class="service-features">
-                    <li><i class="fas fa-check"></i> Property Buy/Sell</li>
-                    <li><i class="fas fa-check"></i> Rental Services</li>
-                    <li><i class="fas fa-check"></i> Property Verification</li>
-                    <li><i class="fas fa-check"></i> Legal Documentation</li>
-                    <li><i class="fas fa-check"></i> Home Loans Assistance</li>
-                    <li><i class="fas fa-check"></i> NRI Property Management</li>
-                    <li><i class="fas fa-check"></i> Commercial Properties</li>
-                    <li><i class="fas fa-check"></i> Agricultural Land</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Property Buy/Sell</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Rental Services</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Property Verification</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Legal Documentation</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Home Loans Assistance</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> NRI Property Management</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Commercial Properties</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Agricultural Land</li>
                 </ul>
-                <a href="#estimator" class="service-link">
-                    List Property <i class="fas fa-arrow-right"></i>
+                <a href="#estimator" class="service-link micro-bounce">
+                    List Property <i class="fas fa-arrow-right" aria-hidden="true"></i>
                 </a>
-            </div>
+            </article>
 
             <!-- Home Services -->
-            <div class="service-card" onclick="openServiceDetail('home')">
+            <article class="service-card glass-enhanced" onclick="openServiceDetail('home')" role="article" tabindex="0" aria-labelledby="home-title">
                 <span class="service-tag home">Home</span>
                 <div class="service-icon" style="background: linear-gradient(135deg, #2dd4bf, #00f2ff);">
-                    <i class="fas fa-tools"></i>
+                    <i class="fas fa-tools" aria-hidden="true"></i>
                 </div>
-                <h3>Home Services</h3>
+                <h3 id="home-title">Home Services</h3>
                 <p>Every service for your home. From cooks to drivers, electricians to plumbers - all verified professionals.</p>
                 <ul class="service-features">
-                    <li><i class="fas fa-check"></i> Professional Cooks</li>
-                    <li><i class="fas fa-check"></i> Drivers (Car/Bike)</li>
-                    <li><i class="fas fa-check"></i> Maids & Housekeeping</li>
-                    <li><i class="fas fa-check"></i> Electricians</li>
-                    <li><i class="fas fa-check"></i> Plumbers</li>
-                    <li><i class="fas fa-check"></i> Carpenters</li>
-                    <li><i class="fas fa-check"></i> AC/TV Repair</li>
-                    <li><i class="fas fa-check"></i> Packers & Movers</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Professional Cooks</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Drivers (Car/Bike)</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Maids & Housekeeping</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Electricians</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Plumbers</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Carpenters</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> AC/TV Repair</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Packers & Movers</li>
                 </ul>
-                <a href="#estimator" class="service-link">
-                    Book Service <i class="fas fa-arrow-right"></i>
+                <a href="#estimator" class="service-link micro-bounce">
+                    Book Service <i class="fas fa-arrow-right" aria-hidden="true"></i>
                 </a>
-            </div>
+            </article>
 
             <!-- Electronics Repair -->
-            <div class="service-card" onclick="openServiceDetail('repair')">
+            <article class="service-card glass-enhanced" onclick="openServiceDetail('repair')" role="article" tabindex="0" aria-labelledby="repair-title">
                 <span class="service-tag">Repair</span>
                 <div class="service-icon" style="background: linear-gradient(135deg, #ff6b6b, #ee5a24);">
-                    <i class="fas fa-mobile-alt"></i>
+                    <i class="fas fa-mobile-alt" aria-hidden="true"></i>
                 </div>
-                <h3>Electronics Repair</h3>
+                <h3 id="repair-title">Electronics Repair</h3>
                 <p>Expert repair for all electronic devices. Mobile, laptop, TV, fridge, washing machine - door service available.</p>
                 <ul class="service-features">
-                    <li><i class="fas fa-check"></i> Mobile Repair</li>
-                    <li><i class="fas fa-check"></i> Laptop/Computer Repair</li>
-                    <li><i class="fas fa-check"></i> LED TV Repair</li>
-                    <li><i class="fas fa-check"></i> AC/Fridge Repair</li>
-                    <li><i class="fas fa-check"></i> Washing Machine</li>
-                    <li><i class="fas fa-check"></i> Water Purifier</li>
-                    <li><i class="fas fa-check"></i> Microwave/Oven</li>
-                    <li><i class="fas fa-check"></i> Doorstep Service</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Mobile Repair</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Laptop/Computer Repair</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> LED TV Repair</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> AC/Fridge Repair</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Washing Machine</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Water Purifier</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Microwave/Oven</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Doorstep Service</li>
                 </ul>
-                <a href="#estimator" class="service-link">
-                    Book Repair <i class="fas fa-arrow-right"></i>
+                <a href="#estimator" class="service-link micro-bounce">
+                    Book Repair <i class="fas fa-arrow-right" aria-hidden="true"></i>
                 </a>
-            </div>
+            </article>
 
             <!-- Marketing -->
-            <div class="service-card" onclick="openServiceDetail('marketing')">
+            <article class="service-card glass-enhanced" onclick="openServiceDetail('marketing')" role="article" tabindex="0" aria-labelledby="marketing-title">
                 <span class="service-tag it">Marketing</span>
                 <div class="service-icon" style="background: linear-gradient(135deg, #f39c12, #e74c3c);">
-                    <i class="fas fa-ad"></i>
+                    <i class="fas fa-ad" aria-hidden="true"></i>
                 </div>
-                <h3>Marketing Services</h3>
+                <h3 id="marketing-title">Marketing Services</h3>
                 <p>Complete marketing solutions - both digital and traditional. Grow your business with our expert strategies.</p>
                 <ul class="service-features">
-                    <li><i class="fas fa-check"></i> Social Media Marketing</li>
-                    <li><i class="fas fa-check"></i> Google Ads & SEO</li>
-                    <li><i class="fas fa-check"></i> Content Creation</li>
-                    <li><i class="fas fa-check"></i> Brand Development</li>
-                    <li><i class="fas fa-check"></i> Print Media</li>
-                    <li><i class="fas fa-check"></i> Hoardings & Banners</li>
-                    <li><i class="fas fa-check"></i> Event Marketing</li>
-                    <li><i class="fas fa-check"></i> Video Production</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Social Media Marketing</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Google Ads & SEO</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Content Creation</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Brand Development</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Print Media</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Hoardings & Banners</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Event Marketing</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Video Production</li>
                 </ul>
-                <a href="#estimator" class="service-link">
-                    Boost Business <i class="fas fa-arrow-right"></i>
+                <a href="#estimator" class="service-link micro-bounce">
+                    Boost Business <i class="fas fa-arrow-right" aria-hidden="true"></i>
                 </a>
-            </div>
+            </article>
 
             <!-- Buy/Sell Platform -->
-            <div class="service-card" onclick="openServiceDetail('marketplace')">
+            <article class="service-card glass-enhanced" onclick="openServiceDetail('marketplace')" role="article" tabindex="0" aria-labelledby="marketplace-title">
                 <span class="service-tag">Marketplace</span>
                 <div class="service-icon" style="background: linear-gradient(135deg, #00b894, #00cec9);">
-                    <i class="fas fa-shopping-bag"></i>
+                    <i class="fas fa-shopping-bag" aria-hidden="true"></i>
                 </div>
-                <h3>Buy & Sell Platform</h3>
+                <h3 id="marketplace-title">Buy & Sell Platform</h3>
                 <p>OLX-style platform for Ambala District. Sell anything - furniture, vehicles, electronics, property.</p>
                 <ul class="service-features">
-                    <li><i class="fas fa-check"></i> Free Listings</li>
-                    <li><i class="fas fa-check"></i> Verified Buyers</li>
-                    <li><i class="fas fa-check"></i> Secure Payments</li>
-                    <li><i class="fas fa-check"></i> Vehicle Sales</li>
-                    <li><i class="fas fa-check"></i> Furniture & Appliances</li>
-                    <li><i class="fas fa-check"></i> Property Listings</li>
-                    <li><i class="fas fa-check"></i> Electronics</li>
-                    <li><i class="fas fa-check"></i> Home Delivery</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Free Listings</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Verified Buyers</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Secure Payments</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Vehicle Sales</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Furniture & Appliances</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Property Listings</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Electronics</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Home Delivery</li>
                 </ul>
-                <a href="#estimator" class="service-link">
-                    Sell Now <i class="fas fa-arrow-right"></i>
+                <a href="#estimator" class="service-link micro-bounce">
+                    Sell Now <i class="fas fa-arrow-right" aria-hidden="true"></i>
                 </a>
-            </div>
+            </article>
         </div>
     </section>
 
     <!-- AI ESTIMATOR SECTION -->
-    <section id="estimator" style="background: rgba(0, 242, 255, 0.03);">
+    <section id="estimator" style="background: oklch(from var(--primary) l c h / 0.03);" class="content-visibility" aria-labelledby="estimator-title">
         <div class="section-header">
             <span class="section-tag">AI Pricing</span>
-            <h2>Smart Price <span style="color: var(--primary);">Estimator</span></h2>
+            <h2 id="estimator-title">Smart Price <span style="color: var(--primary);">Estimator</span></h2>
             <p>Get instant estimates powered by our AI. Select your service category and specific requirement.</p>
         </div>
 
-        <div class="estimator-container">
-            <div class="estimator-tabs">
-                <button class="est-tab active" onclick="switchEstTab('government', this)">Government</button>
-                <button class="est-tab" onclick="switchEstTab('legal', this)">Legal/Court</button>
-                <button class="est-tab" onclick="switchEstTab('it', this)">IT & AI</button>
-                <button class="est-tab" onclick="switchEstTab('realestate', this)">Real Estate</button>
-                <button class="est-tab" onclick="switchEstTab('home', this)">Home Services</button>
-                <button class="est-tab" onclick="switchEstTab('repair', this)">Repair</button>
-                <button class="est-tab" onclick="switchEstTab('marketing', this)">Marketing</button>
+        <div class="estimator-container glass-enhanced">
+            <div class="estimator-tabs" role="tablist" aria-label="Service Categories">
+                <button class="est-tab active micro-bounce" onclick="switchEstTab('government', this)" role="tab" aria-selected="true" aria-controls="estimator-panel" id="tab-government">Government</button>
+                <button class="est-tab micro-bounce" onclick="switchEstTab('legal', this)" role="tab" aria-selected="false" aria-controls="estimator-panel" id="tab-legal">Legal/Court</button>
+                <button class="est-tab micro-bounce" onclick="switchEstTab('it', this)" role="tab" aria-selected="false" aria-controls="estimator-panel" id="tab-it">IT & AI</button>
+                <button class="est-tab micro-bounce" onclick="switchEstTab('realestate', this)" role="tab" aria-selected="false" aria-controls="estimator-panel" id="tab-realestate">Real Estate</button>
+                <button class="est-tab micro-bounce" onclick="switchEstTab('home', this)" role="tab" aria-selected="false" aria-controls="estimator-panel" id="tab-home">Home Services</button>
+                <button class="est-tab micro-bounce" onclick="switchEstTab('repair', this)" role="tab" aria-selected="false" aria-controls="estimator-panel" id="tab-repair">Repair</button>
+                <button class="est-tab micro-bounce" onclick="switchEstTab('marketing', this)" role="tab" aria-selected="false" aria-controls="estimator-panel" id="tab-marketing">Marketing</button>
             </div>
 
-            <div class="estimator-form">
+            <div class="estimator-form" id="estimator-panel" role="tabpanel">
                 <div class="form-group">
-                    <label>Service Type</label>
-                    <select class="form-control" id="est-service" onchange="calculateEstimate()">
+                    <label for="est-service">Service Type</label>
+                    <select class="form-control" id="est-service" onchange="calculateEstimate()" aria-label="Select service type">
                         <!-- Populated by JS -->
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>Urgency Level</label>
-                    <select class="form-control" id="est-urgency" onchange="calculateEstimate()">
+                    <label for="est-urgency">Urgency Level</label>
+                    <select class="form-control" id="est-urgency" onchange="calculateEstimate()" aria-label="Select urgency level">
                         <option value="normal">Normal (Standard Time)</option>
                         <option value="express">Express (2x Speed)</option>
                         <option value="urgent">Urgent (Same Day)</option>
@@ -2600,7 +2905,7 @@
                 </div>
             </div>
 
-            <div class="estimator-result">
+            <div class="estimator-result" aria-live="polite" aria-atomic="true">
                 <div class="result-box">
                     <h3 id="est-price">--</h3>
                     <p>Estimated Fee</p>
@@ -2613,3 +2918,1646 @@
                     <h3 id="est-success" style="color: var(--success);">99.9%</h3>
                     <p>Success Rate</p>
                 </div>
+                <div class="result-note" role="note">
+                    <i class="fas fa-info-circle" aria-hidden="true"></i> 
+                    <span id="est-note">Final price may vary based on document complexity and government fees. Contact us for exact quote.</span>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <button class="btn-primary micro-bounce" onclick="openBookingModal()" style="padding: 20px 50px; font-size: 16px;">
+                    <i class="fas fa-paper-plane"></i> Book This Service Now
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRACKER SECTION -->
+    <section id="tracker" class="content-visibility" aria-labelledby="tracker-title">
+        <div class="section-header">
+            <span class="section-tag">Track Order</span>
+            <h2 id="tracker-title">Real-Time <span style="color: var(--primary);">Service Tracker</span></h2>
+            <p>Track your service request status in real-time. Enter your tracking ID to see live updates.</p>
+        </div>
+
+        <div class="tracker-box glass-enhanced">
+            <div class="tracker-input-group">
+                <input type="text" class="tracker-input" id="track-id" placeholder="Enter Tracking ID (e.g., SW-2026-001234)" maxlength="20" aria-label="Tracking ID" aria-describedby="track-help">
+                <button class="btn-primary micro-bounce" onclick="trackService()" style="padding: 20px 40px;" aria-label="Track service">
+                    <i class="fas fa-search" aria-hidden="true"></i> Track
+                </button>
+            </div>
+            <div id="track-help" style="display: none; color: var(--text-dim); font-size: 12px; margin-top: 10px;">Format: SW-2026-XXXXXX</div>
+
+            <div class="tracking-timeline" id="tracking-timeline" aria-live="polite">
+                <div class="timeline-step">
+                    <div class="step-icon active" aria-label="Completed">
+                        <i class="fas fa-check" aria-hidden="true"></i>
+                    </div>
+                    <div class="step-content">
+                        <h4>Request Received</h4>
+                        <p>Your service request has been received and is being processed by our AI system.</p>
+                        <div class="step-time" id="step-1-time">Today, 09:30 AM</div>
+                    </div>
+                </div>
+                
+                <div class="timeline-step">
+                    <div class="step-icon active" aria-label="Completed">
+                        <i class="fas fa-user-check" aria-hidden="true"></i>
+                    </div>
+                    <div class="step-content">
+                        <h4>Assigned to Agent</h4>
+                        <p>Professional agent assigned. Documents verification in progress.</p>
+                        <div class="step-time" id="step-2-time">Today, 10:15 AM</div>
+                    </div>
+                </div>
+                
+                <div class="timeline-step">
+                    <div class="step-icon active" aria-label="In Progress">
+                        <i class="fas fa-cog fa-spin" aria-hidden="true"></i>
+                    </div>
+                    <div class="step-content">
+                        <h4>Processing</h4>
+                        <p>Your application is being processed at the respective department.</p>
+                        <div class="step-time" id="step-3-time">In Progress</div>
+                    </div>
+                </div>
+                
+                <div class="timeline-step">
+                    <div class="step-icon" aria-label="Pending">
+                        <i class="fas fa-file-signature" aria-hidden="true"></i>
+                    </div>
+                    <div class="step-content">
+                        <h4>Approval Pending</h4>
+                        <p>Final approval from authorities. Expected completion soon.</p>
+                        <div class="step-time" id="step-4-time">Pending</div>
+                    </div>
+                </div>
+                
+                <div class="timeline-step">
+                    <div class="step-icon" aria-label="Pending">
+                        <i class="fas fa-flag-checkered" aria-hidden="true"></i>
+                    </div>
+                    <div class="step-content">
+                        <h4>Completed</h4>
+                        <p>Service completed successfully. Documents ready for delivery/pickup.</p>
+                        <div class="step-time" id="step-5-time">Estimated: Tomorrow</div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 30px; padding: 30px; background: var(--glass-light); border-radius: 20px; border: 1px solid var(--border);">
+                <p style="color: var(--text-dim); margin-bottom: 15px;">
+                    <i class="fab fa-whatsapp" style="color: #25D366; margin-right: 10px;" aria-hidden="true"></i>
+                    Get instant updates on WhatsApp
+                </p>
+                <a href="https://wa.me/917015657213?text=Track%20my%20order" class="btn-glow micro-bounce" style="display: inline-flex;">
+                    <i class="fab fa-whatsapp" aria-hidden="true"></i> Get WhatsApp Updates
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOCKCHAIN LEDGER SECTION -->
+    <section id="ledger" style="background: oklch(from var(--primary) l c h / 0.02);" class="content-visibility" aria-labelledby="ledger-title">
+        <div class="section-header">
+            <span class="section-tag">Transparency</span>
+            <h2 id="ledger-title">Live Transaction <span style="color: var(--primary);">Ledger</span></h2>
+            <p>Every service request is recorded on our transparent ledger. Real-time updates from across Ambala District.</p>
+        </div>
+
+        <div class="ledger-container">
+            <div class="ledger-grid" id="ledger-grid" role="list" aria-label="Transaction blocks">
+                <!-- Block 1 -->
+                <div class="block-card" role="listitem">
+                    <div class="block-hash">0x7f8a9b...2c3d4e</div>
+                    <div class="block-type">
+                        <i class="fas fa-passport" style="color: var(--primary);" aria-hidden="true"></i>
+                        Passport Service
+                    </div>
+                    <span class="block-status status-verified">
+                        <i class="fas fa-shield-alt" aria-hidden="true"></i> Verified
+                    </span>
+                    <div class="block-time">
+                        <span>Block #8921</span>
+                        <span>2 min ago</span>
+                    </div>
+                    <div class="block-chain-line" aria-hidden="true"></div>
+                </div>
+
+                <!-- Block 2 -->
+                <div class="block-card" role="listitem">
+                    <div class="block-hash">0x9a8b7c...6d5e4f</div>
+                    <div class="block-type">
+                        <i class="fas fa-laptop-code" style="color: var(--secondary);" aria-hidden="true"></i>
+                        IT Project
+                    </div>
+                    <span class="block-status status-processing">
+                        <i class="fas fa-spinner fa-spin" aria-hidden="true"></i> Processing
+                    </span>
+                    <div class="block-time">
+                        <span>Block #8920</span>
+                        <span>5 min ago</span>
+                    </div>
+                    <div class="block-chain-line" aria-hidden="true"></div>
+                </div>
+
+                <!-- Block 3 -->
+                <div class="block-card" role="listitem">
+                    <div class="block-hash">0x1a2b3c...4d5e6f</div>
+                    <div class="block-type">
+                        <i class="fas fa-home" style="color: var(--accent);" aria-hidden="true"></i>
+                        Real Estate
+                    </div>
+                    <span class="block-status status-verified">
+                        <i class="fas fa-check-circle" aria-hidden="true"></i> Completed
+                    </span>
+                    <div class="block-time">
+                        <span>Block #8919</span>
+                        <span>12 min ago</span>
+                    </div>
+                    <div class="block-chain-line" aria-hidden="true"></div>
+                </div>
+
+                <!-- Block 4 -->
+                <div class="block-card" role="listitem">
+                    <div class="block-hash">0x2b3c4d...5e6f7a</div>
+                    <div class="block-type">
+                        <i class="fas fa-tools" style="color: var(--warning);" aria-hidden="true"></i>
+                        Home Service
+                    </div>
+                    <span class="block-status status-pending">
+                        <i class="fas fa-clock" aria-hidden="true"></i> Pending
+                    </span>
+                    <div class="block-time">
+                        <span>Block #8918</span>
+                        <span>18 min ago</span>
+                    </div>
+                    <div class="block-chain-line" aria-hidden="true"></div>
+                </div>
+
+                <!-- Block 5 -->
+                <div class="block-card" role="listitem">
+                    <div class="block-hash">0x3c4d5e...6f7a8b</div>
+                    <div class="block-type">
+                        <i class="fas fa-ad" style="color: var(--gold);" aria-hidden="true"></i>
+                        Marketing
+                    </div>
+                    <span class="block-status status-sealed">
+                        <i class="fas fa-lock" aria-hidden="true"></i> Sealed
+                    </span>
+                    <div class="block-time">
+                        <span>Block #8917</span>
+                        <span>25 min ago</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <div style="display: inline-flex; gap: 30px; flex-wrap: wrap; justify-content: center;">
+                <div style="text-align: center;">
+                    <h4 style="color: var(--primary); font-size: 2rem; font-weight: 800; font-variant-numeric: tabular-nums;">8,921</h4>
+                    <p style="color: var(--text-dim); font-size: 12px; text-transform: uppercase;">Total Blocks</p>
+                </div>
+                <div style="text-align: center;">
+                    <h4 style="color: var(--success); font-size: 2rem; font-weight: 800;">100%</h4>
+                    <p style="color: var(--text-dim); font-size: 12px; text-transform: uppercase;">Verified</p>
+                </div>
+                <div style="text-align: center;">
+                    <h4 style="color: var(--accent); font-size: 2rem; font-weight: 800; font-variant-numeric: tabular-nums;">0ms</h4>
+                    <p style="color: var(--text-dim); font-size: 12px; text-transform: uppercase;">Latency</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROADMAP SECTION -->
+    <section id="roadmap" class="content-visibility" aria-labelledby="roadmap-title">
+        <div class="section-header">
+            <span class="section-tag">Our Journey</span>
+            <h2 id="roadmap-title">2026 <span style="color: var(--primary);">Roadmap</span></h2>
+            <p>Our vision for transforming service delivery in Ambala District and beyond.</p>
+        </div>
+
+        <div class="roadmap-container">
+            <div class="roadmap-line" aria-hidden="true"></div>
+
+            <div class="roadmap-item fade-in">
+                <div class="roadmap-content glass-enhanced">
+                    <span class="roadmap-date">Q1 2026</span>
+                    <h3>🚀 AI Super-App Launch</h3>
+                    <p>Launch of unified mobile app with AI assistant, biometric login, and real-time tracking. Coverage expansion to all 6 tehsils of Ambala.</p>
+                </div>
+                <div class="roadmap-dot" aria-hidden="true"></div>
+                <div style="width: 45%;"></div>
+            </div>
+
+            <div class="roadmap-item fade-in">
+                <div style="width: 45%;"></div>
+                <div class="roadmap-dot" aria-hidden="true"></div>
+                <div class="roadmap-content glass-enhanced">
+                    <span class="roadmap-date">Q2 2026</span>
+                    <h3>🌐 Blockchain Integration</h3>
+                    <p>Full blockchain implementation for document verification. Partnership with Haryana Government for digital attestation services.</p>
+                </div>
+            </div>
+
+            <div class="roadmap-item fade-in">
+                <div class="roadmap-content glass-enhanced">
+                    <span class="roadmap-date">Q3 2026</span>
+                    <h3>🤖 Robotics & Automation</h3>
+                    <p>Introduction of robotic process automation for government offices. Drone delivery for document dispatch in remote villages.</p>
+                </div>
+                <div class="roadmap-dot" aria-hidden="true"></div>
+                <div style="width: 45%;"></div>
+            </div>
+
+            <div class="roadmap-item fade-in">
+                <div style="width: 45%;"></div>
+                <div class="roadmap-dot" aria-hidden="true"></div>
+                <div class="roadmap-content glass-enhanced">
+                    <span class="roadmap-date">Q4 2026</span>
+                    <h3>🌍 Pan-Haryana Expansion</h3>
+                    <p>Expanding to Panchkula, Yamunanagar, and Kurukshetra districts. 500+ service partners onboarded.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG SECTION -->
+    <section id="blog" style="background: oklch(from var(--primary) l c h / 0.02);" class="content-visibility" aria-labelledby="blog-title">
+        <div class="section-header">
+            <span class="section-tag">Latest News</span>
+            <h2 id="blog-title">Insights & <span style="color: var(--primary);">Updates</span></h2>
+            <p>Stay updated with the latest in government services, technology, and local news.</p>
+        </div>
+
+        <div class="blog-grid">
+            <article class="blog-card fade-in" role="article">
+                <div class="blog-image" aria-hidden="true">
+                    <i class="fas fa-passport"></i>
+                </div>
+                <div class="blog-content">
+                    <span class="blog-tag">Government</span>
+                    <h3>New Passport Rules 2026: What You Need to Know</h3>
+                    <p>Updated guidelines for passport applications, reduced processing times, and new document requirements effective January 2026.</p>
+                    <div class="blog-meta">
+                        <span><i class="fas fa-calendar" aria-hidden="true"></i> Jan 15, 2026</span>
+                        <span><i class="fas fa-clock" aria-hidden="true"></i> 5 min read</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-card fade-in" role="article">
+                <div class="blog-image" style="background: var(--gradient-2);" aria-hidden="true">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="blog-content">
+                    <span class="blog-tag">Technology</span>
+                    <h3>How AI is Transforming Local Government Services</h3>
+                    <p>Exploring the impact of artificial intelligence on service delivery, document verification, and citizen engagement in Ambala.</p>
+                    <div class="blog-meta">
+                        <span><i class="fas fa-calendar" aria-hidden="true"></i> Jan 12, 2026</span>
+                        <span><i class="fas fa-clock" aria-hidden="true"></i> 8 min read</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-card fade-in" role="article">
+                <div class="blog-image" style="background: linear-gradient(135deg, #ffd700, #ff8c00);" aria-hidden="true">
+                    <i class="fas fa-home"></i>
+                </div>
+                <div class="blog-content">
+                    <span class="blog-tag">Real Estate</span>
+                    <h3>Property Market Trends in Ambala District 2026</h3>
+                    <p>Analysis of real estate prices, emerging localities, and investment opportunities in Ambala Cantt and surrounding areas.</p>
+                    <div class="blog-meta">
+                        <span><i class="fas fa-calendar" aria-hidden="true"></i> Jan 10, 2026</span>
+                        <span><i class="fas fa-clock" aria-hidden="true"></i> 6 min read</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="#" class="btn-glow micro-bounce" onclick="showComingSoon(event)" aria-label="View all articles">
+                View All Articles <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="content-visibility" aria-labelledby="contact-title">
+        <div class="section-header">
+            <span class="section-tag">Get In Touch</span>
+            <h2 id="contact-title">Let's Start Your <span style="color: var(--primary);">Project</span></h2>
+            <p>Ready to get started? Contact us now for instant assistance. We're available 24/7.</p>
+        </div>
+
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <h2>Contact <span style="color: var(--primary);">Information</span></h2>
+                <p>Visit our office, call us, or drop a message. We respond within minutes, not hours.</p>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Office Address</h4>
+                        <p>Swadesh Link Headquarters<br>Ambala Cantt, Haryana 133001<br>Near Railway Station</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Phone Numbers</h4>
+                        <p>
+                            <a href="tel:+918307619156">+91 83076 19156</a> (Primary)<br>
+                            <a href="tel:+917015657213">+91 70156 57213</a> (WhatsApp)
+                        </p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Email Address</h4>
+                        <p>
+                            <a href="mailto:swadeshlink@gmail.com">swadeshlink@gmail.com</a><br>
+                            <a href="mailto:support@swadeshlink.com">support@swadeshlink.com</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock" aria-hidden="true"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Working Hours</h4>
+                        <p>Office: 9:00 AM - 8:00 PM<br>AI Support: 24/7 Available</p>
+                    </div>
+                </div>
+
+                <div class="social-grid">
+                    <a href="#" class="social-btn micro-bounce" onclick="showComingSoon(event)" title="Facebook" aria-label="Facebook">
+                        <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="social-btn micro-bounce" onclick="showComingSoon(event)" title="Instagram" aria-label="Instagram">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="social-btn micro-bounce" onclick="showComingSoon(event)" title="Twitter" aria-label="Twitter">
+                        <i class="fab fa-twitter" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="social-btn micro-bounce" onclick="showComingSoon(event)" title="LinkedIn" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://wa.me/917015657213" class="social-btn micro-bounce" title="WhatsApp" style="background: #25D366;" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact-form glass-enhanced">
+                <form id="contactForm" onsubmit="handleContactSubmit(event)" aria-label="Contact form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required id="contact-name" aria-label="Your name">
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Phone Number" required id="contact-phone" maxlength="10" pattern="[0-9]{10}" aria-label="Phone number" aria-describedby="phone-help">
+                        </div>
+                    </div>
+                    <div id="phone-help" style="display: none; color: var(--text-dim); font-size: 12px;">10-digit mobile number</div>
+                    
+                    <div class="form-group">
+                        <input type="email" placeholder="Email Address" id="contact-email" aria-label="Email address">
+                    </div>
+
+                    <div class="form-group">
+                        <select required id="contact-service" aria-label="Select service category">
+                            <option value="">Select Service Category</option>
+                            <option value="government">Government Services</option>
+                            <option value="legal">Legal & Court</option>
+                            <option value="it">IT & AI Solutions</option>
+                            <option value="realestate">Real Estate</option>
+                            <option value="home">Home Services</option>
+                            <option value="repair">Electronics Repair</option>
+                            <option value="marketing">Marketing</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea rows="4" placeholder="Describe your requirements..." required id="contact-message" style="resize: vertical; min-height: 120px;" aria-label="Your message"></textarea>
+                    </div>
+
+                    <div class="form-group" style="display: flex; align-items: center; gap: 10px;">
+                        <input type="checkbox" id="urgent-check" style="width: 20px; height: 20px; accent-color: var(--primary);" aria-label="Urgent request">
+                        <label for="urgent-check" style="margin: 0; font-weight: 500; cursor: pointer;">This is an urgent request (Priority Processing)</label>
+                    </div>
+
+                    <button type="submit" class="btn-submit micro-bounce" id="submit-btn">
+                        <i class="fas fa-paper-plane" aria-hidden="true"></i> Send Message
+                    </button>
+                </form>
+
+                <div style="margin-top: 30px; padding: 25px; background: oklch(from var(--primary) l c h / 0.05); border-radius: 20px; border: 1px solid var(--border);">
+                    <h4 style="margin-bottom: 15px; color: var(--primary);">
+                        <i class="fas fa-bolt" aria-hidden="true"></i> Instant Connect
+                    </h4>
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <a href="https://wa.me/917015657213" class="btn-primary micro-bounce" style="flex: 1; min-width: 150px; justify-content: center;">
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
+                        </a>
+                        <a href="tel:+918307619156" class="btn-glow micro-bounce" style="flex: 1; min-width: 150px; justify-content: center;">
+                            <i class="fas fa-phone" aria-hidden="true"></i> Call Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAP SECTION -->
+    <section class="map-section" aria-labelledby="map-title">
+        <div class="section-header">
+            <span class="section-tag">Location</span>
+            <h2 id="map-title">Find Us <span style="color: var(--primary);">Here</span></h2>
+        </div>
+        
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55138.58864979442!2d76.7653!3d30.3752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fb62a0e5f9c7b%3A0x45bb3c40c5e3c5e!2sAmbala%20Cantt%2C%20Haryana!5e0!3m2!1sen!2sin!4v1704067200000!5m2!1sen!2sin"
+                width="100%" 
+                height="100%" 
+                style="border:0; filter: grayscale(100%) invert(92%) contrast(83%);" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Swadesh Link Office Location - Ambala Cantt"
+                aria-label="Google Maps showing Swadesh Link location">
+            </iframe>
+        </div>
+
+        <div class="map-info">
+            <div class="map-info-item">
+                <h4>30.3752° N</h4>
+                <p>Latitude</p>
+            </div>
+            <div class="map-info-item">
+                <h4>76.7653° E</h4>
+                <p>Longitude</p>
+            </div>
+            <div class="map-info-item">
+                <h4>264m</h4>
+                <p>Elevation</p>
+            </div>
+            <div class="map-info-item">
+                <h4>IST +5:30</h4>
+                <p>Time Zone</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer role="contentinfo">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3 class="logo kinetic-text" style="font-size: 2.5rem; margin-bottom: 20px;">SWADESH<span>LINK</span></h3>
+                <p>Ambala District's premier AI-powered service platform. Connecting citizens with government, technology, and home services through innovative solutions.</p>
+                
+                <div class="footer-contact">
+                    <a href="tel:+918307619156"><i class="fas fa-phone" aria-hidden="true"></i> +91 83076 19156</a>
+                    <a href="mailto:swadeshlink@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i> swadeshlink@gmail.com</a>
+                    <a href="#"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Ambala Cantt, Haryana 133001</a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home"><i class="fas fa-chevron-right" aria-hidden="true"></i> Home</a></li>
+                    <li><a href="#about"><i class="fas fa-chevron-right" aria-hidden="true"></i> About Us</a></li>
+                    <li><a href="#services"><i class="fas fa-chevron-right" aria-hidden="true"></i> Services</a></li>
+                    <li><a href="#estimator"><i class="fas fa-chevron-right" aria-hidden="true"></i> Price Estimator</a></li>
+                    <li><a href="#tracker"><i class="fas fa-chevron-right" aria-hidden="true"></i> Track Order</a></li>
+                    <li><a href="#blog"><i class="fas fa-chevron-right" aria-hidden="true"></i> Blog</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="#" onclick="showServiceDetail('government')"><i class="fas fa-chevron-right" aria-hidden="true"></i> Government Services</a></li>
+                    <li><a href="#" onclick="showServiceDetail('legal')"><i class="fas fa-chevron-right" aria-hidden="true"></i> Legal & Court</a></li>
+                     <li><a href="#" onclick="showServiceDetail('it')"><i class="fas fa-chevron-right" aria-hidden="true"></i> IT & AI Solutions</a></li>
+                    <li><a href="#" onclick="showServiceDetail('realestate')"><i class="fas fa-chevron-right" aria-hidden="true"></i> Real Estate</a></li>
+                    <li><a href="#" onclick="showServiceDetail('home')"><i class="fas fa-chevron-right" aria-hidden="true"></i> Home Services</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#" onclick="openModal('terms')"><i class="fas fa-chevron-right" aria-hidden="true"></i> Terms of Service</a></li>
+                    <li><a href="#" onclick="openModal('privacy')"><i class="fas fa-chevron-right" aria-hidden="true"></i> Privacy Policy</a></li>
+                    <li><a href="#" onclick="openModal('refund')"><i class="fas fa-chevron-right" aria-hidden="true"></i> Refund Policy</a></li>
+                    <li><a href="#" onclick="openModal('disclaimer')"><i class="fas fa-chevron-right" aria-hidden="true"></i> Disclaimer</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Swadesh Link. All rights reserved. | Designed with <i class="fas fa-heart" style="color: var(--warning);" aria-hidden="true"></i> in Ambala</p>
+            
+            <div class="security-badges" aria-label="Security certifications">
+                <i class="fas fa-shield-alt" title="SSL Secured"></i>
+                <i class="fas fa-lock" title="256-bit Encryption"></i>
+                <i class="fas fa-check-circle" title="Verified Business"></i>
+                <i class="fas fa-robot" title="AI Powered"></i>
+           </div>
+        </div>
+    </footer>
+
+    <!-- MODALS -->
+    <!-- Terms Modal -->
+    <div class="modal-overlay" id="modal-terms" role="dialog" aria-modal="true" aria-labelledby="terms-title">
+        <div class="modal-content">
+            <button class="modal-close micro-bounce" onclick="closeModal('terms')" aria-label="Close terms">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+            <h2 id="terms-title">Terms of Service</h2>
+            
+            <div class="highlight-box">
+                <strong>Last Updated:</strong> January 1, 2026<br>
+                <strong>Effective Date:</strong> January 1, 2026
+            </div>
+
+            <h3>1. Acceptance of Terms</h3>
+            <p>By accessing or using Swadesh Link services, you agree to be bound by these Terms of Service. If you disagree with any part of the terms, you may not access our services.</p>
+
+            <h3>2. Service Description</h3>
+            <p>Swadesh Link provides facilitation services for government documentation, IT solutions, real estate, home services, and marketing. We act as intermediaries and do not guarantee government approval timelines.</p>
+
+            <h3>3. User Responsibilities</h3>
+            <ul>
+                <li>Provide accurate and complete information</li>
+                <li>Maintain confidentiality of account credentials</li>
+                <li>Comply with all applicable laws and regulations</li>
+                <li>Not use services for fraudulent or illegal purposes</li>
+            </ul>
+
+            <h3>4. Fees and Payments</h3>
+            <p>Service fees are quoted upfront and may include government charges. All payments are non-refundable once processing begins unless service cannot be rendered due to our fault.</p>
+
+            <h3>5. Limitation of Liability</h3>
+            <div class="highlight-box warning">
+                Swadesh Link is not liable for delays caused by government offices, third-party service providers, or force majeure events. Maximum liability is limited to the service fee paid.
+            </div>
+
+            <h3>6. Governing Law</h3>
+            <p>These terms shall be governed by and construed in accordance with the laws of Haryana, India. Disputes shall be subject to the exclusive jurisdiction of courts in Ambala.</p>
+        </div>
+    </div>
+
+    <!-- Privacy Modal -->
+    <div class="modal-overlay" id="modal-privacy" role="dialog" aria-modal="true" aria-labelledby="privacy-title">
+        <div class="modal-content">
+            <button class="modal-close micro-bounce" onclick="closeModal('privacy')" aria-label="Close privacy policy">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+            <h2 id="privacy-title">Privacy Policy</h2>
+
+            <h3>1. Information We Collect</h3>
+            <p>We collect personal information including name, contact details, address, government ID numbers, and documents necessary for service provision. All data is encrypted using AES-256-GCM.</p>
+
+            <h3>2. How We Use Information</h3>
+            <ul>
+                <li>To process your service requests</li>
+                <li>To communicate updates and status</li>
+                <li>To improve our AI systems</li>
+                <li>To comply with legal obligations</li>
+            </ul>
+
+            <h3>3. Data Security</h3>
+            <div class="highlight-box">
+                <i class="fas fa-shield-alt" aria-hidden="true"></i> Your data is protected with military-grade encryption and stored on secure servers located in India. We never sell your data to third parties.
+            </div>
+
+            <h3>4. Cookies and Tracking</h3>
+            <p>We use cookies to enhance user experience and analyze traffic. You can disable cookies in your browser settings, but some features may not function properly.</p>
+
+            <h3>5. Your Rights</h3>
+            <p>You have the right to access, correct, or delete your personal data. Contact our Data Protection Officer at privacy@swadeshlink.com for any privacy-related requests.</p>
+        </div>
+    </div>
+
+    <!-- Refund Modal -->
+    <div class="modal-overlay" id="modal-refund" role="dialog" aria-modal="true" aria-labelledby="refund-title">
+        <div class="modal-content">
+            <button class="modal-close micro-bounce" onclick="closeModal('refund')" aria-label="Close refund policy">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+            <h2 id="refund-title">Refund Policy</h2>
+
+            <h3>Eligibility for Refund</h3>
+            <ul>
+                <li><strong>Before Processing:</strong> 100% refund if cancelled before work begins</li>
+                <li><strong>During Processing:</strong> 50% refund if cancelled after work starts but before submission</li>
+                <li><strong>After Submission:</strong> No refund once documents are submitted to authorities</li>
+                <li><strong>Service Failure:</strong> Full refund if we fail to render service due to our fault</li>
+            </ul>
+
+            <h3>Refund Process</h3>
+            <p>Refunds are processed within 5-7 business days to the original payment method. Government fees are non-refundable under any circumstances.</p>
+
+            <div class="highlight-box">
+                <i class="fas fa-info-circle" aria-hidden="true"></i> To request a refund, contact us at support@swadeshlink.com with your order ID and reason for cancellation.
+            </div>
+        </div>
+    </div>
+
+    <!-- Disclaimer Modal -->
+    <div class="modal-overlay" id="modal-disclaimer" role="dialog" aria-modal="true" aria-labelledby="disclaimer-title">
+        <div class="modal-content">
+            <button class="modal-close micro-bounce" onclick="closeModal('disclaimer')" aria-label="Close disclaimer">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+            <h2 id="disclaimer-title">Disclaimer</h2>
+
+            <div class="highlight-box warning">
+                <i class="fas fa-exclamation-triangle" aria-hidden="true"></i> <strong>Important Notice</strong>
+            </div>
+
+            <p>Swadesh Link is a private service facilitation company and is not affiliated with any government body unless explicitly stated. We are not:</p>
+            
+            <ul>
+                <li>A government agency or department</li>
+                <li>Authorized to guarantee government approvals</li>
+                <li>Liable for government policy changes or delays</li>
+                <li>Responsible for document rejection due to incorrect client information</li>
+            </ul>
+
+            <p>All government services are subject to official verification and approval. Processing times mentioned are estimates based on historical data and may vary.</p>
+
+            <p>Clients are responsible for providing accurate information and original documents. Any legal consequences arising from fraudulent information are solely the client's responsibility.</p>
+        </div>
+    </div>
+
+    <!-- AI CONSTRUCTOR CHAT -->
+    <div class="ai-constructor" id="ai-constructor" role="dialog" aria-modal="true" aria-label="AI Assistant Chat">
+        <div class="ai-header">
+            <div class="ai-avatar-small" aria-hidden="true">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div>
+                <h4>AI Constructor</h4>
+                <p>Online • Ready to help</p>
+            </div>
+            <button class="ai-close micro-bounce" onclick="toggleAI()" aria-label="Close AI chat">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="ai-messages" id="ai-messages" role="log" aria-live="polite" aria-atomic="false">
+            <div class="ai-message">
+                <strong>👋 Namaste!</strong><br>
+                I'm your AI Assistant. I can help you with:
+                <ul style="margin: 10px 0; padding-left: 20px;">
+                    <li>Government service information</li>
+                    <li>Price estimates</li>
+                    <li>Document requirements</li>
+                    <li>Service tracking</li>
+                    <li>General inquiries</li>
+                </ul>
+                How may I assist you today?
+            </div>
+        </div>
+        
+        <div class="ai-input-area">
+            <input type="text" class="ai-input" id="ai-input" placeholder="Type your message..." onkeypress="handleAIInput(event)" aria-label="Type your message to AI">
+            <button class="ai-send micro-bounce" onclick="sendAIMessage()" aria-label="Send message">
+                <i class="fas fa-paper-plane" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- AI TRIGGER BUTTON -->
+    <button class="ai-trigger-btn micro-bounce" onclick="toggleAI()" id="ai-trigger" aria-label="Open AI Assistant">
+        <i class="fas fa-robot" aria-hidden="true"></i>
+    </button>
+
+    <div class="ai-tooltip" id="ai-tooltip" role="tooltip">
+        <i class="fas fa-comment-dots" aria-hidden="true"></i> Ask me anything!
+    </div>
+
+    <!-- VOICE AI HUB -->
+    <div class="voice-hub">
+        <div class="mic-status" id="mic-status" role="status" aria-live="polite">Listening...</div>
+        <button class="mic-button micro-bounce" id="mic-btn" onclick="toggleVoice()" aria-label="Start voice command">
+            <i class="fas fa-microphone" aria-hidden="true"></i>
+        </button>
+    </div>
+
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/917015657213" class="wa-float micro-bounce" target="_blank" rel="noopener noreferrer" aria-label="Contact on WhatsApp">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </a>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // ===== LOADING & INIT =====
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                document.getElementById('loader').classList.add('hidden');
+            }, 1500);
+            
+            initNeuralBackground();
+            startUptime();
+            initEstimator();
+            startLedgerUpdates();
+            animateCounters();
+            initServiceWorker();
+            initIntersectionObserver();
+        });
+
+        // ===== AI WELCOME =====
+        function skipWelcome() {
+            document.getElementById('ai-welcome').classList.add('hidden');
+            localStorage.setItem('swadesh-welcome-seen', 'true');
+        }
+
+        if(localStorage.getItem('swadesh-welcome-seen')) {
+            document.getElementById('ai-welcome').classList.add('hidden');
+        }
+
+        // ===== NEURAL BACKGROUND =====
+        function initNeuralBackground() {
+            const canvas = document.getElementById('neural-canvas');
+            const ctx = canvas.getContext('2d');
+            
+            function resize() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+            resize();
+            window.addEventListener('resize', resize, { passive: true });
+
+            const particles = [];
+            const particleCount = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 30 : 80;
+            
+            for(let i = 0; i < particleCount; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    vx: (Math.random() - 0.5) * 0.5,
+                    vy: (Math.random() - 0.5) * 0.5,
+                    radius: Math.random() * 2 + 1
+                });
+            }
+
+            let animationId;
+            let lastTime = 0;
+            const fps = 30;
+            const fpsInterval = 1000 / fps;
+
+            function animate(currentTime) {
+                animationId = requestAnimationFrame(animate);
+                
+                const elapsed = currentTime - lastTime;
+                if (elapsed < fpsInterval) return;
+                lastTime = currentTime - (elapsed % fpsInterval);
+                
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                
+                particles.forEach((p, i) => {
+                    p.x += p.vx;
+                    p.y += p.vy;
+                    
+                    if(p.x < 0 || p.x > canvas.width) p.vx *= -1;
+                    if(p.y < 0 || p.y > canvas.height) p.vy *= -1;
+                    
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = 'rgba(0, 242, 255, 0.5)';
+                    ctx.fill();
+                    
+                    // Connect nearby particles - limit connections for performance
+                    for(let j = i + 1; j < particles.length && j < i + 5; j++) {
+                        const dx = particles[j].x - p.x;
+                        const dy = particles[j].y - p.y;
+                        const dist = Math.sqrt(dx * dx + dy * dy);
+                        
+                        if(dist < 150) {
+                            ctx.beginPath();
+                            ctx.moveTo(p.x, p.y);
+                            ctx.lineTo(particles[j].x, particles[j].y);
+                            ctx.strokeStyle = rgba(0, 242, 255, ${0.2 * (1 - dist/150)});
+                            ctx.stroke();
+                        }
+                    }
+                });
+            }
+            animate(0);
+
+            // Pause animation when tab hidden
+            document.addEventListener('visibilitychange', () => {
+                if(document.hidden) {
+                    cancelAnimationFrame(animationId);
+                } else {
+                    animate(0);
+                }
+            });
+        }
+
+        // ===== HEADER SCROLL =====
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+            if(!ticking) {
+                window.requestAnimationFrame(() => {
+                    const header = document.getElementById('main-header');
+                    if(window.scrollY > 50) {
+                        header.classList.add('scrolled');
+                    } else {
+                        header.classList.remove('scrolled');
+                    }
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }, { passive: true });
+
+        // ===== UPTIME COUNTER =====
+        function startUptime() {
+            let seconds = 0;
+            setInterval(() => {
+                seconds++;
+                const hrs = Math.floor(seconds / 3600).toString().padStart(2, '0');
+                const mins = Math.floor((seconds % 3600) / 60).toString().padStart(2, '0');
+                const secs = (seconds % 60).toString().padStart(2, '0');
+                const uptimeEl = document.getElementById('uptime');
+                if(uptimeEl) uptimeEl.textContent = ${hrs}:${mins}:${secs};
+            }, 1000);
+        }
+
+        // ===== ANIMATE COUNTERS =====
+        function animateCounters() {
+            const clientsTarget = 1250;
+            const duration = 2000;
+            const step = 20;
+            let current = 0;
+            
+            const timer = setInterval(() => {
+                current += Math.ceil(clientsTarget / (duration / step));
+                if(current >= clientsTarget) {
+                    current = clientsTarget;
+                    clearInterval(timer);
+                }
+                const statClients = document.getElementById('stat-clients');
+                const aboutClients = document.getElementById('about-clients');
+                if(statClients) statClients.textContent = current + '+';
+                if(aboutClients) aboutClients.textContent = current + '+';
+            }, step);
+        }
+
+        // ===== INTERSECTION OBSERVER FOR FADE-IN =====
+        function initIntersectionObserver() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+            document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        }
+
+        // ===== MOBILE MENU =====
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const btn = document.querySelector('.mobile-menu-btn');
+            const isOpen = menu.classList.toggle('active');
+            btn.setAttribute('aria-expanded', isOpen);
+            if(isOpen) {
+                menu.querySelector('a').focus();
+            }
+        }
+
+        // ===== THEME TOGGLE =====
+        function toggleTheme() {
+            const isLight = document.body.classList.toggle('light-mode');
+            const icon = document.querySelector('.btn-icon i.fa-adjust, .btn-icon i.fa-moon');
+            if(icon) {
+                if(isLight) {
+                    icon.classList.remove('fa-adjust');
+                    icon.classList.add('fa-moon');
+                } else {
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-adjust');
+                }
+            }
+            localStorage.setItem('swadesh-theme', isLight ? 'light' : 'dark');
+        }
+
+        // Restore theme
+        if(localStorage.getItem('swadesh-theme') === 'light') {
+            toggleTheme();
+        }
+
+        // ===== LANGUAGE TOGGLE =====
+        let currentLang = 'en';
+        const translations = {
+            en: {
+                heroTitle: "Ambala District's<br>#1 AI Service Hub",
+                heroSubtitle: "50+ Services: Government • IT • Real Estate • Home Services • Marketing. AI-powered 24/7 support. Serving Ambala Cantt, City, Babyal, Naraingarh & all villages.",
+                pulseText: "QUANTUM AI ACTIVE • 189 NODES ONLINE"
+            },
+            hi: {
+                heroTitle: "अंबाला जिले का<br>#1 AI सेवा केंद्र",
+                heroSubtitle: "50+ सेवाएं: सरकारी • आईटी • रियल एस्टेट • होम सेवाएं • मार्केटिंग। AI-संचालित 24/7 समर्थन। अंबाला कैंट, शहर, बेब्याल, नारायणगढ़ और सभी गांवों की सेवा।",
+                pulseText: "क्वांटम AI सक्रिय • 189 नोड ऑनलाइन"
+            }
+        };
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'hi' : 'en';
+            const t = translations[currentLang];
+            
+            const heroTitle = document.getElementById('hero-title-text');
+            const heroSubtitle = document.getElementById('hero-subtitle');
+            const pulseText = document.getElementById('pulse-text');
+            
+            if(heroTitle) heroTitle.innerHTML = t.heroTitle;
+            if(heroSubtitle) heroSubtitle.textContent = t.heroSubtitle;
+            if(pulseText) pulseText.textContent = t.pulseText;
+            
+            localStorage.setItem('swadesh-lang', currentLang);
+        }
+
+        // Restore language
+        if(localStorage.getItem('swadesh-lang') === 'hi') {
+            toggleLanguage();
+        }
+
+        // ===== BIOMETRIC SIMULATION =====
+        function initiateBiometric() {
+            toggleAI();
+            setTimeout(() => {
+                addAIMessage('system', '🔐 Biometric authentication simulated. Access granted to AI Constructor.');
+            }, 500);
+        }
+
+        // ===== AI CHAT =====
+        function toggleAI() {
+            const chat = document.getElementById('ai-constructor');
+            const tooltip = document.getElementById('ai-tooltip');
+            const isOpen = chat.classList.toggle('active');
+            
+            if(tooltip) tooltip.style.display = isOpen ? 'none' : 'block';
+            if(isOpen) {
+                document.getElementById('ai-input').focus();
+            }
+        }
+
+        function handleAIInput(e) {
+            if(e.key === 'Enter') sendAIMessage();
+        }
+
+        function sendAIMessage() {
+            const input = document.getElementById('ai-input');
+            const msg = input.value.trim();
+            if(!msg) return;
+            
+            addAIMessage('user', msg);
+            input.value = '';
+            
+            // AI Response simulation with typing indicator
+            setTimeout(() => {
+                const responses = [
+                    "I'd be happy to help with that! For detailed assistance, please call us at +91 8307619156 or WhatsApp +91 7015657213.",
+                    "Great question! You can track your service using the tracker above or visit our office in Ambala Cantt.",
+                    "Our team is available 24/7. Would you like me to connect you with a specialist?",
+                    "For government services, we handle everything from passport to property registration. What's your specific requirement?",
+                    "You can get an instant estimate using our AI Price Estimator above. Would you like to try it?",
+                    "Namaste! 🙏 Swadesh Link mein aapka swagat hai. Main aapki kaise madad kar sakta hoon?",
+                    "Aapko kaunsi service chahiye? Government documents, IT solutions, Real Estate, ya Home Services?",
+                    "Hamare paas 50+ services hain. Aapko kis cheez mein madad chahiye?"
+                ];
+                const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+                addAIMessage('system', randomResponse);
+            }, 1000);
+        }
+
+        function addAIMessage(type, text) {
+            const container = document.getElementById('ai-messages');
+            const div = document.createElement('div');
+            div.className = ai-message ${type};
+            div.innerHTML = text;
+            container.appendChild(div);
+            container.scrollTop = container.scrollHeight;
+        }
+
+        // ===== VOICE AI =====
+        let voiceActive = false;
+        function toggleVoice() {
+            const btn = document.getElementById('mic-btn');
+            const status = document.getElementById('mic-status');
+            
+            voiceActive = !voiceActive;
+            
+            if(voiceActive) {
+                btn.classList.add('active');
+                if(status) {
+                    status.style.display = 'block';
+                    status.textContent = 'Listening... Speak now';
+                }
+                
+                // Check for Web Speech API support
+                if('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+                    startSpeechRecognition();
+                } else {
+                    // Fallback simulation
+                    setTimeout(() => {
+                        if(voiceActive) {
+                            if(status) status.textContent = 'Processing...';
+                            setTimeout(() => {
+                                toggleVoice();
+                                toggleAI();
+                                const voiceQueries = [
+                                    '🎤 "I need passport service"',
+                                    '🎤 "Mujhe PAN card banwana hai"',
+                                    '🎤 "Website development cost"',
+                                    '🎤 "Ghar ke liye cook chahiye"'
+                                ];
+                                const randomQuery = voiceQueries[Math.floor(Math.random() * voiceQueries.length)];
+                                addAIMessage('user', randomQuery);
+                                addAIMessage('system', 'I heard your request. Let me help you with that. Would you like to see pricing or speak to an agent?');
+                            }, 1500);
+                        }
+                    }, 3000);
+                }
+            } else {
+                btn.classList.remove('active');
+                if(status) status.style.display = 'none';
+                stopSpeechRecognition();
+            }
+        }
+
+        let recognition;
+        function startSpeechRecognition() {
+            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+            recognition = new SpeechRecognition();
+            recognition.lang = currentLang === 'hi' ? 'hi-IN' : 'en-IN';
+            recognition.continuous = false;
+            recognition.interimResults = false;
+            
+            recognition.onresult = (event) => {
+                const transcript = event.results[0][0].transcript;
+                toggleVoice();
+                toggleAI();
+                addAIMessage('user', 🎤 "${transcript}");
+                addAIMessage('system', 'I heard your request. Let me help you with that. Would you like to see pricing or speak to an agent?');
+            };
+            
+            recognition.onerror = (event) => {
+                console.error('Speech recognition error', event.error);
+                toggleVoice();
+            };
+            
+            recognition.start();
+        }
+
+        function stopSpeechRecognition() {
+            if(recognition) {
+                recognition.stop();
+                recognition = null;
+            }
+        }
+
+        // ===== ESTIMATOR =====
+        const serviceData = {
+            government: [
+                {name: 'New Passport', price: 3500, time: '30-45 days'},
+                {name: 'Passport Renewal', price: 2500, time: '15-20 days'},
+                {name: 'Tatkal Passport', price: 5500, time: '3-7 days'},
+                {name: 'Aadhaar New', price: 500, time: '7-15 days'},
+                {name: 'Aadhaar Update', price: 300, time: '5-10 days'},
+                {name: 'PAN Card New', price: 1200, time: '15-20 days'},
+                {name: 'PAN Card Update', price: 800, time: '10-15 days'},
+                {name: 'Voter ID New', price: 800, time: '30-45 days'},
+                {name: 'Voter ID Update', price: 500, time: '20-30 days'},
+                {name: 'Ration Card New', price: 600, time: '20-30 days'},
+                {name: 'Ration Card Update', price: 400, time: '15-20 days'},
+                {name: 'Birth Certificate', price: 1500, time: '7-15 days'},
+                {name: 'Death Certificate', price: 1500, time: '7-15 days'},
+                {name: 'Domicile Certificate', price: 2000, time: '15-25 days'},
+                {name: 'Income Certificate', price: 1200, time: '10-15 days'},
+                {name: 'Caste Certificate', price: 1000, time: '10-15 days'}
+            ],
+            legal: [
+                {name: 'Court Case Filing', price: 5000, time: 'Same day'},
+                {name: 'Legal Documentation', price: 3000, time: '1-2 days'},
+                {name: 'Affidavit', price: 500, time: 'Same day'},
+                {name: 'Notary', price: 300, time: 'Same day'},
+                {name: 'Power of Attorney', price: 1500, time: '1-2 days'},
+                {name: 'Property Registration', price: 10000, time: '3-5 days'},
+                {name: 'Mutation of Land', price: 3500, time: '15-30 days'},
+                {name: 'SDM Office Work', price: 2500, time: '7-15 days'},
+                {name: 'Nagar Nigam Services', price: 2000, time: '5-10 days'},
+                {name: 'RTI Filing', price: 800, time: 'Same day'}
+            ],
+            it: [
+                {name: 'Basic Website (5 pages)', price: 15000, time: '7-10 days'},
+                {name: 'Business Website', price: 25000, time: '10-15 days'},
+                {name: 'E-commerce Site', price: 45000, time: '15-20 days'},
+                {name: 'Mobile App (Android)', price: 75000, time: '30-45 days'},
+                {name: 'Mobile App (iOS)', price: 95000, time: '30-45 days'},
+                {name: 'AI Chatbot Integration', price: 25000, time: '10-15 days'},
+                {name: 'Robotics Solutions', price: 150000, time: '45-60 days'},
+                {name: 'Computer Vision System', price: 120000, time: '30-45 days'},
+                {name: 'Cloud Setup & Migration', price: 15000, time: '3-5 days'},
+                {name: 'Cybersecurity Audit', price: 35000, time: '5-7 days'},
+                {name: 'Digital Transformation', price: 50000, time: '20-30 days'}
+            ],
+            realestate: [
+                {name: 'Property Listing', price: 2000, time: 'Same day'},
+                {name: 'Property Verification', price: 5000, time: '3-5 days'},
+                {name: 'Legal Documentation', price: 10000, time: '5-7 days'},
+                {name: 'Home Loan Assistance', price: 5000, time: '7-15 days'},
+                {name: 'NRI Property Management', price: 15000, time: 'Monthly'},
+                {name: 'Commercial Property', price: 8000, time: '3-5 days'},
+                {name: 'Agricultural Land', price: 6000, time: '5-7 days'},
+                {name: 'Property Dispute Resolution', price: 25000, time: '15-30 days'}
+            ],
+            home: [
+                {name: 'Cook (Monthly)', price: 8000, time: 'Same day'},
+                {name: 'Driver (Car - Monthly)', price: 15000, time: 'Same day'},
+                {name: 'Driver (Bike - Monthly)', price: 12000, time: 'Same day'},
+                {name: 'Maid/Housekeeping (Monthly)', price: 6000, time: 'Same day'},
+                {name: 'Electrician (Per Visit)', price: 500, time: 'Same day'},
+                {name: 'Plumber (Per Visit)', price: 500, time: 'Same day'},
+                {name: 'Carpenter (Per Visit)', price: 600, time: 'Same day'},
+                {name: 'AC Repair (Per Visit)', price: 800, time: 'Same day'},
+                {name: 'TV Repair (Per Visit)', price: 600, time: 'Same day'},
+                {name: 'Packers & Movers', price: 15000, time: '1-2 days'},
+                {name: 'Home Cleaning', price: 2500, time: 'Same day'},
+                {name: 'Pest Control', price: 1800, time: 'Same day'}
+            ],
+            repair: [
+                {name: 'Mobile Screen Replacement', price: 2500, time: '2-4 hours'},
+                {name: 'Mobile Battery Replacement', price: 1200, time: '1-2 hours'},
+                {name: 'Mobile Software Issue', price: 800, time: '1-2 hours'},
+                {name: 'Laptop Screen Replacement', price: 4500, time: '1-2 days'},
+                {name: 'Laptop Battery Replacement', price: 2500, time: '2-4 hours'},
+                {name: 'Laptop Motherboard Repair', price: 3500, time: '2-3 days'},
+                {name: 'LED TV Screen Repair', price: 3500, time: '2-3 days'},
+                {name: 'LED TV Power Issue', price: 1200, time: 'Same day'},
+                {name: 'AC Gas Refill', price: 2500, time: '2-3 hours'},
+                {name: 'AC Full Service', price: 1500, time: '2-3 hours'},
+                {name: 'Fridge Repair', price: 1200, time: 'Same day'},
+                {name: 'Washing Machine Repair', price: 1000, time: 'Same day'},
+                {name: 'Water Purifier Service', price: 800, time: 'Same day'},
+                {name: 'Microwave Repair', price: 800, time: 'Same day'}
+            ],
+            marketing: [
+                {name: 'Social Media Management', price: 15000, time: 'Monthly'},
+                {name: 'Google Ads Setup', price: 10000, time: '3-5 days'},
+                {name: 'SEO Package (Basic)', price: 20000, time: 'Monthly'},
+                {name: 'SEO Package (Premium)', price: 35000, time: 'Monthly'},
+                {name: 'Content Creation', price: 5000, time: 'Per content'},
+                {name: 'Brand Development', price: 50000, time: '15-20 days'},
+                {name: 'Print Media Design', price: 8000, time: '3-5 days'},
+                {name: 'Hoarding/Banner Design', price: 5000, time: '2-3 days'},
+                {name: 'Event Marketing', price: 25000, time: 'Per event'},
+                {name: 'Video Production', price: 25000, time: '5-7 days'},
+                {name: 'Product Photography', price: 8000, time: '1-2 days'}
+            ]
+        };
+
+        function initEstimator() {
+            populateServices('government');
+        }
+
+        function populateServices(category) {
+            const select = document.getElementById('est-service');
+            if(!select) return;
+            select.innerHTML = '';
+            serviceData[category].forEach(service => {
+                const option = document.createElement('option');
+                option.value = JSON.stringify(service);
+                option.textContent = ${service.name} (₹${service.price.toLocaleString()});
+                select.appendChild(option);
+            });
+            calculateEstimate();
+        }
+
+        function switchEstTab(category, btn) {
+            document.querySelectorAll('.est-tab').forEach(t => {
+                t.classList.remove('active');
+                t.setAttribute('aria-selected', 'false');
+            });
+            btn.classList.add('active');
+            btn.setAttribute('aria-selected', 'true');
+            populateServices(category);
+        }
+
+        function calculateEstimate() {
+            const select = document.getElementById('est-service');
+            if(!select || !select.value) return;
+            
+            const service = JSON.parse(select.value);
+            const urgency = document.getElementById('est-urgency')?.value || 'normal';
+            
+            let multiplier = 1;
+            if(urgency === 'express') multiplier = 1.5;
+            else if(urgency === 'urgent') multiplier = 2;
+            
+            const finalPrice = Math.round(service.price * multiplier);
+            const priceEl = document.getElementById('est-price');
+            const timeEl = document.getElementById('est-time');
+            const noteEl = document.getElementById('est-note');
+            
+            if(priceEl) priceEl.textContent = ₹${finalPrice.toLocaleString()};
+            
+            let timeText = service.time;
+            if(urgency === 'express') timeText = service.time.includes('day') ? 'Half the usual time' : 'Express processing';
+            else if(urgency === 'urgent') timeText = 'Same day priority';
+            if(timeEl) timeEl.textContent = timeText;
+            
+            const notes = {
+                normal: '✅ Standard processing time. Government fees included where applicable.',
+                express: '⚡ Express processing at 1.5x fee. Priority handling guaranteed.',
+                urgent: '🚨 Urgent same-day processing at 2x fee. Limited availability.'
+            };
+            if(noteEl) noteEl.textContent = notes[urgency];
+        }
+
+        // ===== TRACKER =====
+        function trackService() {
+            const id = document.getElementById('track-id')?.value.trim().toUpperCase();
+            if(!id) {
+                showNotification('Please enter a tracking ID', 'error');
+                return;
+            }
+            
+            if(!id.startsWith('SW-')) {
+                showNotification('Invalid tracking ID format. Use: SW-2026-XXXXXX', 'error');
+                return;
+            }
+            
+            const timeline = document.getElementById('tracking-timeline');
+            if(timeline) timeline.style.display = 'block';
+            
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const mins = now.getMinutes().toString().padStart(2, '0');
+            
+            const step1 = document.getElementById('step-1-time');
+            const step2 = document.getElementById('step-2-time');
+            if(step1) step1.textContent = Today, ${hours}:${mins} AM;
+            if(step2) step2.textContent = Today, ${hours}:${(parseInt(mins)+5)%60} AM;
+            
+            const steps = document.querySelectorAll('.step-icon');
+            const randomActive = Math.floor(Math.random() * 3) + 2;
+            steps.forEach((step, index) => {
+                if(index < randomActive) step.classList.add('active');
+                else step.classList.remove('active');
+            });
+            
+            showNotification('Tracking information updated!', 'success');
+        }
+
+        // ===== LEDGER UPDATES =====
+        function startLedgerUpdates() {
+            setInterval(() => {
+                const times = document.querySelectorAll('.block-time span:last-child');
+                times.forEach(time => {
+                    const match = time.textContent.match(/(\d+)\s*min/);
+                    if(match) {
+                        const minutes = parseInt(match[1]) + 1;
+                        if(minutes < 60) time.textContent = ${minutes} min ago;
+                    }
+                });
+            }, 60000);
+            
+            setInterval(() => {
+                const cards = document.querySelectorAll('.block-card');
+                cards.forEach((card, index) => {
+                    setTimeout(() => {
+                        card.style.transform = 'scale(1.02)';
+                        card.style.borderColor = 'var(--primary)';
+                        setTimeout(() => {
+                            card.style.transform = '';
+                            card.style.borderColor = '';
+                        }, 300);
+                    }, index * 100);
+                });
+            }, 10000);
+        }
+
+        // ===== CONTACT FORM =====
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('contact-name')?.value;
+            const phone = document.getElementById('contact-phone')?.value;
+            const service = document.getElementById('contact-service')?.value;
+            const isUrgent = document.getElementById('urgent-check')?.checked;
+            
+            if(phone && phone.length !== 10) {
+                showNotification('Please enter valid 10-digit mobile number', 'error');
+                return;
+            }
+            
+            const btn = document.getElementById('submit-btn');
+            if(!btn) return;
+            
+            if(isUrgent) {
+                btn.classList.add('urgent');
+                btn.innerHTML = '<i class="fas fa-exclamation-triangle"></i> SENDING URGENT REQUEST...';
+            } else {
+                btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> SENDING...';
+            }
+            
+            setTimeout(() => {
+                if(isUrgent) {
+                    btn.innerHTML = '<i class="fas fa-check"></i> URGENT REQUEST SENT! WE\'LL CALL IN 5 MINS';
+                    showNotification('Urgent request received! Our team will call you within 5 minutes.', 'success');
+                } else {
+                    btn.innerHTML = '<i class="fas fa-check"></i> MESSAGE SENT SUCCESSFULLY';
+                    showNotification('Message sent! We\'ll get back to you soon.', 'success');
+                }
+                
+                setTimeout(() => {
+                    btn.classList.remove('urgent');
+                    btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+                    const form = document.getElementById('contactForm');
+                    if(form) form.reset();
+                }, 3000);
+            }, 2000);
+        }
+
+        // ===== NOTIFICATION SYSTEM =====
+        function showNotification(message, type = 'info') {
+            const existing = document.querySelector('.notification-toast');
+            if(existing) existing.remove();
+            
+            const notification = document.createElement('div');
+            notification.className = notification-toast ${type};
+            notification.setAttribute('role', 'alert');
+            notification.setAttribute('aria-live', 'polite');
+            notification.innerHTML = `
+                <i class="fas fa-${type === 'success' ? 'check-circle' : type === 'error' ? 'exclamation-circle' : 'info-circle'}"></i>
+                <span>${message}</span>
+            `;
+            
+            notification.style.cssText = `
+                position: fixed;
+                top: 100px;
+                right: 20px;
+                background: ${type === 'success' ? 'var(--success)' : type === 'error' ? 'var(--warning)' : 'var(--primary)'};
+                color: ${type === 'success' || type === 'error' ? '#000' : '#fff'};
+                padding: 15px 25px;
+                border-radius: 15px;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                font-weight: 600;
+                z-index: 100001;
+                animation: slideIn 0.3s ease;
+                box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            `;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.animation = 'slideOut 0.3s ease';
+                setTimeout(() => notification.remove(), 300);
+            }, 4000);
+        }
+
+        // ===== MODALS =====
+        function openModal(type) {
+            const modal = document.getElementById(modal-${type});
+            if(modal) {
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                modal.querySelector('.modal-close')?.focus();
+            }
+        }
+
+        function closeModal(type) {
+            const modal = document.getElementById(modal-${type});
+            if(modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        function showComingSoon(e) {
+            e.preventDefault();
+            showNotification('Coming Soon! This feature is under development.', 'info');
+        }
+
+        function openServiceDetail(type) {
+            const details = {
+                government: { title: 'Government Services', phone: '+91 8307619156' },
+                legal: { title: 'Legal & Court Services', phone: '+91 8307619156' },
+                it: { title: 'IT & AI Solutions', phone: '+91 7015657213' },
+                realestate: { title: 'Real Estate Services', phone: '+91 8307619156' },
+                home: { title: 'Home Services', phone: '+91 8307619156' },
+                repair: { title: 'Electronics Repair', phone: '+91 8307619156' },
+                marketing: { title: 'Marketing Services', phone: '+91 7015657213' },
+                marketplace: { title: 'Buy & Sell Platform', phone: '+91 8307619156' }
+            };
+            
+            const info = details[type];
+            if(info) {
+                showNotification(${info.title} - Call ${info.phone}, 'info');
+            }
+            
+            const estimator = document.getElementById('estimator');
+            if(estimator) estimator.scrollIntoView({behavior: 'smooth'});
+        }
+
+        function openBookingModal() {
+            const contact = document.getElementById('contact');
+            if(contact) contact.scrollIntoView({behavior: 'smooth'});
+            showNotification('Please fill the contact form to book this service', 'info');
+        }
+
+        // Close modals on escape key and outside click
+        document.addEventListener('keydown', (e) => {
+            if(e.key === 'Escape') {
+                document.querySelectorAll('.modal-overlay.active').forEach(modal => {
+                    modal.classList.remove('active');
+                });
+                document.body.style.overflow = '';
+                
+                // Also close AI chat
+                const aiChat = document.getElementById('ai-constructor');
+                if(aiChat?.classList.contains('active')) {
+                    toggleAI();
+                }
+            }
+        });
+
+        document.querySelectorAll('.modal-overlay').forEach(overlay => {
+            overlay.addEventListener('click', (e) => {
+                if(e.target === overlay) {
+                    overlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+
+        // ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if(href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if(target) {
+                        target.scrollIntoView({behavior: 'smooth', block: 'start'});
+                        // Update URL without jump
+                        history.pushState(null, null, href);
+                    }
+                }
+            });
+        });
+
+        // ===== SERVICE WORKER REGISTRATION (PWA) =====
+        function initServiceWorker() {
+            if('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    // Inline service worker for offline support
+                    const swCode = `
+                        const CACHE_NAME = 'swadesh-link-v1';
+                        const urlsToCache = [
+                            '/',
+                            '/part1.html',
+                            '/part2.html',
+                            '/part3.html'
+                        ];
+                        
+                        self.addEventListener('install', event => {
+                            event.waitUntil(
+                                caches.open(CACHE_NAME)
+                                    .then(cache => cache.addAll(urlsToCache))
+                            );
+                        });
+                        
+                        self.addEventListener('fetch', event => {
+                            event.respondWith(
+                                caches.match(event.request)
+                                    .then(response => {
+                                        if(response) return response;
+                                        return fetch(event.request);
+                                    })
+                            );
+                        });
+                    `;
+                    
+                    const blob = new Blob([swCode], { type: 'application/javascript' });
+                    const swUrl = URL.createObjectURL(blob);
+                    
+                    navigator.serviceWorker.register(swUrl)
+                        .then(registration => {
+                            console.log('SW registered:', registration);
+                        })
+                        .catch(error => {
+                            console.log('SW registration failed:', error);
+                        });
+                });
+            }
+        }
+
+        // ===== ONLINE/OFFLINE DETECTION =====
+        window.addEventListener('online', () => {
+            showNotification('You are back online!', 'success');
+            const status = document.getElementById('system-status');
+            if(status) status.textContent = 'ONLINE';
+        });
+
+        window.addEventListener('offline', () => {
+            showNotification('You are offline. Some features may not work.', 'error');
+            const status = document.getElementById('system-status');
+            if(status) status.textContent = 'OFFLINE';
+        });
+
+        // ===== CONSOLE EASTER EGG =====
+        console.log('%c🔷 SWADESH LINK 🔷', 'color: #00f2ff; font-size: 24px; font-weight: bold;');
+        console.log('%cAmbala District\'s #1 AI-Powered Service Hub', 'color: #7000ff; font-size: 14px;');
+        console.log('%c📞 Call: +91 8307619156 | WhatsApp: +91 7015657213', 'color: #2dd4bf; font-size: 12px;');
+        console.log('%c🌐 https://swadeshlink.com', 'color: #ffd700; font-size: 12px;');
+        console.log('%c⚡ 2026 Edition with OKLCH Colors, Anchor Positioning & Popover API', 'color: #00f2ff; font-size: 11px;');
+
+        // ===== KEYBOARD SHORTCUTS =====
+        document.addEventListener('keydown', (e) => {
+            // Ctrl/Cmd + K to open AI Chat
+            if((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                e.preventDefault();
+                toggleAI();
+            }
+            // Ctrl/Cmd + / to focus search
+            if((e.ctrlKey || e.metaKey) && e.key === '/') {
+                e.preventDefault();
+                const trackInput = document.getElementById('track-id');
+                if(trackInput) trackInput.focus();
+            }
+        });
+
+        // ===== ANIMATION KEYFRAMES (injected) =====
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            @keyframes slideOut {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(100%); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // ===== VIEW TRANSITIONS API (2026 Feature) =====
+        if(document.startViewTransition) {
+            document.querySelectorAll('a[href^="#"]').forEach(link => {
+                link.addEventListener('click', async (e) => {
+                    const href = link.getAttribute('href');
+                    if(href === '#') return;
+                    
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if(!target) return;
+                    
+                    await document.startViewTransition(() => {
+                        target.scrollIntoView({ behavior: 'instant', block: 'start' });
+                    }).finished;
+                });
+            });
+        }
+
+        // ===== POPOVER API SUPPORT =====
+        if('Popover' in HTMLElement.prototype) {
+            // Enable native popover where supported
+            document.querySelectorAll('[popover]').forEach(el => {
+                el.popover = 'auto';
+            });
+        }
+    </script>
+</body>
+</html>
+        
